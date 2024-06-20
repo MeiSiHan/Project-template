@@ -1,0 +1,11 @@
+// 自定义element-主题
+@forward "element-plus/theme-chalk/src/common/var.scss" with (
+  $colors: (
+    "primary": ("base": #5080fe),
+    "success": ("base": #12B312),
+    "warning": ("base": #FA830C),
+    "danger": ("base": #FA3946),
+    "error": ("base": #FA3946),
+    "info": ("base": #909399),
+  )
+);
