@@ -1,0 +1,14 @@
+C:\files>npm -v
+6.14.9
+
+
+C:\files>node -v
+v14.15.3
+
+
+C:\files>node-gyp -v
+v7.1.2
+
+
+C:\files>vue -V
+@vue/cli 4.5.7

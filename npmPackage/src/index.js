@@ -1,5 +1,6 @@
 import 'ol/ol.css';
 import './index.css'
+import {deepMerge} from './utils'
 import { Map, View } from 'ol';
 import TileLayer from 'ol/layer/Tile';
 import OSM from 'ol/source/OSM';
