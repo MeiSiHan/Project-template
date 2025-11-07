@@ -1,9 +1,12 @@
-import { app, BrowserWindow, shell, ipcMain ,dialog,Menu,Notification} from 'electron'
+import { app, BrowserWindow, shell, ipcMain ,dialog,Menu,MenuItem,Notification} from 'electron'
 import { release } from 'node:os'
 import { join } from 'node:path'
 import path from 'node:path'
 import fs from 'fs';
-
+// import koffi from 'koffi'
+import { v4 as uuidv4 } from 'uuid';
+import { TCPNet } from './nets';
+import { checkAndReadJSONFile } from './readfiles'
 // The built directory structure
 //
 // ├─┬ dist-electron
@@ -42,18 +45,48 @@ if (!app.requestSingleInstanceLock()) {
 //const cachePath = app.getPath('userData');
 
 let win: BrowserWindow | null = null
+
+let signalTcp: any = "" //频谱仪tcp
 // Here, you can also use other preload
 const preload = join(__dirname, '../preload/index.js')
 const url = process.env.VITE_DEV_SERVER_URL
 const indexHtml = join(process.env.DIST, 'index.html')
 
+
+// let dllpath = path.join(process.cwd(), "/dll/IQToSpectrum.dll")
+// const myDll = koffi.load(dllpath);
+// // 请求频谱数据（模拟）
+// let handleMsgToDll = myDll.func('char* iqToSpectrumMsgToDll(const char*, uint64_t, uint64_t, uint32_t, int32_t, uint32_t)');
+// // 连接真机频谱仪
+// let initSpectrum = myDll.func('bool initSpectrum(const char*, short, int)');
+// // 断开真机频谱仪
+// let uninitSpectrum = myDll.func('bool uninitSpectrum()');
+// // 真机频谱仪参数控制(开始回调)
+// let setDevPara = myDll.func('bool setDevPara(const uint64_t, uint64_t, uint32_t)');
+// // 真机频谱仪参数控制
+// let stopDevPara = myDll.func('bool stopDevPara()');
+// // 回调函数类型定义
+// let msgCallBackFun = koffi.proto('void myMsgCallBackFun(int, const char*, int, const char*)'); // 消息回调函数
+// let registCallBackFunc = myDll.func('bool registmsgiqToSpecCallBackFun(myMsgCallBackFun *cb)'); // 注册回调函数
+// function msgCallfunc(messageID, paraJson, datalen, data) {
+//   let responses = { messageID, paraJson, datalen, data }
+//   win?.webContents.send("call-msg-dll", responses)
+//   responses = null
+// }
+// let cb = koffi.register(msgCallfunc, koffi.pointer(msgCallBackFun));
+// registCallBackFunc(cb);
+// console.log('koffi Hello result:');
+
+
+
 async function createWindow() {
   win = new BrowserWindow({
-    title: 'Main window',
-    width: 1300,
+    title: '北斗',
+    width: 1600,
     height: 800,
     show:true,
-    frame: true, // 去掉窗口边框
+    frame: true,  // 禁用默认窗口框架
+    //transparent: true,  // 使窗口背景透明，方便自定义样式
     icon: join(process.env.VITE_PUBLIC, 'favicon.ico'),
     webPreferences: {
       preload,
@@ -62,6 +95,7 @@ async function createWindow() {
       // Read more on https://www.electronjs.org/docs/latest/tutorial/context-isolation
       nodeIntegration: true,//开启true这一步很重要,目的是为了vue文件中可以引入node和electron相关的API
       contextIsolation: false,// 可以使用require方法
+      webSecurity: false,//允许跨域
     },
   })
 
@@ -77,9 +111,37 @@ async function createWindow() {
     //win.setFullScreen(true);
     //最大化
     //BrowserWindow.getFocusedWindow().maximize()
+    //win.maximize();
   } else {
+    //win.maximize();
     win.loadFile(indexHtml)
   }
+if (process.env.NODE_ENV === 'development') {
+    const contextMenu = new Menu(); // 创建菜单
+    // 添加菜单项
+    contextMenu.append(new MenuItem({
+      label: '刷新页面',
+      click: () => {
+        win?.reload();
+      }
+    }));
+
+    contextMenu.append(new MenuItem({
+      label: '开发工具',
+      click: () => {
+        win?.webContents.openDevTools();
+      }
+    }));
+    // 监听右键点击事件
+    win.webContents.on('context-menu', (event, params) => {
+      // 显示右键菜单
+      contextMenu.popup({ window: win });
+    });
+
+    win?.on('resize', () => {
+      win?.webContents.send("window-max-reply", win?.isMaximized())
+    })
+   }
 
   // Test actively push message to the Electron-Renderer
   win.webContents.on('did-finish-load', () => {
@@ -182,4 +244,61 @@ ipcMain.on('window-close', () => {
   // 窗口关闭
   BrowserWindow.getFocusedWindow().close()
   app.quit()
+})
+// 获取窗口状态
+ipcMain.on("curWindow", (event) => {
+  event.reply('windowStatus', win.isMaximized());
+});
+//读取目录json文件
+ipcMain.on('read-baseJson', (event, filePath, type) => {
+  let files = path.join(process.cwd(), filePath)
+  checkAndReadJSONFile(files).then((data: any) => {
+    let datas = JSON.parse(data)
+    event.sender.send('read-basefileEvent', datas.files_list);
+  }).catch(error => {
+    console.error('read file basejson error:', error);
+  })
+});
+
+// tcp连接
+function uint8ArrayToString(u8a: any) {
+  var dataStr = "";
+  for (var i = 0; i < u8a.length; i++) {
+    dataStr += String.fromCharCode(u8a[i])
+  }
+  return dataStr;
+}
+
+//频谱仪网络tcp连接
+ipcMain.on('create-signalTcp', (event, ips, port, ids) => {
+  console.log('create-signalTcp', ips, port)
+  if (signalTcp) {
+    signalTcp.close()
+  }
+  signalTcp = new TCPNet(ips, port)
+  signalTcp.onConnect(function () {
+    console.log('signal tcp connet');
+    win?.webContents.send('connect-signal', { id: ids, code: '200', data: 1, success: true, msg: '频谱仪连接成功' });
+  })
+  signalTcp.connect()
+  signalTcp.onError((err) => {
+    console.log(`signal tcp err: ${err}`)
+    win?.webContents.send('connect-signal', { id: ids, code: '201', data: 0, success: false, msg: '频谱仪网络出错' });
+    signalTcp = null
+  })
+  signalTcp.onData(function (data) {
+    let datas = data
+    var stringtext = uint8ArrayToString(data.data)
+    datas.data = stringtext
+    //console.log("cuss data",data)
+    // win?.webContents.send('freqNum',{nums:freqs})
+    // win?.webContents.send('message',freqs)
+
+    if (data?.type == "0101") {
+      win?.webContents.send('connect-signal-state', { code: '201', data: datas, success: true, msg: '频谱仪连接正常' });
+    } else {
+      win?.webContents.send('signal-message', datas);
+    }
+    //event.sender.send('message-signal', data);
+  })
 })

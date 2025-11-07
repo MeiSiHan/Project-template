@@ -99,7 +99,19 @@ function calculateMD5(filePath:string) {
   hash.update(data);
   return hash.digest('hex');
 }
-
+//读取文件
+export function readFile(dir: string) {
+  let fileUrl = path.join(process.cwd(), dir)
+  return new Promise((resolve, reject) => {
+    fs.readFile(fileUrl, 'utf-8', (err: any, data: any) => {
+      if (err) {
+        reject(err)
+        return;
+      }
+      resolve(data)
+    })
+  })
+}
 //写入多个json文件
 export function writeJSONFiles(dataObjects:any) {
   return new Promise((resolve, reject) => {

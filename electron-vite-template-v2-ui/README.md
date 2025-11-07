@@ -121,3 +121,5 @@ npm config set chromedriver_cdnurl https://npmmirror.com/mirrors/chromedriver/
 npm config set operadriver_cdnurl https://npmmirror.com/mirrors/operadriver/
 npm config set fse_binary_host_mirror https://npmmirror.com/mirrors/fsevents/
 ```
+
+## "koffi": "^2.9.2",
