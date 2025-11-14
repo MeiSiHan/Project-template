@@ -165,8 +165,16 @@ if (process.env.NODE_ENV === 'development') {
  // console.log("appData",app.getPath('appData'));
  // console.log("getAppMetrics",app.getAppMetrics());
  // console.log("versions.chrome",process.versions.chrome)
+ // 打印内存使用情况
+  const usage = process.memoryUsage();
+  console.log("process.pid", process.pid)
+  console.log(`Memory usage: ${usage.rss / 1024 / 1024} MB`, `(${usage.heapUsed / 1024 / 1024} MB heap used)`, `(${usage.heapTotal / 1024 / 1024} MB heap total)`);
+
 }
 
+
+// 设置 V8 堆内存限制为4GB（4096 MB）
+//app.commandLine.appendSwitch('js-flags', '--max-old-space-size=4096');
 // 这段程序将会在 Electron 结束初始化
 // 和创建浏览器窗口的时候调用
 // 部分 API 在 ready 事件触发后才能使用。
@@ -280,10 +288,15 @@ ipcMain.on('create-signalTcp', (event, ips, port, ids) => {
     console.log('signal tcp connet');
     win?.webContents.send('connect-signal', { id: ids, code: '200', data: 1, success: true, msg: '频谱仪连接成功' });
   })
-  signalTcp.connect()
+  signalTcp.connect();
+  signalTcp.onEnd(function(){
+    console.log('signal tcp end');
+    win?.webContents.send('connect-signal', { id: ids, code: '201', data: 0, success: false, msg: '网络连接断开' });
+    signalTcp = null
+  })
   signalTcp.onError((err) => {
     console.log(`signal tcp err: ${err}`)
-    win?.webContents.send('connect-signal', { id: ids, code: '201', data: 0, success: false, msg: '频谱仪网络出错' });
+    win?.webContents.send('connect-signal', { id: ids, code: '201', data: 0, success: false, msg: '网络出错,请检查网络连接' });
     signalTcp = null
   })
   signalTcp.onData(function (data) {
@@ -302,3 +315,166 @@ ipcMain.on('create-signalTcp', (event, ips, port, ids) => {
     //event.sender.send('message-signal', data);
   })
 })
+
+
+
+//读取文件
+ipcMain.on('read-file', function (event, fileInfo) {
+  console.log("main read-file",fileInfo)
+  readFile(fileInfo.filePath, fileInfo.isUserPath).then((data: any) => {
+    if (fileInfo.isParse) {
+      try {
+        let resdata = { data: "", success: true, msg: '读取成功', ...fileInfo }
+        resdata.data = JSON.parse(data)
+        // console.log(resdata)
+        event.sender.send('read-fileEvent', resdata);
+      } catch (errr) {
+        console.log("errr", errr)
+        let resdata = { data: data, success: false, msg: '解析json失败', ...fileInfo }
+        event.sender.send('read-fileEvent', resdata);
+      }
+    } else {
+      let resdata = { data: data, success: true, msg: '读取成功', ...fileInfo }
+      event.sender.send('read-fileEvent', resdata);
+    }
+  }).catch(error => {
+    console.error('read file password error:', error);
+    let resdata = { data: "", success: false, msg: error, ...fileInfo }
+    event.sender.send('read-fileEvent', resdata);
+  })
+})
+
+function readFile(filePath: string, isUserPath: boolean = false, filetype?: string) {
+  return new Promise((resolve, reject) => {
+    //console.log("appurl", app.getAppPath());
+    // console.log("userData",app.getPath('userData'))
+    // console.log("process.cwd()",process.cwd())
+    let dirpath = isUserPath ? app.getPath('userData') : process.cwd();
+    let fileUrl = path.join(dirpath, filePath)
+    // console.log('fileUrl', fileUrl)
+    if (filetype == "dat") {
+      fs.readFile(fileUrl, { encoding: null }, (err, data) => {
+        if (err) {
+          reject(err)
+          return;
+        }
+        let parsedDatas = [];
+        // 解析每个数字（假设每个数字占 2 字节）
+        for (let i = 0; i < data.length; i += 2) {
+          const num = data.readInt16LE(i); // 从 Buffer 中读取一个 16 位整数
+          parsedDatas.push(num);
+        }
+        resolve(parsedDatas)
+      })
+    } else {
+      fs.readFile(fileUrl, 'utf-8', (err, data) => {
+        if (err) {
+          reject(err)
+          return;
+        }
+        resolve(data)
+      })
+    }
+  })
+}
+
+//写入文件
+ipcMain.on('write-File', (event, data) => {
+  console.log("main write file",data)
+  writeFile(data, data.fileType).then((res) => {
+    console.log('file write success:', data.filePath);
+    event.sender.send('write-fileMessage', { code: data.code, data: 0, success: true, msg: '文件写入成功', hidden: data?.hidden });
+  }).catch(error => {
+    console.error('file histrory errorr:', error);
+    event.sender.send('write-fileMessage', { code: data.code, data: 0, success: false, msg: error, hidden: data?.hidden });
+  })
+})
+
+function writeFile(data: any, datatype?: any, isdelect?: boolean, isautofile?: boolean) {
+  return new Promise((resolve, reject) => {
+    let datas: any = ""
+    if (datatype == "json") {
+      datas=JSON.stringify(data.data,null,2)
+      //datas = JSON.stringify(data.data)
+    } else if (datatype == "text") {
+      datas = data.data
+    } else if (datatype == "hex") {
+      const originalData = data.data;
+      // 创建一个 Buffer 以存储二进制数据
+      datas = Buffer.alloc(originalData.length * 2); // 每个数据占 2 字节
+      // 将数据写入 Buffer
+      for (let i = 0; i < originalData.length; i++) {
+        datas.writeInt16LE(originalData[i], i * 2); // 每个数据占 2 字节，使用 Little Endian 格式
+      }
+    } else {
+      datas = JSON.stringify(data.data, null, 2)
+    }
+    console.log("create file", data.filePath)
+    //判断文件夹是否存在
+    let dirpath = data.isUserPath ? app.getPath('userData') : process.cwd();
+    let fileUrl = path.join(dirpath, data.filePath)
+    let dirname = path.dirname(fileUrl);
+    if (fs.existsSync(dirname) == false) {
+      fs.mkdirSync(dirname, { recursive: true })
+    }
+    if (isdelect) {
+      try {
+        if (fs.existsSync(fileUrl)) {
+          // 文件存在，删除文件
+          fs.unlinkSync(fileUrl);
+          console.log('Successfully deleted the file.');
+        }
+      } catch (err) {
+        console.error('Error:', err);
+      }
+    }
+    fs.writeFile(fileUrl, datas, (err) => {
+      if (err) {
+        reject(err)
+      }
+      resolve("write-success")
+    })
+  })
+}
+//追加写入文件
+function appendFile(data: any, datatype?: any) {
+  return new Promise((resolve, reject) => {
+    let datas: any = ""
+    if (datatype == "json") {
+      datas = JSON.stringify(data.data)
+    } else if (datatype == "text") {
+      datas = data.data
+    } else if (datatype == "hex") {
+      const originalData = data.data;
+      // 创建一个 Buffer 以存储二进制数据
+      datas = Buffer.alloc(originalData.length * 2); // 每个数据占 2 字节
+      // 将数据写入 Buffer
+      for (let i = 0; i < originalData.length; i++) {
+        datas.writeInt16LE(originalData[i], i * 2); // 每个数据占 2 字节，使用 Little Endian 格式
+      }
+    } else {
+      datas = JSON.stringify(data.data, null, 2)
+    }
+    let dirpath = data.isUserPath ? app.getPath('userData') : process.cwd();
+    let fileUrl = path.join(dirpath, data.filePath)
+    let dirname = path.dirname(fileUrl);
+    if (fs.existsSync(dirname) == false) {
+      fs.mkdirSync(dirname, { recursive: true })
+    }
+    if (fs.existsSync(fileUrl)) {
+      fs.appendFile(fileUrl, datas, (err) => {
+        if (err) {
+          reject(err)
+        }
+        resolve("append-success")
+      })
+    } else {
+      fs.writeFile(fileUrl, datas, (err) => {
+        if (err) {
+          reject(err)
+        }
+        resolve("append-success")
+      })
+    }
+  })
+}

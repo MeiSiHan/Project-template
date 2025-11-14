@@ -23,6 +23,8 @@ export class TCPNet {
   private sptmLength: number;
   private asciiLength:number;
   private waitCout:number;
+  private buffer: Buffer;
+  private frameHeader: Buffer;
   constructor(host: string, port: number) {
     this.host = host;
     this.port = port;
@@ -43,6 +45,8 @@ export class TCPNet {
     this.sptmLength=0;
     this.asciiLength=0;
     this.waitCout=0;
+    this.buffer = Buffer.alloc(0);
+    this.frameHeader = Buffer.from();
   }
 
   public connect(): void {
@@ -118,8 +122,15 @@ export class TCPNet {
             console.log("net wait for data")
           }
         }else{
-          var reqdata=this.returnData(sendInfo.message,sendInfo.code,sendInfo.type,true,data)
+          // var reqdata=this.returnData(sendInfo.message,sendInfo.code,sendInfo.type,true,data)
+          // this.onDataCallback(reqdata);
+          let header=data.readUint16LE(0)
+          let dataLength=data.readUint32LE(2);
+          console.log("net data header",header,dataLength)
+          let newData=this.parseDataStructures(data,6)
+          var reqdata=this.returnData(sendInfo.message,sendInfo.code,sendInfo.type,true,newData)
           this.onDataCallback(reqdata);
+          data=null;
         }
       }
       if(isNext){
@@ -304,6 +315,8 @@ export class TCPNet {
   public close(): void {
     // 关闭与服务器的连接
     if (this.client) {
+      this.client.removeAllListeners();
+      this.client.destroy();
       this.client.end();
     }
   }
@@ -312,4 +325,114 @@ export class TCPNet {
     // 获取保存的事件列表
     return this.savedEvents;
   }
+  // 批量解析数据结构
+ parseDataStructures(buffer:Buffer,startOffset=5) {
+    const data:any = [];
+    let offset = startOffset;
+    while (offset + 20 <= buffer.length) { // 假设每个结构至少20字节
+        let item:any = {};
+        item = this.parseDFData(buffer,offset);
+        offset=item.bytesProcessed
+        data.push(item);
+    }
+    return data;
+  }
+  /**
+     * 解析DFData结构体
+     * 对应C++结构体：
+     * typedef struct _DFData {
+     *     uint32_t   dataType = BDDataType_DFLine;
+     *     uint64_t   freq = INVALID_FREQ;
+     *     uint16_t   angle = INVALID_ANGLE;
+     *     int16_t    resultLev = INVALID_STRENGTH;
+     *     uint64_t   timeMs = 0;
+     *     PositionInfo posInfo = _PositionInfo();
+     * } DFData;
+     * @param {Buffer} buffer - 数据缓冲区
+     * @returns {Object} 解析后的数据对象
+     */
+    public parseDFData(buffer: Buffer,startoffset:number): any {
+        let result:any = {};
+        let offset = startoffset;
+        let dataType = buffer.readUInt8(offset);//0 测向线 1 路径点
+        // 解析数据类型 (uint8_t，1字节)
+        if (offset + 1 <= buffer.length) {
+            result.type = dataType;
+            offset += 1;
+        }
+        // 解析频率 (uint64_t，8字节)
+        if (offset + 8 <= buffer.length) {
+            // Node.js没有原生64位整数读取方法，使用组合方式读取
+            // const low:any = buffer.readUInt32LE(offset);
+            // const high:any  = buffer.readUInt32LE(offset + 8);
+            // result.freq = (BigInt(high) << 32n) | BigInt(low);
+            const low = BigInt(buffer.readUInt32LE(offset));
+            const high = BigInt(buffer.readUInt32LE(offset + 4));
+            result.freq=parseFloat(low + (high << 32n));
+            offset += 8;
+        }
+
+        // 解析角度 (uint16_t，2字节)
+        if (offset + 2 <= buffer.length&&dataType===0) {
+            result.angle = buffer.readUInt16LE(offset);
+            offset += 2;
+        }
+
+        // 解析结果强度 (int16_t，2字节，有符号)
+        if (offset + 2 <= buffer.length) {
+            result.value = buffer.readInt16LE(offset);
+            offset += 2;
+        }
+
+        // 解析时间 (uint64_t，8字节)
+        if (offset + 8 <= buffer.length) {
+            const timeLow = buffer.readUInt32LE(offset);
+            const timeHigh = buffer.readUInt32LE(offset + 4);
+            result.time = parseFloat((BigInt(timeHigh) << 32n) | BigInt(timeLow));
+            offset += 8;
+        }
+        // 解析位置信息
+        if (offset < buffer.length) {
+            const position = this.PositionInfoParser(buffer, offset);
+            result = {...result,...position};
+            offset += 10;
+        }
+        buffer=null;
+        result.bytesProcessed = offset;
+        // console.log("line data",result)
+        return result;
+    }
+    /** 解析PositionInfo结构体
+     * 对应C++结构体：
+     * typedef struct _PositionInfo
+    */
+    public PositionInfoParser(buffer, offset = 0) {
+        let result:any = {};
+        // 解析经度 (int32_t，4字节)
+        if (offset + 4 <= buffer.length) {
+            result['longitude'] = buffer.readInt32LE(offset)/10000000;
+            offset += 4;
+        }
+
+        // 解析纬度 (int32_t，4字节)
+        if (offset + 4 <= buffer.length) {
+            result['latitude'] = buffer.readInt32LE(offset)/10000000;
+            offset += 4;
+        }
+
+        // 解析高度 (int16_t，2字节)
+        if (offset + 2 <= buffer.length) {
+            result['altitude'] = buffer.readInt16LE(offset);
+            offset += 2;
+        }
+
+        result['bytesRead'] = offset;
+        return result;
+    }
+    // 使用BigInt精确解析uint64_t小端序
+    readUInt64LEBigInt(buffer, offset) {
+        const low = BigInt(buffer.readUInt32LE(offset));
+        const high = BigInt(buffer.readUInt32LE(offset + 4));
+        return low + (high << 32n);
+    }
 }
