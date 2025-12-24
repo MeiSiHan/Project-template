@@ -12,15 +12,14 @@ npm install --save-dev terser
  # 安装commonjs
 npm install --save-dev @rollup/plugin-commonjs
 
-
 # package.json文件
 ```javaScript
 {
-  "name": "npmpackage",
+  "name": "olmaps",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "main": "dist/olmaps.js",
+  "module": "dist/olmaps.esm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel": "babel src -d lib",
@@ -40,13 +39,13 @@ npm install --save-dev @rollup/plugin-commonjs
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
-    "babel-loader": "^9.1.3",
     "rollup": "^2.79.1",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
-    "terser": "^5.32.0"
+    "terser": "^5.31.6"
   },
   "dependencies": {
+    "build": "^0.1.4",
     "ol": "^5.3.3"
   },
   "peerDependencies": {
@@ -55,7 +54,6 @@ npm install --save-dev @rollup/plugin-commonjs
 }
 
 ```
-
 # .babelrc文件
 在项目根目录下创建一个 .babelrc 文件，添加如下配置
 ```javaScript
@@ -67,7 +65,19 @@ npm install --save-dev @rollup/plugin-commonjs
   ]
 }
 ```
-# 创建rollup.config.js文件
+# .eslintrc.js文件
+在项目根目录下创建一个 .eslintrc.js 文件，添加如下配置
+```javaScript
+module.exports = {
+  parser: '@babel/eslint-parser',
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+# rollup.config.js文件
 ```javaScript
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
@@ -114,56 +124,37 @@ export default {
   ],
   external: ['ol']// 外部依赖
 };
+//安装依赖
+// npm init -y
+// npm install ol
 
-```
-# 创建src文件夹
-# 创建index.js文件
-```js
-import { Map, View } from 'ol';
-import TileLayer from 'ol/layer/Tile';
-import OSM from 'ol/source/OSM';
+// {
+//     "name": "my-openlayers-wrapper",
+//     "version": "1.0.0",
+//     "main": "lib/index.js",
+//     "module": "lib/index.js",
+//     "scripts": {
+//       "build": "babel src -d lib"
+//     },
+//     "dependencies": {
+//       "ol": "^latest-version"
+//     },
+//     "devDependencies": {
+//       "@babel/core": "^latest-version",
+//       "@babel/cli": "^latest-version",
+//       "@babel/preset-env": "^latest-version",
+//       "@babel/preset-react": "^latest-version"
+//     },
+//     "peerDependencies": {
+//       "ol": "^latest-version"
+//     }
+//   }
+  
+//Babel 是一个工具，可以将现代 JavaScript 代码（ES6+）转译为兼容旧版本环境的代码（如 ES5）
+//npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/preset-react @babel/preset-typescript
 
-export default function createMap(target, options) {
-  const map = new Map({
-    target: target,
-    layers: [
-      new TileLayer({
-        source: new OSM()
-      })
-    ],
-    view: new View({
-      center: [0, 0],
-      zoom: 2
-    })
-  });
-
-  return map;
-}
-```
-# 创建index.css文件
-```css
-```
-
-## 安装依赖
-```javaScript
-  npm i
-```
-
-## 本地打包
-```javaScript
-  npm run build
-```
-
-## 打包后执行
-```javaScript
-  npm link
-```
-## 使用
-```javaScript
-  //链接库
-  npm link sptmChart
-  //引入库
-  import sptmChart from 'sptmChart'
-  // 实例化
-  let sptmCharts = new sptmChart('id',options)
+// npm install rollup @rollup/plugin-babel rollup-plugin-node-resolve rollup-plugin-terser rollup-plugin-postcss --save-dev
+// 适配commonjs
+// npm install --save-dev @rollup/plugin-commonjs
+//npm install --save-dev terser
 ```

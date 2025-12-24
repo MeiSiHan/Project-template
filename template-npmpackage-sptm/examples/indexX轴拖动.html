@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECharts 示例</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <style>
+        #chart {
+            width: 800px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="chart"></div>
+
+<script>
+    // 初始化 ECharts 实例
+    var myChart = echarts.init(document.getElementById('chart'));
+
+    // 配置选项
+    var option = {
+        title: {
+            text: 'ECharts X 轴缩放与拖动示例'
+        },
+        tooltip: {},
+        xAxis: {
+            type: 'category',
+            data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [{
+            name: '销售额',
+            type: 'line',
+            data: [120, 132, 101, 134, 90, 230, 210, 300, 350, 400, 450, 500]
+        }],
+        dataZoom: [
+            {
+                type: 'slider', // 使用滑动条进行缩放
+                show: true,
+                start: 0, // 起始位置
+                end: 100 // 结束位置
+            },
+            {
+                type: 'inside', // 鼠标滚轮缩放
+                start: 0,
+                end: 100
+            }
+        ]
+    };
+
+    // 使用配置项生成图表
+    myChart.setOption(option);
+</script>
+
+</body>
+</html>

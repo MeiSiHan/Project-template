@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>折线图示例</title>
+    <style>
+        canvas {
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="800" height="400"></canvas>
+    <button id="zoomIn">放大</button>
+    <button id="zoomOut">缩小</button>
+
+    <script>
+        class LineChart {
+            constructor(canvas, options, data) {
+                this.canvas = canvas;
+                this.ctx = canvas.getContext('2d');
+                this.options = options;
+                this.data = data;
+                this.startIndex = 0;
+                this.visibleCount = Math.min(5, data[0].data.length);
+                this.drawLineChart();
+
+                // 绑定按钮事件
+                document.getElementById('zoomIn').onclick = () => this.zoom(1);
+                document.getElementById('zoomOut').onclick = () => this.zoom(-1);
+                canvas.addEventListener('wheel', (event) => this.handleScroll(event));
+            }
+
+            drawLineChart() {
+                const { ctx, options, data, startIndex, visibleCount } = this;
+                const { grid } = options;
+
+                ctx.clearRect(0, 0, options.width, options.height);
+                this.drawGrid();
+                this.drawAxes();
+
+                const barWidth = (options.width - grid.left - grid.right) / visibleCount;
+
+                // 绘制X轴标签
+                for (let i = 0; i < visibleCount; i++) {
+                    const index = startIndex + i;
+                    if (index >= data[0].data.length) break;
+                    const labelValue = index + 1; 
+                    const x = grid.left + i * barWidth + barWidth / 2;
+                    ctx.fillText(labelValue, x, options.height - grid.bottom + 20);
+                }
+
+                // 绘制折线
+                data.forEach((dataset) => {
+                    ctx.beginPath();
+                    ctx.strokeStyle = dataset.color || 'rgba(0, 0, 255, 0.7)';
+                    for (let i = 0; i < visibleCount; i++) {
+                        if (startIndex + i >= dataset.data.length) break;
+                        const value = dataset.data[startIndex + i];
+                        const x = grid.left + i * barWidth + barWidth / 2;
+                        const y = options.height - grid.bottom - value;
+                        if (i === 0) {
+                            ctx.moveTo(x, y);
+                        } else {
+                            ctx.lineTo(x, y);
+                        }
+                    }
+                    ctx.stroke();
+                });
+            }
+
+            drawGrid() {
+                const { ctx, options } = this;
+                const { grid } = options;
+
+                ctx.strokeStyle = '#e0e0e0';
+                ctx.lineWidth = 1;
+
+                for (let i = 0; i <= 10; i++) {
+                    const y = options.height - grid.bottom - (i * (options.height - grid.top - grid.bottom) / 10);
+                    ctx.beginPath();
+                    ctx.moveTo(grid.left, y);
+                    ctx.lineTo(options.width - grid.right, y);
+                    ctx.stroke();
+                }
+            }
+
+            drawAxes() {
+                const { ctx, options } = this;
+                const { grid } = options;
+                ctx.strokeStyle = '#000';
+                ctx.lineWidth = 2;
+
+                ctx.beginPath();
+                ctx.moveTo(grid.left, options.height - grid.bottom);
+                ctx.lineTo(options.width - grid.right, options.height - grid.bottom);
+                ctx.stroke();
+
+                ctx.beginPath();
+                ctx.moveTo(grid.left, grid.top);
+                ctx.lineTo(grid.left, options.height - grid.bottom);
+                ctx.stroke();
+            }
+
+            zoom(direction) {
+                const { data } = this;
+                const totalPoints = data[0].data.length;
+
+                const centerIndex = Math.floor(this.startIndex + this.visibleCount / 2);
+
+                if (direction === 1 && this.visibleCount < totalPoints) {
+                    this.visibleCount++;
+                } else if (direction === -1 && this.visibleCount > 2) {
+                    this.visibleCount--;
+                }
+
+                // 更新startIndex以保持中心点
+                this.startIndex = Math.max(0, Math.min(centerIndex - Math.floor(this.visibleCount / 2), totalPoints - this.visibleCount));
+
+                this.drawLineChart();
+            }
+
+            handleScroll(event) {
+                event.preventDefault(); // 阻止默认滚动行为
+                const direction = event.deltaY < 0 ? -1 : 1; //下滚放大，上滚缩小
+                this.zoom(direction);
+            }
+        }
+
+        const canvas = document.getElementById('myCanvas');
+        const options = {
+            width: 800,
+            height: 400,
+            grid: { left: 50, top: 30, right: 50, bottom: 50 },
+        };
+
+        const data = [
+            { color: 'rgba(255, 0, 0, 0.7)', data: [10, 20, 15, 30, 25, 10, 5, 15, 18, 22] },
+            { color: 'rgba(0, 255, 0, 0.7)', data: [5, 15, 10, 20, 15, 8, 12, 10, 14, 9] },
+        ];
+
+        const chart = new LineChart(canvas, options, data);
+    </script>
+</body>
+</html>

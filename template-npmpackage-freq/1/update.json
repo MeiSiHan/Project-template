@@ -1,0 +1,63 @@
+{
+    "operate_data": {
+        "data_options": {
+            "button": {
+                "background_button": [
+                    0,
+                    0,
+                    255,
+                    1
+                ],
+                "show_switch_button": true
+            },
+            "channel_show": "show",
+            "grid": {
+                "channel_max_height": 5,
+                "left": 40,
+                "right": 0,
+                "stroke_color": [
+                    170,
+                    0,
+                    0,
+                    1
+                ],
+                "stroke_focus_color": [
+                    85,
+                    0,
+                    255,
+                    1
+                ],
+                "stroke_focus_width": 5,
+                "stroke_width": 5
+            },
+            "language_code": "2052",
+            "lock": {
+                "background": [
+                    200,
+                    200,
+                    200,
+                    1
+                ],
+                "color": [
+                    100,
+                    100,
+                    100,
+                    1
+                ],
+                "content": "hello!",
+                "font_size": 10
+            },
+            "scrollbar_show": "show",
+            "x_axis": {
+                "decimals": 6,
+                "init_end_freq": 500000000,
+                "init_start_freq": 200000000,
+                "show_bottom_label": true,
+                "show_top_label": true,
+                "unit": "MHz",
+                "unit_position": "top"
+            }
+        }
+    },
+    "operate_type": "update_options"
+}

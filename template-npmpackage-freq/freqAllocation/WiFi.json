@@ -1,0 +1,4027 @@
+{
+    "table_name": "WiFi",
+    "format_type": 2,
+    "bg_color": "#ddd",
+    "business_list": [
+        {
+            "business_id": 1,
+            "color": "#00FFFF",
+            "language": [
+                {
+                    "code": 2052,
+                    "name": "2.4G WiFi"
+                },
+                {
+                    "code": 1033,
+                    "name": "2.4G WiFi"
+                }
+            ]
+        },
+        {
+            "business_id": 2,
+            "color": "#3399ff",
+            "language": [
+                {
+                    "code": 2052,
+                    "name": "5.2G WiFi"
+                },
+                {
+                    "code": 1033,
+                    "name": "5.2G WiFi"
+                }
+            ]
+        },
+        {
+            "business_id": 3,
+            "color": "#3399ff",
+            "language": [
+                {
+                    "code": 2052,
+                    "name": "5.5G WiFi"
+                },
+                {
+                    "code": 1033,
+                    "name": "5.5G WiFi"
+                }
+            ]
+        },
+        {
+            "business_id": 4,
+            "color": "#3399ff",
+            "language": [
+                {
+                    "code": 2052,
+                    "name": "5.8G WiFi"
+                },
+                {
+                    "code": 1033,
+                    "name": "5.8G WiFi"
+                }
+            ]
+        },
+        {
+            "business_id": 5,
+            "color": "#cc00cc",
+            "language": [
+                {
+                    "code": 2052,
+                    "name": "6G WiFi"
+                },
+                {
+                    "code": 1033,
+                    "name": "6G WiFi"
+                }
+            ]
+        }
+    ],
+    "band_list": [
+        {
+            "start_freq": 2400000000,
+            "end_freq": 2483500000,
+            "foot_notes": [
+                "2.4G"
+            ],
+            "business_id": 1,
+            "child_band": [
+                {
+                    "color": "#00FF00",
+                    "child_band_range": [
+                        {
+                            "start_freq": 2402000000,
+                            "end_freq": 2422000000,
+                            "business_name": "1",
+                            "foot_note": [
+                                "2.4G1"
+                            ]
+                        },
+                        {
+                            "start_freq": 2422000000,
+                            "end_freq": 2442000000,
+                            "business_name": "5",
+                            "foot_note": [
+                                "2.4G5"
+                            ]
+                        },
+                        {
+                            "start_freq": 2442000000,
+                            "end_freq": 2462000000,
+                            "business_name": "9",
+                            "foot_note": [
+                                "2.4G9"
+                            ]
+                        },
+                        {
+                            "start_freq": 2462000000,
+                            "end_freq": 2482000000,
+                            "business_name": "13",
+                            "foot_note": [
+                                "2.4G13"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "color": "#00FF00",
+                    "child_band_range": [
+                        {
+                            "start_freq": 2407000000,
+                            "end_freq": 2427000000,
+                            "business_name": "2",
+                            "foot_note": [
+                                "2.4G2"
+                            ]
+                        },
+                        {
+                            "start_freq": 2427000000,
+                            "end_freq": 2447000000,
+                            "business_name": "6",
+                            "foot_note": [
+                                "2.4G6"
+                            ]
+                        },
+                        {
+                            "start_freq": 2447000000,
+                            "end_freq": 2467000000,
+                            "business_name": "10",
+                            "foot_note": [
+                                "2.4G10"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "color": "#00FF00",
+                    "child_band_range": [
+                        {
+                            "start_freq": 2412000000,
+                            "end_freq": 2432000000,
+                            "business_name": "3",
+                            "foot_note": [
+                                "2.4G3"
+                            ]
+                        },
+                        {
+                            "start_freq": 2432000000,
+                            "end_freq": 2452000000,
+                            "business_name": "7",
+                            "foot_note": [
+                                "2.4G7"
+                            ]
+                        },
+                        {
+                            "start_freq": 2452000000,
+                            "end_freq": 2472000000,
+                            "business_name": "11",
+                            "foot_note": [
+                                "2.4G11"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "color": "#00FF00",
+                    "child_band_range": [
+                        {
+                            "start_freq": 2417000000,
+                            "end_freq": 2437000000,
+                            "business_name": "4",
+                            "foot_note": [
+                                "2.4G4"
+                            ]
+                        },
+                        {
+                            "start_freq": 2437000000,
+                            "end_freq": 2457000000,
+                            "business_name": "8",
+                            "foot_note": [
+                                "2.4G8"
+                            ]
+                        },
+                        {
+                            "start_freq": 2457000000,
+                            "end_freq": 2477000000,
+                            "business_name": "12",
+                            "foot_note": [
+                                "2.4G12"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "color": "#0066ff",
+                    "child_band_range": [
+                        {
+                            "start_freq": 2402000000,
+                            "end_freq": 2442000000,
+                            "business_name": "1+5",
+                            "foot_note": [
+                                "2.4G1+5"
+                            ]
+                        },
+                        {
+                            "start_freq": 2442000000,
+                            "end_freq": 2482000000,
+                            "business_name": "9+13",
+                            "foot_note": [
+                                "2.4G9+13"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "color": "#0066ff",
+                    "child_band_range": [
+                        {
+                            "start_freq": 2407000000,
+                            "end_freq": 2447000000,
+                            "business_name": "2+6",
+                            "foot_note": [
+                                "2.4G2+6"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "color": "#0066ff",
+                    "child_band_range": [
+                        {
+                            "start_freq": 2412000000,
+                            "end_freq": 2452000000,
+                            "business_name": "3+7",
+                            "foot_note": [
+                                "2.4G3+7"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "color": "#0066ff",
+                    "child_band_range": [
+                        {
+                            "start_freq": 2417000000,
+                            "end_freq": 2457000000,
+                            "business_name": "4+8",
+                            "foot_note": [
+                                "2.4G4+8"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "color": "#0066ff",
+                    "child_band_range": [
+                        {
+                            "start_freq": 2422000000,
+                            "end_freq": 2462000000,
+                            "business_name": "5+9",
+                            "foot_note": [
+                                "2.4G5+9"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "color": "#0066ff",
+                    "child_band_range": [
+                        {
+                            "start_freq": 2427000000,
+                            "end_freq": 2467000000,
+                            "business_name": "6+10",
+                            "foot_note": [
+                                "2.4G6+10"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "color": "#0066ff",
+                    "child_band_range": [
+                        {
+                            "start_freq": 2432000000,
+                            "end_freq": 2472000000,
+                            "business_name": "7+11",
+                            "foot_note": [
+                                "2.4G7+11"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "color": "#0066ff",
+                    "child_band_range": [
+                        {
+                            "start_freq": 2437000000,
+                            "end_freq": 2477000000,
+                            "business_name": "8+12",
+                            "foot_note": [
+                                "2.4G8+12"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "start_freq": 5170000000,
+            "end_freq": 5330000000,
+            "foot_notes": [
+                "5.2G"
+            ],
+            "business_id": 2,
+            "child_band": [
+                {
+                    "color": "#ffff66",
+                    "child_band_range": [
+                        {
+                            "start_freq": 5170000000,
+                            "end_freq": 5190000000,
+                            "business_name": "36",
+                            "foot_note": [
+                                "5.2G36"
+                            ]
+                        },
+                        {
+                            "start_freq": 5190000000,
+                            "end_freq": 5210000000,
+                            "business_name": "40",
+                            "foot_note": [
+                                "5.2G40"
+                            ]
+                        },
+                        {
+                            "start_freq": 5210000000,
+                            "end_freq": 5230000000,
+                            "business_name": "44",
+                            "foot_note": [
+                                "5.2G44"
+                            ]
+                        },
+                        {
+                            "start_freq": 5230000000,
+                            "end_freq": 5250000000,
+                            "business_name": "48",
+                            "foot_note": [
+                                "5.2G48"
+                            ]
+                        },
+                        {
+                            "start_freq": 5250000000,
+                            "end_freq": 5270000000,
+                            "business_name": "52",
+                            "foot_note": [
+                                "5.2G52"
+                            ]
+                        },
+                        {
+                            "start_freq": 5270000000,
+                            "end_freq": 5290000000,
+                            "business_name": "56",
+                            "foot_note": [
+                                "5.2G56"
+                            ]
+                        },
+                        {
+                            "start_freq": 5290000000,
+                            "end_freq": 5310000000,
+                            "business_name": "60",
+                            "foot_note": [
+                                "5.2G60"
+                            ]
+                        },
+                        {
+                            "start_freq": 5310000000,
+                            "end_freq": 5330000000,
+                            "business_name": "64",
+                            "foot_note": [
+                                "5.2G64"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "color": "#ff9900",
+                    "child_band_range": [
+                        {
+                            "start_freq": 5170000000,
+                            "end_freq": 5210000000,
+                            "business_name": "38",
+                            "foot_note": [
+                                "5.2G38"
+                            ]
+                        },
+                        {
+                            "start_freq": 5210000000,
+                            "end_freq": 5250000000,
+                            "business_name": "46",
+                            "foot_note": [
+                                "5.2G46"
+                            ]
+                        },
+                        {
+                            "start_freq": 5250000000,
+                            "end_freq": 5290000000,
+                            "business_name": "54",
+                            "foot_note": [
+                                "5.2G54"
+                            ]
+                        },
+                        {
+                            "start_freq": 5290000000,
+                            "end_freq": 5330000000,
+                            "business_name": "62",
+                            "foot_note": [
+                                "5.2G62"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "color": "#cc6600",
+                    "child_band_range": [
+                        {
+                            "start_freq": 5170000000,
+                            "end_freq": 5250000000,
+                            "business_name": "42",
+                            "foot_note": [
+                                "5.2G42"
+                            ]
+                        },
+                        {
+                            "start_freq": 5250000000,
+                            "end_freq": 5330000000,
+                            "business_name": "58",
+                            "foot_note": [
+                                "5.2G58"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "color": "#ff0000",
+                    "child_band_range": [
+                        {
+                            "start_freq": 5170000000,
+                            "end_freq": 5330000000,
+                            "business_name": "50",
+                            "foot_note": [
+                                "5.2G50"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "start_freq": 5490000000,
+            "end_freq": 5730000000,
+            "foot_notes": [
+                "5.5G"
+            ],
+            "business_id": 3,
+            "child_band": [
+                {
+                    "color": "#ffff66",
+                    "child_band_range": [
+                        {
+                            "start_freq": 5490000000,
+                            "end_freq": 5510000000,
+                            "business_name": "100",
+                            "foot_note": [
+                                "5.5G100"
+                            ]
+                        },
+                        {
+                            "start_freq": 5510000000,
+                            "end_freq": 5530000000,
+                            "business_name": "104",
+                            "foot_note": [
+                                "5.5G104"
+                            ]
+                        },
+                        {
+                            "start_freq": 5530000000,
+                            "end_freq": 5550000000,
+                            "business_name": "108",
+                            "foot_note": [
+                                "5.5G108"
+                            ]
+                        },
+                        {
+                            "start_freq": 5550000000,
+                            "end_freq": 5570000000,
+                            "business_name": "112",
+                            "foot_note": [
+                                "5.5G112"
+                            ]
+                        },
+                        {
+                            "start_freq": 5570000000,
+                            "end_freq": 5590000000,
+                            "business_name": "116",
+                            "foot_note": [
+                                "5.5G116"
+                            ]
+                        },
+                        {
+                            "start_freq": 5590000000,
+                            "end_freq": 5610000000,
+                            "business_name": "120",
+                            "foot_note": [
+                                "5.5G120"
+                            ]
+                        },
+                        {
+                            "start_freq": 5610000000,
+                            "end_freq": 5630000000,
+                            "business_name": "124",
+                            "foot_note": [
+                                "5.5G124"
+                            ]
+                        },
+                        {
+                            "start_freq": 5630000000,
+                            "end_freq": 5650000000,
+                            "business_name": "128",
+                            "foot_note": [
+                                "5.5G128"
+                            ]
+                        },
+                        {
+                            "start_freq": 5650000000,
+                            "end_freq": 5670000000,
+                            "business_name": "132",
+                            "foot_note": [
+                                "5.5G132"
+                            ]
+                        },
+                        {
+                            "start_freq": 5670000000,
+                            "end_freq": 5690000000,
+                            "business_name": "136",
+                            "foot_note": [
+                                "5.5G136"
+                            ]
+                        },
+                        {
+                            "start_freq": 5690000000,
+                            "end_freq": 5710000000,
+                            "business_name": "140",
+                            "foot_note": [
+                                "5.5G140"
+                            ]
+                        },
+                        {
+                            "start_freq": 5710000000,
+                            "end_freq": 5730000000,
+                            "business_name": "144",
+                            "foot_note": [
+                                "5.5G144"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "color": "#ff9900",
+                    "child_band_range": [
+                        {
+                            "start_freq": 5490000000,
+                            "end_freq": 5530000000,
+                            "business_name": "102",
+                            "foot_note": [
+                                "5.5G102"
+                            ]
+                        },
+                        {
+                            "start_freq": 5530000000,
+                            "end_freq": 5570000000,
+                            "business_name": "110",
+                            "foot_note": [
+                                "5.5G110"
+                            ]
+                        },
+                        {
+                            "start_freq": 5570000000,
+                            "end_freq": 5610000000,
+                            "business_name": "118",
+                            "foot_note": [
+                                "5.5G118"
+                            ]
+                        },
+                        {
+                            "start_freq": 5610000000,
+                            "end_freq": 5650000000,
+                            "business_name": "126",
+                            "foot_note": [
+                                "5.5G126"
+                            ]
+                        },
+                        {
+                            "start_freq": 5650000000,
+                            "end_freq": 5690000000,
+                            "business_name": "134",
+                            "foot_note": [
+                                "5.5G134"
+                            ]
+                        },
+                        {
+                            "start_freq": 5690000000,
+                            "end_freq": 5730000000,
+                            "business_name": "142",
+                            "foot_note": [
+                                "5.5G142"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "color": "#cc6600",
+                    "child_band_range": [
+                        {
+                            "start_freq": 5490000000,
+                            "end_freq": 5570000000,
+                            "business_name": "106",
+                            "foot_note": [
+                                "5.5G106"
+                            ]
+                        },
+                        {
+                            "start_freq": 5570000000,
+                            "end_freq": 5650000000,
+                            "business_name": "122",
+                            "foot_note": [
+                                "5.5G122"
+                            ]
+                        },
+                        {
+                            "start_freq": 5650000000,
+                            "end_freq": 5730000000,
+                            "business_name": "138",
+                            "foot_note": [
+                                "5.5G138"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "color": "#ff0000",
+                    "child_band_range": [
+                        {
+                            "start_freq": 5490000000,
+                            "end_freq": 5650000000,
+                            "business_name": "114",
+                            "foot_note": [
+                                "5.5G114"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "start_freq": 5735000000,
+            "end_freq": 5835000000,
+            "foot_notes": [
+                "5.8G"
+            ],
+            "business_id": 4,
+            "child_band": [
+                {
+                    "color": "#ffff66",
+                    "child_band_range": [
+                        {
+                            "start_freq": 5735000000,
+                            "end_freq": 5755000000,
+                            "business_name": "149",
+                            "foot_note": [
+                                "5.8G149"
+                            ]
+                        },
+                        {
+                            "start_freq": 5755000000,
+                            "end_freq": 5775000000,
+                            "business_name": "153",
+                            "foot_note": [
+                                "5.8G153"
+                            ]
+                        },
+                        {
+                            "start_freq": 5775000000,
+                            "end_freq": 5795000000,
+                            "business_name": "157",
+                            "foot_note": [
+                                "5.8G157"
+                            ]
+                        },
+                        {
+                            "start_freq": 5795000000,
+                            "end_freq": 5815000000,
+                            "business_name": "161",
+                            "foot_note": [
+                                "5.8G161"
+                            ]
+                        },
+                        {
+                            "start_freq": 5815000000,
+                            "end_freq": 5835000000,
+                            "business_name": "165",
+                            "foot_note": [
+                                "5.8G165"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "color": "#ff9900",
+                    "child_band_range": [
+                        {
+                            "start_freq": 5735000000,
+                            "end_freq": 5775000000,
+                            "business_name": "151",
+                            "foot_note": [
+                                "5.8G151"
+                            ]
+                        },
+                        {
+                            "start_freq": 5775000000,
+                            "end_freq": 5815000000,
+                            "business_name": "159",
+                            "foot_note": [
+                                "5.8G159"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "color": "#cc6600",
+                    "child_band_range": [
+                        {
+                            "start_freq": 5735000000,
+                            "end_freq": 5815000000,
+                            "business_name": "155",
+                            "foot_note": [
+                                "5.8G155"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "start_freq": 5925000000,
+            "end_freq": 7125000000,
+            "foot_notes": [
+                "6G"
+            ],
+            "business_id": 5,
+            "child_band": [
+                {
+                    "color": "#ccffff",
+                    "child_band_range": [
+                        {
+                            "start_freq": 5945000000,
+                            "end_freq": 5965000000,
+                            "business_name": "1",
+                            "foot_note": [
+                                "6G1"
+                            ]
+                        },
+                        {
+                            "start_freq": 5965000000,
+                            "end_freq": 5985000000,
+                            "business_name": "5",
+                            "foot_note": [
+                                "6G5"
+                            ]
+                        },
+                        {
+                            "start_freq": 5985000000,
+                            "end_freq": 6005000000,
+                            "business_name": "9",
+                            "foot_note": [
+                                "6G9"
+                            ]
+                        },
+                        {
+                            "start_freq": 6005000000,
+                            "end_freq": 6025000000,
+                            "business_name": "13",
+                            "foot_note": [
+                                "6G13"
+                            ]
+                        },
+                        {
+                            "start_freq": 6025000000,
+                            "end_freq": 6045000000,
+                            "business_name": "17",
+                            "foot_note": [
+                                "6G17"
+                            ]
+                        },
+                        {
+                            "start_freq": 6045000000,
+                            "end_freq": 6065000000,
+                            "business_name": "21",
+                            "foot_note": [
+                                "6G21"
+                            ]
+                        },
+                        {
+                            "start_freq": 6065000000,
+                            "end_freq": 6085000000,
+                            "business_name": "25",
+                            "foot_note": [
+                                "6G25"
+                            ]
+                        },
+                        {
+                            "start_freq": 6085000000,
+                            "end_freq": 6105000000,
+                            "business_name": "29",
+                            "foot_note": [
+                                "6G29"
+                            ]
+                        },
+                        {
+                            "start_freq": 6105000000,
+                            "end_freq": 6125000000,
+                            "business_name": "33",
+                            "foot_note": [
+                                "6G33"
+                            ]
+                        },
+                        {
+                            "start_freq": 6125000000,
+                            "end_freq": 6145000000,
+                            "business_name": "37",
+                            "foot_note": [
+                                "6G37"
+                            ]
+                        },
+                        {
+                            "start_freq": 6145000000,
+                            "end_freq": 6165000000,
+                            "business_name": "41",
+                            "foot_note": [
+                                "6G41"
+                            ]
+                        },
+                        {
+                            "start_freq": 6165000000,
+                            "end_freq": 6185000000,
+                            "business_name": "45",
+                            "foot_note": [
+                                "6G45"
+                            ]
+                        },
+                        {
+                            "start_freq": 6185000000,
+                            "end_freq": 6205000000,
+                            "business_name": "49",
+                            "foot_note": [
+                                "6G49"
+                            ]
+                        },
+                        {
+                            "start_freq": 6205000000,
+                            "end_freq": 6225000000,
+                            "business_name": "53",
+                            "foot_note": [
+                                "6G53"
+                            ]
+                        },
+                        {
+                            "start_freq": 6225000000,
+                            "end_freq": 6245000000,
+                            "business_name": "57",
+                            "foot_note": [
+                                "6G57"
+                            ]
+                        },
+                        {
+                            "start_freq": 6245000000,
+                            "end_freq": 6265000000,
+                            "business_name": "61",
+                            "foot_note": [
+                                "6G61"
+                            ]
+                        },
+                        {
+                            "start_freq": 6265000000,
+                            "end_freq": 6285000000,
+                            "business_name": "65",
+                            "foot_note": [
+                                "6G65"
+                            ]
+                        },
+                        {
+                            "start_freq": 6285000000,
+                            "end_freq": 6305000000,
+                            "business_name": "69",
+                            "foot_note": [
+                                "6G69"
+                            ]
+                        },
+                        {
+                            "start_freq": 6305000000,
+                            "end_freq": 6325000000,
+                            "business_name": "73",
+                            "foot_note": [
+                                "6G73"
+                            ]
+                        },
+                        {
+                            "start_freq": 6325000000,
+                            "end_freq": 6345000000,
+                            "business_name": "77",
+                            "foot_note": [
+                                "6G77"
+                            ]
+                        },
+                        {
+                            "start_freq": 6345000000,
+                            "end_freq": 6365000000,
+                            "business_name": "81",
+                            "foot_note": [
+                                "6G81"
+                            ]
+                        },
+                        {
+                            "start_freq": 6365000000,
+                            "end_freq": 6385000000,
+                            "business_name": "85",
+                            "foot_note": [
+                                "6G85"
+                            ]
+                        },
+                        {
+                            "start_freq": 6385000000,
+                            "end_freq": 6405000000,
+                            "business_name": "89",
+                            "foot_note": [
+                                "6G89"
+                            ]
+                        },
+                        {
+                            "start_freq": 6405000000,
+                            "end_freq": 6425000000,
+                            "business_name": "93",
+                            "foot_note": [
+                                "6G93"
+                            ]
+                        },
+                        {
+                            "start_freq": 6425000000,
+                            "end_freq": 6445000000,
+                            "business_name": "97",
+                            "foot_note": [
+                                "6G97"
+                            ]
+                        },
+                        {
+                            "start_freq": 6445000000,
+                            "end_freq": 6465000000,
+                            "business_name": "101",
+                            "foot_note": [
+                                "6G101"
+                            ]
+                        },
+                        {
+                            "start_freq": 6465000000,
+                            "end_freq": 6485000000,
+                            "business_name": "105",
+                            "foot_note": [
+                                "6G105"
+                            ]
+                        },
+                        {
+                            "start_freq": 6485000000,
+                            "end_freq": 6505000000,
+                            "business_name": "109",
+                            "foot_note": [
+                                "6G109"
+                            ]
+                        },
+                        {
+                            "start_freq": 6505000000,
+                            "end_freq": 6525000000,
+                            "business_name": "113",
+                            "foot_note": [
+                                "6G113"
+                            ]
+                        },
+                        {
+                            "start_freq": 6525000000,
+                            "end_freq": 6545000000,
+                            "business_name": "117",
+                            "foot_note": [
+                                "6G117"
+                            ]
+                        },
+                        {
+                            "start_freq": 6545000000,
+                            "end_freq": 6565000000,
+                            "business_name": "121",
+                            "foot_note": [
+                                "6G121"
+                            ]
+                        },
+                        {
+                            "start_freq": 6565000000,
+                            "end_freq": 6585000000,
+                            "business_name": "125",
+                            "foot_note": [
+                                "6G125"
+                            ]
+                        },
+                        {
+                            "start_freq": 6585000000,
+                            "end_freq": 6605000000,
+                            "business_name": "129",
+                            "foot_note": [
+                                "6G129"
+                            ]
+                        },
+                        {
+                            "start_freq": 6605000000,
+                            "end_freq": 6625000000,
+                            "business_name": "133",
+                            "foot_note": [
+                                "6G133"
+                            ]
+                        },
+                        {
+                            "start_freq": 6625000000,
+                            "end_freq": 6645000000,
+                            "business_name": "137",
+                            "foot_note": [
+                                "6G137"
+                            ]
+                        },
+                        {
+                            "start_freq": 6645000000,
+                            "end_freq": 6665000000,
+                            "business_name": "141",
+                            "foot_note": [
+                                "6G141"
+                            ]
+                        },
+                        {
+                            "start_freq": 6665000000,
+                            "end_freq": 6685000000,
+                            "business_name": "145",
+                            "foot_note": [
+                                "6G145"
+                            ]
+                        },
+                        {
+                            "start_freq": 6685000000,
+                            "end_freq": 6705000000,
+                            "business_name": "149",
+                            "foot_note": [
+                                "6G149"
+                            ]
+                        },
+                        {
+                            "start_freq": 6705000000,
+                            "end_freq": 6725000000,
+                            "business_name": "153",
+                            "foot_note": [
+                                "6G153"
+                            ]
+                        },
+                        {
+                            "start_freq": 6725000000,
+                            "end_freq": 6745000000,
+                            "business_name": "157",
+                            "foot_note": [
+                                "6G157"
+                            ]
+                        },
+                        {
+                            "start_freq": 6745000000,
+                            "end_freq": 6765000000,
+                            "business_name": "161",
+                            "foot_note": [
+                                "6G161"
+                            ]
+                        },
+                        {
+                            "start_freq": 6765000000,
+                            "end_freq": 6785000000,
+                            "business_name": "165",
+                            "foot_note": [
+                                "6G165"
+                            ]
+                        },
+                        {
+                            "start_freq": 6785000000,
+                            "end_freq": 6805000000,
+                            "business_name": "169",
+                            "foot_note": [
+                                "6G169"
+                            ]
+                        },
+                        {
+                            "start_freq": 6805000000,
+                            "end_freq": 6825000000,
+                            "business_name": "173",
+                            "foot_note": [
+                                "6G173"
+                            ]
+                        },
+                        {
+                            "start_freq": 6825000000,
+                            "end_freq": 6845000000,
+                            "business_name": "177",
+                            "foot_note": [
+                                "6G177"
+                            ]
+                        },
+                        {
+                            "start_freq": 6845000000,
+                            "end_freq": 6865000000,
+                            "business_name": "181",
+                            "foot_note": [
+                                "6G181"
+                            ]
+                        },
+                        {
+                            "start_freq": 6865000000,
+                            "end_freq": 6885000000,
+                            "business_name": "185",
+                            "foot_note": [
+                                "6G185"
+                            ]
+                        },
+                        {
+                            "start_freq": 6885000000,
+                            "end_freq": 6905000000,
+                            "business_name": "189",
+                            "foot_note": [
+                                "6G189"
+                            ]
+                        },
+                        {
+                            "start_freq": 6905000000,
+                            "end_freq": 6925000000,
+                            "business_name": "193",
+                            "foot_note": [
+                                "6G193"
+                            ]
+                        },
+                        {
+                            "start_freq": 6925000000,
+                            "end_freq": 6945000000,
+                            "business_name": "197",
+                            "foot_note": [
+                                "6G197"
+                            ]
+                        },
+                        {
+                            "start_freq": 6945000000,
+                            "end_freq": 6965000000,
+                            "business_name": "201",
+                            "foot_note": [
+                                "6G201"
+                            ]
+                        },
+                        {
+                            "start_freq": 6965000000,
+                            "end_freq": 6985000000,
+                            "business_name": "205",
+                            "foot_note": [
+                                "6G205"
+                            ]
+                        },
+                        {
+                            "start_freq": 6985000000,
+                            "end_freq": 7005000000,
+                            "business_name": "209",
+                            "foot_note": [
+                                "6G209"
+                            ]
+                        },
+                        {
+                            "start_freq": 7005000000,
+                            "end_freq": 7025000000,
+                            "business_name": "213",
+                            "foot_note": [
+                                "6G213"
+                            ]
+                        },
+                        {
+                            "start_freq": 7025000000,
+                            "end_freq": 7045000000,
+                            "business_name": "217",
+                            "foot_note": [
+                                "6G217"
+                            ]
+                        },
+                        {
+                            "start_freq": 7045000000,
+                            "end_freq": 7065000000,
+                            "business_name": "221",
+                            "foot_note": [
+                                "6G221"
+                            ]
+                        },
+                        {
+                            "start_freq": 7065000000,
+                            "end_freq": 7085000000,
+                            "business_name": "225",
+                            "foot_note": [
+                                "6G225"
+                            ]
+                        },
+                        {
+                            "start_freq": 7085000000,
+                            "end_freq": 7105000000,
+                            "business_name": "229",
+                            "foot_note": [
+                                "6G229"
+                            ]
+                        },
+                        {
+                            "start_freq": 7105000000,
+                            "end_freq": 7125000000,
+                            "business_name": "233",
+                            "foot_note": [
+                                "6G233"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "color": "#cc99ff",
+                    "child_band_range": [
+                        {
+                            "start_freq": 5945000000,
+                            "end_freq": 5985000000,
+                            "business_name": "3",
+                            "foot_note": [
+                                "6G3"
+                            ]
+                        },
+                        {
+                            "start_freq": 5985000000,
+                            "end_freq": 6025000000,
+                            "business_name": "11",
+                            "foot_note": [
+                                "6G11"
+                            ]
+                        },
+                        {
+                            "start_freq": 6025000000,
+                            "end_freq": 6065000000,
+                            "business_name": "19",
+                            "foot_note": [
+                                "6G19"
+                            ]
+                        },
+                        {
+                            "start_freq": 6065000000,
+                            "end_freq": 6105000000,
+                            "business_name": "27",
+                            "foot_note": [
+                                "6G27"
+                            ]
+                        },
+                        {
+                            "start_freq": 6105000000,
+                            "end_freq": 6145000000,
+                            "business_name": "35",
+                            "foot_note": [
+                                "6G35"
+                            ]
+                        },
+                        {
+                            "start_freq": 6145000000,
+                            "end_freq": 6185000000,
+                            "business_name": "43",
+                            "foot_note": [
+                                "6G43"
+                            ]
+                        },
+                        {
+                            "start_freq": 6185000000,
+                            "end_freq": 6225000000,
+                            "business_name": "51",
+                            "foot_note": [
+                                "6G51"
+                            ]
+                        },
+                        {
+                            "start_freq": 6225000000,
+                            "end_freq": 6265000000,
+                            "business_name": "59",
+                            "foot_note": [
+                                "6G59"
+                            ]
+                        },
+                        {
+                            "start_freq": 6265000000,
+                            "end_freq": 6305000000,
+                            "business_name": "67",
+                            "foot_note": [
+                                "6G67"
+                            ]
+                        },
+                        {
+                            "start_freq": 6305000000,
+                            "end_freq": 6345000000,
+                            "business_name": "75",
+                            "foot_note": [
+                                "6G75"
+                            ]
+                        },
+                        {
+                            "start_freq": 6345000000,
+                            "end_freq": 6385000000,
+                            "business_name": "83",
+                            "foot_note": [
+                                "6G83"
+                            ]
+                        },
+                        {
+                            "start_freq": 6385000000,
+                            "end_freq": 6425000000,
+                            "business_name": "91",
+                            "foot_note": [
+                                "6G91"
+                            ]
+                        },
+                        {
+                            "start_freq": 6425000000,
+                            "end_freq": 6465000000,
+                            "business_name": "99",
+                            "foot_note": [
+                                "6G99"
+                            ]
+                        },
+                        {
+                            "start_freq": 6465000000,
+                            "end_freq": 6505000000,
+                            "business_name": "107",
+                            "foot_note": [
+                                "6G107"
+                            ]
+                        },
+                        {
+                            "start_freq": 6505000000,
+                            "end_freq": 6545000000,
+                            "business_name": "115",
+                            "foot_note": [
+                                "6G115"
+                            ]
+                        },
+                        {
+                            "start_freq": 6545000000,
+                            "end_freq": 6585000000,
+                            "business_name": "123",
+                            "foot_note": [
+                                "6G123"
+                            ]
+                        },
+                        {
+                            "start_freq": 6585000000,
+                            "end_freq": 6625000000,
+                            "business_name": "131",
+                            "foot_note": [
+                                "6G131"
+                            ]
+                        },
+                        {
+                            "start_freq": 6625000000,
+                            "end_freq": 6665000000,
+                            "business_name": "139",
+                            "foot_note": [
+                                "6G139"
+                            ]
+                        },
+                        {
+                            "start_freq": 6665000000,
+                            "end_freq": 6705000000,
+                            "business_name": "147",
+                            "foot_note": [
+                                "6G147"
+                            ]
+                        },
+                        {
+                            "start_freq": 6705000000,
+                            "end_freq": 6745000000,
+                            "business_name": "155",
+                            "foot_note": [
+                                "6G155"
+                            ]
+                        },
+                        {
+                            "start_freq": 6745000000,
+                            "end_freq": 6785000000,
+                            "business_name": "163",
+                            "foot_note": [
+                                "6G163"
+                            ]
+                        },
+                        {
+                            "start_freq": 6785000000,
+                            "end_freq": 6825000000,
+                            "business_name": "171",
+                            "foot_note": [
+                                "6G171"
+                            ]
+                        },
+                        {
+                            "start_freq": 6825000000,
+                            "end_freq": 6865000000,
+                            "business_name": "179",
+                            "foot_note": [
+                                "6G179"
+                            ]
+                        },
+                        {
+                            "start_freq": 6865000000,
+                            "end_freq": 6905000000,
+                            "business_name": "187",
+                            "foot_note": [
+                                "6G187"
+                            ]
+                        },
+                        {
+                            "start_freq": 6905000000,
+                            "end_freq": 6945000000,
+                            "business_name": "195",
+                            "foot_note": [
+                                "6G195"
+                            ]
+                        },
+                        {
+                            "start_freq": 6945000000,
+                            "end_freq": 6985000000,
+                            "business_name": "203",
+                            "foot_note": [
+                                "6G203"
+                            ]
+                        },
+                        {
+                            "start_freq": 6985000000,
+                            "end_freq": 7025000000,
+                            "business_name": "211",
+                            "foot_note": [
+                                "6G211"
+                            ]
+                        },
+                        {
+                            "start_freq": 7025000000,
+                            "end_freq": 7065000000,
+                            "business_name": "219",
+                            "foot_note": [
+                                "6G219"
+                            ]
+                        },
+                        {
+                            "start_freq": 7065000000,
+                            "end_freq": 7105000000,
+                            "business_name": "227",
+                            "foot_note": [
+                                "6G227"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "color": "#cc33ff",
+                    "child_band_range": [
+                        {
+                            "start_freq": 5945000000,
+                            "end_freq": 6025000000,
+                            "business_name": "7",
+                            "foot_note": [
+                                "6G7"
+                            ]
+                        },
+                        {
+                            "start_freq": 6025000000,
+                            "end_freq": 6105000000,
+                            "business_name": "23",
+                            "foot_note": [
+                                "6G23"
+                            ]
+                        },
+                        {
+                            "start_freq": 6105000000,
+                            "end_freq": 6185000000,
+                            "business_name": "39",
+                            "foot_note": [
+                                "6G39"
+                            ]
+                        },
+                        {
+                            "start_freq": 6185000000,
+                            "end_freq": 6265000000,
+                            "business_name": "55",
+                            "foot_note": [
+                                "6G55"
+                            ]
+                        },
+                        {
+                            "start_freq": 6265000000,
+                            "end_freq": 6345000000,
+                            "business_name": "71",
+                            "foot_note": [
+                                "6G71"
+                            ]
+                        },
+                        {
+                            "start_freq": 6345000000,
+                            "end_freq": 6425000000,
+                            "business_name": "87",
+                            "foot_note": [
+                                "6G87"
+                            ]
+                        },
+                        {
+                            "start_freq": 6425000000,
+                            "end_freq": 6505000000,
+                            "business_name": "103",
+                            "foot_note": [
+                                "6G103"
+                            ]
+                        },
+                        {
+                            "start_freq": 6505000000,
+                            "end_freq": 6585000000,
+                            "business_name": "119",
+                            "foot_note": [
+                                "6G119"
+                            ]
+                        },
+                        {
+                            "start_freq": 6585000000,
+                            "end_freq": 6665000000,
+                            "business_name": "135",
+                            "foot_note": [
+                                "6G135"
+                            ]
+                        },
+                        {
+                            "start_freq": 6665000000,
+                            "end_freq": 6745000000,
+                            "business_name": "151",
+                            "foot_note": [
+                                "6G151"
+                            ]
+                        },
+                        {
+                            "start_freq": 6745000000,
+                            "end_freq": 6825000000,
+                            "business_name": "167",
+                            "foot_note": [
+                                "6G167"
+                            ]
+                        },
+                        {
+                            "start_freq": 6825000000,
+                            "end_freq": 6905000000,
+                            "business_name": "183",
+                            "foot_note": [
+                                "6G183"
+                            ]
+                        },
+                        {
+                            "start_freq": 6905000000,
+                            "end_freq": 6985000000,
+                            "business_name": "199",
+                            "foot_note": [
+                                "6G199"
+                            ]
+                        },
+                        {
+                            "start_freq": 6985000000,
+                            "end_freq": 7065000000,
+                            "business_name": "215",
+                            "foot_note": [
+                                "6G215"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "color": "#9900cc",
+                    "child_band_range": [
+                        {
+                            "start_freq": 5945000000,
+                            "end_freq": 6105000000,
+                            "business_name": "15",
+                            "foot_note": [
+                                "6G15"
+                            ]
+                        },
+                        {
+                            "start_freq": 6105000000,
+                            "end_freq": 6265000000,
+                            "business_name": "47",
+                            "foot_note": [
+                                "6G47"
+                            ]
+                        },
+                        {
+                            "start_freq": 6265000000,
+                            "end_freq": 6425000000,
+                            "business_name": "79",
+                            "foot_note": [
+                                "6G79"
+                            ]
+                        },
+                        {
+                            "start_freq": 6425000000,
+                            "end_freq": 6585000000,
+                            "business_name": "111",
+                            "foot_note": [
+                                "6G111"
+                            ]
+                        },
+                        {
+                            "start_freq": 6585000000,
+                            "end_freq": 6745000000,
+                            "business_name": "143",
+                            "foot_note": [
+                                "6G143"
+                            ]
+                        },
+                        {
+                            "start_freq": 6745000000,
+                            "end_freq": 6905000000,
+                            "business_name": "175",
+                            "foot_note": [
+                                "6G175"
+                            ]
+                        },
+                        {
+                            "start_freq": 6905000000,
+                            "end_freq": 7065000000,
+                            "business_name": "207",
+                            "foot_note": [
+                                "6G207"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "notes_list": [
+        {
+            "note_id": "2.4G",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "支持802.11b、802.11g、802.11n（2.4G模式）、802.11ax（2.4G模式，WiFi6）等协议标准。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Supports protocol standards such as 802.11b, 802.11g, 802.11n (2.4G mode) and 802.11ax (2.4G mode, WiFi 6)."
+                }
+            ]
+        },
+        {
+            "note_id": "2.4G1",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道1，频段范围：2.402GHz - 2.422GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 1, frequency band range: 2.402GHz - 2.422GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "2.4G2",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道2，频段范围：2.407GHz - 2.427GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 2, frequency band range: 2.407GHz - 2.427GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "2.4G3",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道3，频段范围：2.412GHz - 2.432GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 3, frequency band range: 2.412GHz - 2.432GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "2.4G4",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道4，频段范围：2.417GHz - 2.437GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 4, frequency band range: 2.417GHz - 2.437GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "2.4G5",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道5，频段范围：2.422GHz - 2.442GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 5, frequency band range: 2.422GHz - 2.442GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "2.4G6",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道6，频段范围：2.427GHz - 2.447GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 6, frequency band range: 2.427GHz - 2.447GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "2.4G7",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道7，频段范围：2.432GHz - 2.452GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 7, frequency band range: 2.432GHz - 2.452GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "2.4G8",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道8，频段范围：2.437GHz - 2.457GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 8, frequency band range: 2.437GHz - 2.457GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "2.4G9",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道9，频段范围：2.442GHz - 2.462GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 9, frequency band range: 2.442GHz - 2.462GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "2.4G10",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道10，频段范围：2.447GHz - 2.467GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 10, frequency band range: 2.447GHz - 2.467GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "2.4G11",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道11，频段范围：2.452GHz - 2.472GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 11, frequency band range: 2.452GHz - 2.472GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "2.4G12",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道12，频段范围：2.457GHz - 2.477GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 12, frequency band range: 2.457GHz - 2.477GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "2.4G13",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道13，频段范围：2.462GHz - 2.482GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 13, frequency band range: 2.462GHz - 2.482GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "2.4G1+5",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道1+5，频段范围：2.402GHz - 2.442GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 1+5, frequency band range: 2.402GHz - 2.442GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "2.4G2+6",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道2+6，频段范围：2.407GHz - 2.447GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 2+6, frequency band range: 2.407GHz - 2.447GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "2.4G3+7",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道3+7，频段范围：2.412GHz - 2.452GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 3+7, frequency band range: 2.417GHz - 2.447GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "2.4G4+8",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道4+8，频段范围：2.417GHz - 2.457GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 4+8, frequency band range: 2.417GHz - 2.457GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "2.4G5+9",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道5+9，频段范围：2.422GHz - 2.462GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 5+9, frequency band range: 2.422GHz - 2.462GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "2.4G6+10",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道6+10，频段范围：2.427GHz - 2.467GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 6+10, frequency band range: 2.427GHz - 2.467GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "2.4G7+11",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道7+11，频段范围：2.432GHz - 2.472GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 7+11, frequency band range: 2.432GHz - 2.472GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "2.4G8+12",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道8+12，频段范围：2.437GHz - 2.477GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 8+12, frequency band range: 2.437GHz - 2.477GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "2.4G9+13",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道9+13，频段范围：2.442GHz - 2.482GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 9+13, frequency band range: 2.442GHz - 2.482GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.2G",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "支持802.11a、802.11n、802.11ac（WiFi5）、802.11ax（WiFi6）等协议标准。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Supports protocol standards such as 802.11a, 802.11n, 802.11ac (WiFi 5) and 802.11ax (WiFi 6)."
+                }
+            ]
+        },
+        {
+            "note_id": "5.2G36",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道36，频段范围：5.170GHz - 5.190GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 36, frequency band range: 5.170GHz - 5.190GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.2G38",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道38，频段范围：5.170GHz - 5.210GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 38, frequency band range: 5.170GHz - 5.210GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.2G40",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道40，频段范围：5.190GHz - 5.210GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 40, frequency band range: 5.190GHz - 5.210GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.2G42",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道42，频段范围：5.170GHz - 5.250GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 42, frequency band range: 5.170GHz - 5.250GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.2G44",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道44，频段范围：5.210GHz - 5.230GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 44, frequency band range: 5.210GHz - 5.230GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.2G46",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道46，频段范围：5.210GHz - 5.250GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 46, frequency band range: 5.210GHz - 5.250GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.2G48",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道48，频段范围：5.230GHz - 5.250GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 48, frequency band range: 5.230GHz - 5.250GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.2G50",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道50，频段范围：5.170GHz - 5.330GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 50, frequency band range: 5.170GHz - 5.330GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.2G52",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道52，频段范围：5.250GHz - 5.270GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 52, frequency band range: 5.250GHz - 5.270GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.2G54",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道54，频段范围：5.250GHz - 5.290GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 54, frequency band range: 5.250GHz - 5.290GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.2G56",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道56，频段范围：5.270GHz - 5.290GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 56, frequency band range: 5.270GHz - 5.290GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.2G58",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道58，频段范围：5.250GHz - 5.330GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 58, frequency band range: 5.250GHz - 5.330GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.2G60",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道60，频段范围：5.290GHz - 5.310GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 60, frequency band range: 5.290GHz - 5.310GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.2G62",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道62，频段范围：5.290GHz - 5.330GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 62, frequency band range: 5.290GHz - 5.330GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.2G64",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道64，频段范围：5.310GHz - 5.330GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 64, frequency band range: 5.310GHz - 5.330GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.5G",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "支持802.11a、802.11n、802.11ac（WiFi5）、802.11ax（WiFi6）等协议标准。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Supports protocol standards such as 802.11a, 802.11n, 802.11ac (WiFi 5) and 802.11ax (WiFi 6)."
+                }
+            ]
+        },
+        {
+            "note_id": "5.5G100",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道100，频段范围：5.490GHz - 5.510GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 100, frequency band range: 5.490GHz - 5.530GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.5G102",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道102，频段范围：5.490GHz - 5.530GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 102, frequency band range: 5.490GHz - 5.530GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.5G104",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道104，频段范围：5.510GHz - 5.530GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 104, frequency band range: 5.510GHz - 5.530GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.5G106",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道106，频段范围：5.490GHz - 5.570GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 106, frequency band range: 5.490GHz - 5.570GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.5G108",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道108，频段范围：5.530GHz - 5.550GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 108, frequency band range: 5.530GHz - 5.550GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.5G110",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道110，频段范围：5.530GHz - 5.570GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 110, frequency band range: 5.530GHz - 5.570GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.5G112",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道112，频段范围：5.550GHz - 5.570GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 112, frequency band range: 5.550GHz - 5.570GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.5G114",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道114，频段范围：5.490GHz - 5.650GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 114, frequency band range: 5.490GHz - 5.650GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.5G116",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道116，频段范围：5.570GHz - 5.590GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 116, frequency band range: 5.570GHz - 5.590GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.5G118",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道118，频段范围：5.570GHz - 5.610GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 118, frequency band range: 5.570GHz - 5.610GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.5G120",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道120，频段范围：5.590GHz - 5.610GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 120, frequency band range: 5.590GHz - 5.610GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.5G122",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道122，频段范围：5.570GHz - 5.650GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 122, frequency band range: 5.570GHz - 5.650GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.5G124",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道124，频段范围：5.610GHz - 5.630GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 124, frequency band range: 5.610GHz - 5.630GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.5G126",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道126，频段范围：5.610GHz - 5.650GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 126, frequency band range: 5.610GHz - 5.650GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.5G128",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道128，频段范围：5.630GHz - 5.650GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 128, frequency band range: 5.630GHz - 5.650GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.5G132",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道132，频段范围：5.650GHz - 5.670GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 132, frequency band range: 5.650GHz - 5.670GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.5G134",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道134，频段范围：5.650GHz - 5.690GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 134, frequency band range: 5.650GHz - 5.690GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.5G136",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道136，频段范围：5.670GHz - 5.690GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 136, frequency band range: 5.670GHz - 5.690GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.5G138",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道138，频段范围：5.650GHz - 5.730GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 138, frequency band range: 5.650GHz - 5.730GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.5G140",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道140，频段范围：5.690GHz - 5.710GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 140, frequency band range: 5.690GHz - 5.710GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.5G142",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道142，频段范围：5.690GHz - 5.730GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 142, frequency band range: 5.690GHz - 5.730GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.5G144",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道144，频段范围：5.710GHz - 5.730GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 144, frequency band range: 5.710GHz - 5.730GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.8G",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "支持802.11a、802.11n、802.11ac（WiFi5）、802.11ax（WiFi6）等协议标准。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Supports protocol standards such as 802.11a, 802.11n, 802.11ac (WiFi 5) and 802.11ax (WiFi 6)."
+                }
+            ]
+        },
+        {
+            "note_id": "5.8G149",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道149，频段范围：5.735GHz - 5.755GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 149, frequency band range: 5.735GHz - 5.755GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.8G151",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道151，频段范围：5.735GHz - 5.775GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 151, frequency band range: 5.735GHz - 5.775GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.8G153",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道153，频段范围：5.755GHz - 5.775GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 153, frequency band range: 5.755GHz - 5.775GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.8G155",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道155，频段范围：5.735GHz - 5.815GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 155, frequency band range: 5.735GHz - 5.815GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.8G157",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道157，频段范围：5.775GHz - 5.795GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 157, frequency band range: 5.775GHz - 5.795GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.8G159",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道159，频段范围：5.775GHz - 5.815GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 159, frequency band range: 5.775GHz - 5.815GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.8G161",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道161，频段范围：5.795GHz - 5.815GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 161, frequency band range: 5.795GHz - 5.815GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "5.8G165",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道165，频段范围：5.815GHz - 5.835GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 165, frequency band range: 5.815GHz - 5.835GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "支持802.11ax（WiFi6E）、802.11be（WiFi7）等协议标准。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Supports protocol standards such as 802.11ax (WiFi 6E) and 802.11be (WiFi 7)."
+                }
+            ]
+        },
+        {
+            "note_id": "6G1",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道1，频段范围：5.945GHz - 5.965GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 1, frequency band range: 5.945GHz - 5.965GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G3",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道3，频段范围：5.945GHz - 5.985GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 3, frequency band range: 5.945GHz - 5.985GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G5",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道5，频段范围：5.965GHz - 5.985GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 5, frequency band range: 5.965GHz - 5.985GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G7",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道7，频段范围：5.945GHz - 6.025GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 7, frequency band range: 5.945GHz - 6.025GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G9",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道9，频段范围：5.985GHz - 6.005GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 9, frequency band range: 5.985GHz - 6.005GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G11",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道11，频段范围：5.985GHz - 6.025GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 11, frequency band range: 5.985GHz - 6.025GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G13",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道13，频段范围：6.005GHz - 6.025GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 13, frequency band range: 6.005GHz - 6.025GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G15",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道15，频段范围：5.945GHz - 6.105GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 15, frequency band range: 5.945GHz - 6.105GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G17",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道17，频段范围：6.025GHz - 6.045GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 17, frequency band range: 6.025GHz - 6.045GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G19",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道19，频段范围：6.025GHz - 6.065GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 19, frequency band range: 6.025GHz - 6.065GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G21",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道21，频段范围：6.045GHz - 6.065GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 21, frequency band range: 6.045GHz - 6.065GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G23",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道23，频段范围：6.025GHz - 6.105GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 23, frequency band range: 6.025GHz - 6.105GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G25",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道25，频段范围：6.065GHz - 6.085GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 25, frequency band range: 6.065GHz - 6.085GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G27",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道27，频段范围：6.065GHz - 6.105GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 27, frequency band range: 6.065GHz - 6.105GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G29",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道29，频段范围：6.085GHz - 6.105GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 29, frequency band range: 6.085GHz - 6.105GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G33",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道33，频段范围：6.105GHz - 6.125GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 33, frequency band range: 6.105GHz - 6.125GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G35",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道35，频段范围：6.105GHz - 6.145GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 35, frequency band range: 6.105GHz - 6.145GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G37",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道37，频段范围：6.125GHz - 6.145GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 37, frequency band range: 6.125GHz - 6.145GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G39",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道39，频段范围：6.105GHz - 6.185GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 39, frequency band range: 6.105GHz - 6.185GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G41",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道41，频段范围：6.145GHz - 6.165GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 41, frequency band range: 6.145GHz - 6.165GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G43",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道43，频段范围：6.145GHz - 6.185GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 43, frequency band range: 6.145GHz - 6.185GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G45",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道45，频段范围：6.165GHz - 6.185GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 45, frequency band range: 6.165GHz - 6.185GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G47",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道47，频段范围：6.105GHz - 6.265GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 47, frequency band range: 6.105GHz - 6.265GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G49",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道49，频段范围：6.185GHz - 6.205GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 49, frequency band range: 6.185GHz - 6.205GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G51",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道51，频段范围：6.185GHz - 6.225GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 51, frequency band range: 6.185GHz - 6.225GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G53",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道53，频段范围：6.205GHz - 6.225GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 53, frequency band range: 6.205GHz - 6.225GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G55",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道55，频段范围：6.185GHz - 6.265GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 55, frequency band range: 6.185GHz - 6.265GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G57",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道57，频段范围：6.225GHz - 6.245GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 57, frequency band range: 6.225GHz - 6.245GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G59",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道59，频段范围：6.225GHz - 6.265GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 59, frequency band range: 6.225GHz - 6.265GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G61",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道61，频段范围：6.245GHz - 6.265GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 61, frequency band range: 6.245GHz - 6.265GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G65",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道65，频段范围：6.265GHz - 6.285GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 65, frequency band range: 6.265GHz - 6.285GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G67",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道67，频段范围：6.265GHz - 6.305GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 67, frequency band range: 6.265GHz - 6.305GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G69",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道69，频段范围：6.285GHz - 6.305GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 69, frequency band range: 6.285GHz - 6.305GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G71",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道71，频段范围：6.265GHz - 6.345GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 71, frequency band range: 6.265GHz - 6.345GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G73",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道73，频段范围：6.305GHz - 6.325GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 73, frequency band range: 6.305GHz - 6.325GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G75",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道75，频段范围：6.305GHz - 6.345GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 75, frequency band range: 6.305GHz - 6.345GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G77",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道77，频段范围：6.325GHz - 6.345GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 77, frequency band range: 6.325GHz - 6.345GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G79",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道79，频段范围：6.265GHz - 6.425GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 79, frequency band range: 6.265GHz - 6.425GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G81",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道81，频段范围：6.345GHz - 6.365GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 81, frequency band range: 6.345GHz - 6.365GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G83",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道83，频段范围：6.345GHz - 6.385GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 83, frequency band range: 6.345GHz - 6.385GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G85",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道85，频段范围：6.365GHz - 6.385GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 85, frequency band range: 6.365GHz - 6.385GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G87",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道87，频段范围：6.345GHz - 6.425GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 87, frequency band range: 6.345GHz - 6.425GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G89",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道89，频段范围：6.385GHz - 6.405GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 89, frequency band range: 6.385GHz - 6.405GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G91",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道91，频段范围：6.385GHz - 6.425GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 91, frequency band range: 6.385GHz - 6.425GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G93",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道93，频段范围：6.405GHz - 6.425GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 93, frequency band range: 6.405GHz - 6.425GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G97",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道97，频段范围：6.425GHz - 6.445GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 97, frequency band range: 6.425GHz - 6.445GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G99",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道99，频段范围：6.425GHz - 6.465GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 99, frequency band range: 6.425GHz - 6.465GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G101",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道101，频段范围：6.445GHz - 6.465GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 101, frequency band range: 6.445GHz - 6.465GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G103",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道103，频段范围：6.425GHz - 6.505GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 103, frequency band range: 6.425GHz - 6.505GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G105",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道105，频段范围：6.465GHz - 6.485GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 105, frequency band range: 6.465GHz - 6.485GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G107",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道107，频段范围：6.465GHz - 6.505GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 107, frequency band range: 6.465GHz - 6.505GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G109",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道109，频段范围：6.485GHz - 6.505GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 109, frequency band range: 6.485GHz - 6.505GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G111",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道111，频段范围：6.425GHz - 6.585GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 111, frequency band range: 6.425GHz - 6.585GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G113",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道113，频段范围：6.505GHz - 6.525GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 113, frequency band range: 6.505GHz - 6.525GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G115",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道115，频段范围：6.505GHz - 6.545GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 115, frequency band range: 6.505GHz - 6.545GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G117",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道117，频段范围：6.525GHz - 6.545GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 117, frequency band range: 6.525GHz - 6.545GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G119",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道119，频段范围：6.505GHz - 6.585GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 119, frequency band range: 6.505GHz - 6.585GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G121",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道121，频段范围：6.545GHz - 6.565GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 121, frequency band range: 6.545GHz - 6.565GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G123",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道123，频段范围：6.545GHz - 6.585GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 123, frequency band range: 6.545GHz - 6.585GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G125",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道125，频段范围：6.565GHz - 6.585GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 125, frequency band range: 6.565GHz - 6.585GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G129",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道129，频段范围：6.585GHz - 6.605GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 129, frequency band range: 6.585GHz - 6.605GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G131",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道131，频段范围：6.585GHz - 6.625GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 131, frequency band range: 6.585GHz - 6.625GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G133",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道133，频段范围：6.605GHz - 6.625GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 133, frequency band range: 6.605GHz - 6.625GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G135",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道135，频段范围：6.585GHz - 6.665GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 135, frequency band range: 6.585GHz - 6.665GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G137",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道137，频段范围：6.625GHz - 6.645GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 137, frequency band range: 6.625GHz - 6.645GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G139",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道139，频段范围：6.625GHz - 6.665GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 139, frequency band range: 6.625GHz - 6.665GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G141",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道141，频段范围：6.645GHz - 6.665GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 141, frequency band range: 6.645GHz - 6.665GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G143",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道143，频段范围：6.585GHz - 6.745GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 143, frequency band range: 6.585GHz - 6.745GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G145",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道145，频段范围：6.665GHz - 6.685GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 145, frequency band range: 6.665GHz - 6.685GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G147",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道147，频段范围：6.665GHz - 6.705GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 147, frequency band range: 6.665GHz - 6.705GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G149",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道149，频段范围：6.685GHz - 6.705GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 149, frequency band range: 6.685GHz - 6.705GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G151",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道151，频段范围：6.665GHz - 6.745GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 151, frequency band range: 6.665GHz - 6.745GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G153",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道153，频段范围：6.705GHz - 6.725GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 153, frequency band range: 6.705GHz - 6.725GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G155",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道155，频段范围：6.705GHz - 6.745GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 155, frequency band range: 6.705GHz - 6.745GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G157",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道157，频段范围：6.725GHz - 6.745GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 157, frequency band range: 6.725GHz - 6.745GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G161",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道161，频段范围：6.745GHz - 6.765GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 161, frequency band range: 6.745GHz - 6.765GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G163",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道163，频段范围：6.745GHz - 6.785GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 163, frequency band range: 6.745GHz - 6.785GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G165",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道165，频段范围：6.765GHz - 6.785GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 165, frequency band range: 6.765GHz - 6.785GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G167",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道167，频段范围：6.745GHz - 6.825GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 167, frequency band range: 6.745GHz - 6.825GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G169",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道169，频段范围：6.785GHz - 6.805GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 169, frequency band range: 6.785GHz - 6.805GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G171",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道171，频段范围：6.785GHz - 6.825GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 171, frequency band range: 6.785GHz - 6.825GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G173",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道173，频段范围：6.805GHz - 6.825GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 173, frequency band range: 6.805GHz - 6.825GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G175",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道175，频段范围：6.745GHz - 6.905GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 175, frequency band range: 6.745GHz - 6.905GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G177",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道177，频段范围：6.825GHz - 6.845GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 177, frequency band range: 6.825GHz - 6.845GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G179",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道179，频段范围：6.825GHz - 6.865GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 179, frequency band range: 6.825GHz - 6.865GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G181",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道181，频段范围：6.845GHz - 6.865GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 181, frequency band range: 6.845GHz - 6.865GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G183",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道183，频段范围：6.825GHz - 6.905GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 183, frequency band range: 6.825GHz - 6.905GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G185",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道185，频段范围：6.865GHz - 6.885GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 185, frequency band range: 6.865GHz - 6.885GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G187",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道187，频段范围：6.865GHz - 6.905GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 187, frequency band range: 6.865GHz - 6.905GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G189",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道189，频段范围：6.885GHz - 6.905GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 189, frequency band range: 6.885GHz - 6.905GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G193",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道193，频段范围：6.905GHz - 6.925GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 193, frequency band range: 6.905GHz - 6.925GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G195",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道195，频段范围：6.905GHz - 6.945GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 195, frequency band range: 6.905GHz - 6.945GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G197",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道197，频段范围：6.925GHz - 6.945GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 197, frequency band range: 6.925GHz - 6.945GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G199",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道199，频段范围：6.905GHz - 6.985GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 199, frequency band range: 6.905GHz - 6.985GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G201",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道201，频段范围：6.945GHz - 6.965GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 201, frequency band range: 6.945GHz - 6.965GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G203",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道203，频段范围：6.945GHz - 6.985GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 203, frequency band range: 6.945GHz - 6.985GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G205",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道205，频段范围：6.965GHz - 6.985GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 205, frequency band range: 6.965GHz - 6.985GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G207",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道207，频段范围：6.905GHz - 7.065GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 207, frequency band range: 6.905GHz - 7.065GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G209",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道209，频段范围：6.985GHz - 7.005GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 209, frequency band range: 6.985GHz - 7.005GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G211",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道211，频段范围：6.985GHz - 7.025GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 211, frequency band range: 6.985GHz - 7.025GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G213",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道213，频段范围：7.005GHz - 7.025GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 213, frequency band range: 7.005GHz - 7.025GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G215",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道215，频段范围：6.985GHz - 7.065GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 215, frequency band range: 6.985GHz - 7.065GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G217",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道217，频段范围：7.025GHz - 7.045GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 217, frequency band range: 7.025GHz - 7.045GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G219",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道219，频段范围：7.025GHz - 7.065GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 219, frequency band range: 7.025GHz - 7.065GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G221",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道221，频段范围：7.045GHz - 7.065GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 221, frequency band range: 7.045GHz - 7.065GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G225",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道225，频段范围：7.065GHz - 7.085GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 225, frequency band range: 7.065GHz - 7.085GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G229",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道229，频段范围：7.085GHz - 7.105GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 229, frequency band range: 7.085GHz - 7.105GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G233",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道233，频段范围：7.105GHz - 7.125GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 233, frequency band range: 7.105GHz - 7.125GHz."
+                }
+            ]
+        },
+        {
+            "note_id": "6G227",
+            "language": [
+                {
+                    "code": 2052,
+                    "content": "信道227，频段范围：7.065GHz - 7.105GHz。"
+                },
+                {
+                    "code": 1033,
+                    "content": "Channel 227, frequency band range: 7.065GHz - 7.105GHz."
+                }
+            ]
+        }
+    ]
+}

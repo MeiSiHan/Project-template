@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas 折线图示例</title>
+    <style>
+        canvas {
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="lineChart" width="800" height="400"></canvas>
+<div id="tooltip" style="position: absolute; background: rgba(255, 255, 255, 0.8); border: 1px solid #ccc; padding: 5px; display: none;"></div>
+
+<!-- <script>
+    class LineChart {
+        constructor(canvasId, data, options = {}) {
+            this.canvas = document.getElementById(canvasId);
+            this.ctx = this.canvas.getContext('2d');
+            this.data = data;
+
+            // 设置默认选项
+            this.options = {
+                yMin: options.yMin || 10, // Y 轴最小值
+                yMax: options.yMax || 100, // Y 轴最大值
+                margins: options.margins || { top: 20, right: 20, bottom: 30, left: 40 }, // 边距参数
+                gridColor: options.gridColor || '#e0e0e0', // 网格线颜色
+                labels: options.labels || ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'], // 星期标签
+                xLabelAngle: options.xLabelAngle || 0, // X 轴标签旋转角度
+                logScale: options.logScale ||((x) => x) // 默认使用线性映射, // 对数映射函数是否使用对数映射
+            };
+
+            this.width = this.canvas.width - this.options.margins.left - this.options.margins.right;
+            this.height = this.canvas.height - this.options.margins.top - this.options.margins.bottom;
+
+            // 绑定鼠标移动事件
+            this.canvas.addEventListener('mousemove', this.handleMouseMove.bind(this));
+            this.canvas.addEventListener('mouseleave', this.hideTooltip.bind(this));
+
+            this.draw();
+        }
+
+        draw() {
+            this.clearCanvas();
+            this.drawGrid();
+            this.drawAxes();
+            this.drawClippedLine(); // 裁剪绘制折线
+            this.drawLabels(); // 绘制标签
+        }
+
+        clearCanvas() {
+            this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        }
+
+        drawGrid() {
+            const stepX = this.width / (this.data.length - 1);
+            const stepY = this.height / 5;
+
+            // 绘制水平网格线
+            for (let i = 0; i <= 5; i++) {
+                const y = this.options.margins.top + stepY * i;
+                this.ctx.strokeStyle = this.options.gridColor; // 使用网格线颜色
+                this.ctx.beginPath();
+                this.ctx.moveTo(this.options.margins.left, y);
+                this.ctx.lineTo(this.canvas.width - this.options.margins.right, y);
+                this.ctx.stroke();
+            }
+
+            // 绘制垂直网格线
+            for (let i = 0; i < this.data.length; i++) {
+                const x = this.options.margins.left + stepX * i;
+                this.ctx.strokeStyle = this.options.gridColor; // 使用网格线颜色
+                this.ctx.beginPath();
+                this.ctx.moveTo(x, this.options.margins.top);
+                this.ctx.lineTo(x, this.canvas.height - this.options.margins.bottom);
+                this.ctx.stroke();
+            }
+        }
+
+        drawAxes() {
+            // X 轴
+            this.ctx.strokeStyle = '#000';
+            this.ctx.beginPath();
+            this.ctx.moveTo(this.options.margins.left, this.canvas.height - this.options.margins.bottom);
+            this.ctx.lineTo(this.canvas.width - this.options.margins.right, this.canvas.height - this.options.margins.bottom);
+            this.ctx.stroke();
+
+            // Y 轴
+            this.ctx.beginPath();
+            this.ctx.moveTo(this.options.margins.left, this.options.margins.top);
+            this.ctx.lineTo(this.options.margins.left, this.canvas.height - this.options.margins.bottom);
+            this.ctx.stroke();
+        }
+
+        drawClippedLine() {
+            const stepX = this.width / (this.data.length - 1);
+            this.ctx.save();
+            // 创建一个路径并进行裁剪
+            this.ctx.beginPath();
+            this.ctx.rect(
+                this.options.margins.left,
+                this.options.margins.top,
+                this.width,
+                this.height
+            );
+            this.ctx.clip(); // 裁剪区域
+
+            this.ctx.strokeStyle = '#ff4500';
+            this.ctx.lineWidth = 2;
+
+            // 绘制折线
+            this.ctx.beginPath();
+            for (let i = 0; i < this.data.length; i++) {
+                const x = this.options.margins.left + stepX * i;
+                const y = this.canvas.height - this.options.margins.bottom - this.mapY(this.data[i]);
+                console.log(x, y);
+                if (i === 0) {
+                    this.ctx.moveTo(x, y); // 移动到起点
+                } else {
+                    this.ctx.lineTo(x, y); // 绘制线段
+                }
+            }
+            this.ctx.stroke(); // 绘制折线
+
+            this.ctx.restore(); // 恢复绘图状态
+        }
+
+        mapY(value) {
+            // 将数据值映射到指定的 Y 轴范围
+            // const range = this.options.yMax - this.options.yMin;
+            // return ((value - this.options.yMin) / range) * this.height;
+
+            let mappedValue = value;
+            // 如果启用对数映射
+            if (this.options.logScale) {
+                //mappedValue = Math.log(value) / Math.log(this.options.yMax); // 对数映射
+                mappedValue = ((Math.log(value) - Math.log(this.options.yMin)) / (Math.log(this.options.yMax) - Math.log(this.options.yMin))) * this.height; // 对数映射
+            } else {
+                const range = this.options.yMax - this.options.yMin;
+                mappedValue = ((value - this.options.yMin) / range) * this.height; // 线性映射
+            }
+            return mappedValue;
+
+
+
+            // 根据提供的 logScale 函数进行映射
+            // const scaledValue = this.options.logScale(value);
+            // const range = this.options.yMax - this.options.yMin;
+            // return ((scaledValue - this.options.yMin) / range) * this.height; // 线性映射
+        }
+
+        drawLabels() {
+            const stepX = this.width / (this.data.length - 1);
+            const stepY = this.height / 5;
+
+            // 绘制 X 轴标签
+            for (let i = 0; i < this.options.labels.length; i++) {
+                const x = this.options.margins.left + stepX * i;
+                const y = this.canvas.height - this.options.margins.bottom + 20;
+
+                // this.ctx.save(); // 保存当前绘图状态
+                // this.ctx.translate(x, y); // 移动到标签位置
+                //this.ctx.rotate(this.options.xLabelAngle * Math.PI / 180); // 旋转标签
+                this.ctx.textAlign = 'center';
+                this.ctx.fillText(this.options.labels[i],x, y); // 绘制标签
+                //this.ctx.restore(); // 恢复绘图状态
+            }
+
+            // 绘制 Y 轴标签
+            // for (let i = 0; i <= 5; i++) {
+            //     const yValue = this.options.yMin + (this.options.yMax - this.options.yMin) / 5 * i;
+            //     const y = this.canvas.height - this.options.margins.bottom - stepY * i; // 修改后的 Y 轴标签计算
+            //     this.ctx.textAlign = 'middle';
+            //     this.ctx.fillText(Math.round(yValue), this.options.margins.left - 30, y);
+            // }
+            // 绘制 Y 轴标签
+            for (let i = 0; i <= 5; i++) {
+                let yValue = this.options.yMin + (this.options.yMax - this.options.yMin) / 5 * i;
+                if (this.options.logScale) {
+                    yValue = Math.exp((i / 5) * Math.log(this.options.yMax)); // 对数轴标签计算
+                }
+                const y = this.canvas.height - this.options.margins.bottom - stepY * i; // 修改后的 Y 轴标签计算
+
+                this.ctx.textAlign = 'middle';
+                this.ctx.fillText(Math.round(yValue), this.options.margins.left - 30, y);
+            }
+        }
+
+        handleMouseMove(event) {
+            const rect = this.canvas.getBoundingClientRect();
+            const mouseX = event.clientX - rect.left;
+            const mouseY = event.clientY - rect.top;
+
+            // 计算 X 轴对应的索引
+            const stepX = this.width / (this.data.length - 1);
+            const index = Math.floor((mouseX - this.options.margins.left) / stepX);
+
+            // 检查索引有效性
+            if (index >= 0 && index < this.data.length) {
+                const xValue = this.options.labels[index];
+                const yValue = this.data[index];
+
+                this.showTooltip(mouseX, mouseY, xValue, yValue);
+            } else {
+                this.hideTooltip();
+            }
+        }
+
+        showTooltip(mouseX, mouseY, xValue, yValue) {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.style.left = `${mouseX + 10}px`;
+            tooltip.style.top = `${mouseY + 10}px`;
+            tooltip.innerHTML = `X: ${xValue}, Y: ${yValue}`;
+            tooltip.style.display = 'block';
+        }
+
+        hideTooltip() {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.style.display = 'none';
+        }
+    }
+
+    // 测试数据和选项
+    const data = [120, 132, 101, 134, 90, 230, 10]; // 示例数据
+    const options = {
+        yMin: 10,
+        yMax: 200,
+        margins: { top: 30, right: 20, bottom: 40, left: 50 }, // 自定义边距
+        gridColor: '#b0c4de', // 网格线颜色设置为 LightSteelBlue
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'], // 自定义标签
+        xLabelAngle: 0, // 设置 X 轴标签的旋转角度
+       logScale:true, // 使用对数刻度
+    };
+
+    const lineChart = new LineChart('lineChart', data, options); // 创建折线图实例
+</script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    class LineChart {
+    constructor(canvasId, data, options = {}) {
+        // 获取画布和上下文
+        this.canvas = document.getElementById(canvasId);
+        this.ctx = this.canvas.getContext('2d');
+        this.data = data;
+
+        // 默认选项
+        this.options = {
+            yMin: options.yMin || 0, // Y 轴最小值（对数缩放不能为 0）
+            yMax: options.yMax || 100, // Y 轴最大值
+            margins: options.margins || { top: 20, right: 20, bottom: 30, left: 40 }, // 边距参数
+            gridColor: options.gridColor || '#e0e0e0', // 网格线颜色
+            labels: options.labels || ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'], // 日期标签
+            xLabelAngle: options.xLabelAngle || 0, // X 轴标签旋转角度
+            yMappingFunc: options.yMappingFunc||((x) => x), // 自定义 Y 轴映射函数
+        };
+
+        // 计算可绘制区域的宽度和高度
+        this.width = this.canvas.width - this.options.margins.left - this.options.margins.right;
+        this.height = this.canvas.height - this.options.margins.top - this.options.margins.bottom;
+
+        // 绑定鼠标移动事件
+        this.canvas.addEventListener('mousemove', this.handleMouseMove.bind(this));
+        this.canvas.addEventListener('mouseleave', this.hideTooltip.bind(this));
+
+        this.draw(); // 绘制图表
+    }
+
+    draw() {
+        this.clearCanvas(); // 清空画布
+        this.drawGrid(); // 绘制网格
+        this.drawAxes(); // 绘制坐标轴
+        this.drawClippedLine(); // 绘制裁剪的折线
+        this.drawLabels(); // 绘制标签
+    }
+
+    clearCanvas() {
+        // 清空画布
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    }
+
+    drawGrid() {
+        const stepX = this.width / (this.data.length - 1); // 计算 X 轴步长
+        const stepY = this.height / 5; // 计算 Y 轴步长
+
+        // 绘制水平网格线
+        for (let i = 0; i <= 5; i++) {
+            const y = this.options.margins.top + stepY * i;
+            this.ctx.strokeStyle = this.options.gridColor; // 设置网格线颜色
+            this.ctx.beginPath();
+            this.ctx.moveTo(this.options.margins.left, y);
+            this.ctx.lineTo(this.canvas.width - this.options.margins.right, y);
+            this.ctx.stroke();
+        }
+
+        // 绘制垂直网格线
+        for (let i = 0; i < this.data.length; i++) {
+            const x = this.options.margins.left + stepX * i;
+            this.ctx.strokeStyle = this.options.gridColor; // 设置网格线颜色
+            this.ctx.beginPath();
+            this.ctx.moveTo(x, this.options.margins.top);
+            this.ctx.lineTo(x, this.canvas.height - this.options.margins.bottom);
+            this.ctx.stroke();
+        }
+    }
+
+    drawAxes() {
+        // 绘制 X 轴
+        this.ctx.strokeStyle = '#000';
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.options.margins.left, this.canvas.height - this.options.margins.bottom);
+        this.ctx.lineTo(this.canvas.width - this.options.margins.right, this.canvas.height - this.options.margins.bottom);
+        this.ctx.stroke();
+
+        // 绘制 Y 轴
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.options.margins.left, this.options.margins.top);
+        this.ctx.lineTo(this.options.margins.left, this.canvas.height - this.options.margins.bottom);
+        this.ctx.stroke();
+    }
+
+    drawClippedLine() {
+        const stepX = this.width / (this.data.length - 1); // 计算 X 轴步长
+        this.ctx.save();
+        // 创建路径并裁剪
+        this.ctx.beginPath();
+        this.ctx.rect(
+            this.options.margins.left,
+            this.options.margins.top,
+            this.width,
+            this.height
+        );
+        this.ctx.clip(); // 裁剪区域
+
+        this.ctx.strokeStyle = '#ff4500'; // 设置折线颜色
+        this.ctx.lineWidth = 2; // 设置折线宽度
+
+        // 绘制折线
+        this.ctx.beginPath();
+        for (let i = 0; i < this.data.length; i++) {
+            const x = this.options.margins.left + stepX * i; // 计算 X 坐标
+            const y = this.canvas.height - this.options.margins.bottom - this.mapY(this.data[i]); // 计算 Y 坐标
+            console.log("坐标",x, y);
+            if (i === 0) {
+                this.ctx.moveTo(x, y); // 移动到起点
+            } else {
+                this.ctx.lineTo(x, y); // 绘制线段
+            }
+        }
+        this.ctx.stroke(); // 绘制折线
+
+        this.ctx.restore(); // 恢复绘图状态
+    }
+
+    mapY(value) {
+        // 如果提供了自定义的 Y 映射函数，调用它
+        // if (typeof this.options.yMappingFunc === 'function') {
+        //     let y=this.options.yMappingFunc(value, this.options.yMin, this.options.yMax, this.height)
+        //     console.log('使用自定义的 Y 映射函数',y);
+        //     return y;
+        // }
+
+        // 如果没有提供自定义函数，则默认使用线性映射
+        const range = this.options.yMax - this.options.yMin;
+        return ((value - this.options.yMin) / range) * this.height; // 线性映射
+    }
+
+    drawLabels() {
+        const stepX = this.width / (this.data.length - 1); // 计算 X 轴步长
+        const stepY = this.height / 5; // 计算 Y 轴步长
+
+        // 绘制 X 轴标签
+        for (let i = 0; i < this.options.labels.length; i++) {
+            const x = this.options.margins.left + stepX * i; // 计算标签的 X 坐标
+            const y = this.canvas.height - this.options.margins.bottom + 20; // 计算标签的 Y 坐标
+
+            this.ctx.save(); // 保存当前绘图状态
+            this.ctx.translate(x, y); // 移动到标签位置
+            this.ctx.rotate(this.options.xLabelAngle * Math.PI / 180); // 旋转标签
+            this.ctx.fillText(this.options.labels[i], 0, 0); // 绘制标签
+            this.ctx.restore(); // 恢复绘图状态
+        }
+
+        // 绘制 Y 轴标签
+        for (let i = 0; i <= 5; i++) {
+            let yValue = this.options.yMin + (this.options.yMax - this.options.yMin) * (i / 5); // 计算 Y 轴标签值
+            yValue = this.options.yMappingFunc(yValue)
+            const y = this.canvas.height - this.options.margins.bottom - stepY * i; // 计算 Y 轴标签的 Y 坐标
+            this.ctx.fillText(Math.floor(yValue*100)/100, this.options.margins.left - 30, y); // 绘制 Y 轴标签
+        }
+    }
+
+    handleMouseMove(event) {
+        const rect = this.canvas.getBoundingClientRect(); // 获取画布的边界矩形
+        const mouseX = event.clientX - rect.left; // 计算鼠标的 X 坐标
+        const mouseY = event.clientY - rect.top; // 计算鼠标的 Y 坐标
+
+        // 计算对应的 X 轴索引
+        const stepX = this.width / (this.data.length - 1);
+        const index = Math.floor((mouseX - this.options.margins.left) / stepX);
+
+        // 检查索引的有效性
+        if (index >= 0 && index < this.data.length) {
+            const xValue = this.options.labels[index];
+            const yValue = this.data[index];
+
+            this.showTooltip(mouseX, mouseY, xValue, yValue); // 显示工具提示
+        } else {
+            this.hideTooltip(); // 隐藏工具提示
+        }
+    }
+
+    showTooltip(mouseX, mouseY, xValue, yValue) {
+        const tooltip = document.getElementById('tooltip'); // 获取工具提示元素
+        tooltip.style.display = 'block'; // 显示工具提示
+        tooltip.style.left = `${mouseX + 10}px`; // 设置工具提示的 X 位置
+        tooltip.style.top = `${mouseY + 10}px`; // 设置工具提示的 Y 位置
+        yValue=this.options.yMappingFunc(yValue)
+        yValue=Math.floor(yValue*100)/100
+        tooltip.innerHTML = `X: ${xValue}<br>Y: ${yValue}`; // 设置工具提示内容
+    }
+
+    hideTooltip() {
+        const tooltip = document.getElementById('tooltip');
+        tooltip.style.display = 'none';
+    }
+}
+
+// Example usage
+const data = [12, 20, 30, 108, 50, 60, 100];
+const options = {
+    yMin: 10,
+    yMax: 200,
+    margins: { top: 20, right: 20, bottom: 30, left: 40 },
+    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    yMappingFunc: (value, yMin, yMax, height) => {
+        // Custom mapping function: Quadratic scaling
+        //return ((Math.pow(value, 2) - Math.pow(yMin, 2)) / (Math.pow(yMax, 2) - Math.pow(yMin, 2))) * height;
+        // const range = Math.log10(yMax) - Math.log10(yMin);
+        // return ((Math.log10(value) - Math.log10(yMin)) / range) * height; // 对数映射
+        return Math.log(value) // 对数映射
+        //return value-107
+        //return value
+    }
+};
+
+const lineChart = new LineChart('lineChart', data, options);
+
+</script>
+</body>
+</html>

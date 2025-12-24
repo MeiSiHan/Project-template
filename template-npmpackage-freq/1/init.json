@@ -1,0 +1,4896 @@
+{
+    "operate_data": {
+        "data_chart": {
+            "band_list": [
+                {
+                    "color": "#a38454",
+                    "end_freq": 30000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "甚低频VLF"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Very Low Frequency(VLF)"
+                        }
+                    ],
+                    "start_freq": 3000
+                },
+                {
+                    "color": "#a54075",
+                    "end_freq": 300000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "低频LF"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "​Low Frequency(LF)​"
+                        }
+                    ],
+                    "start_freq": 30000
+                },
+                {
+                    "color": "#49285a",
+                    "end_freq": 3000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "中频MF"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Medium Frequency(MF)"
+                        }
+                    ],
+                    "start_freq": 300000
+                },
+                {
+                    "color": "#dcffaf",
+                    "end_freq": 30000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "高频HF"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "High Frequency(HF)"
+                        }
+                    ],
+                    "start_freq": 3000000
+                },
+                {
+                    "color": "#b71ea3",
+                    "end_freq": 300000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "甚高频VHF"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Very High Frequency(VHF)"
+                        }
+                    ],
+                    "start_freq": 30000000
+                },
+                {
+                    "color": "#158f8b",
+                    "end_freq": 3000000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "特高频UHF"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Ultra High Frequency(UHF)"
+                        }
+                    ],
+                    "start_freq": 300000000
+                },
+                {
+                    "color": "#249c26",
+                    "end_freq": 30000000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "超高频SHF"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Super High Frequency(SHF)"
+                        }
+                    ],
+                    "start_freq": 3000000000
+                },
+                {
+                    "color": "#523ed7",
+                    "end_freq": 300000000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "极高频EHF"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Extremely High Frequency(EHF)"
+                        }
+                    ],
+                    "start_freq": 30000000000
+                },
+                {
+                    "color": "#ebc22d",
+                    "end_freq": 2000000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "雷达-L波段"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Radar-L Band"
+                        }
+                    ],
+                    "start_freq": 1000000000
+                },
+                {
+                    "color": "#ebc22d",
+                    "end_freq": 4000000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "雷达-S波段"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Radar-S Band"
+                        }
+                    ],
+                    "start_freq": 2000000000
+                },
+                {
+                    "color": "#ebc22d",
+                    "end_freq": 8000000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "雷达-C波段"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Radar-C Band"
+                        }
+                    ],
+                    "start_freq": 4000000000
+                },
+                {
+                    "color": "#ebc22d",
+                    "end_freq": 12400000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "雷达-X波段"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Radar-X Band"
+                        }
+                    ],
+                    "start_freq": 8000000000
+                },
+                {
+                    "color": "#ebc22d",
+                    "end_freq": 18000000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "雷达-Ku波段"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Radar-Ku Band"
+                        }
+                    ],
+                    "start_freq": 12400000000
+                },
+                {
+                    "color": "#ebc22d",
+                    "end_freq": 26500000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "雷达-a波段"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Radar-K Band"
+                        }
+                    ],
+                    "start_freq": 18000000000
+                },
+                {
+                    "color": "#ebc22d",
+                    "end_freq": 40000000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "雷达-Ka波段"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Radar-Ka Band"
+                        }
+                    ],
+                    "start_freq": 26500000000
+                },
+                {
+                    "color": "#ebc22d",
+                    "end_freq": 50000000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "雷达-Q波段"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Radar-Q Band"
+                        }
+                    ],
+                    "start_freq": 33000000000
+                },
+                {
+                    "color": "#ebc22d",
+                    "end_freq": 60000000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "雷达-U波段"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Radar-U Band"
+                        }
+                    ],
+                    "start_freq": 40000000000
+                },
+                {
+                    "color": "#ebc22d",
+                    "end_freq": 70000000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "雷达-V波段"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Radar-V Band"
+                        }
+                    ],
+                    "start_freq": 50000000000
+                },
+                {
+                    "color": "#ebc22d",
+                    "end_freq": 90000000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "雷达-E波段"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Radar-E Band"
+                        }
+                    ],
+                    "start_freq": 60000000000
+                },
+                {
+                    "color": "#ebc22d",
+                    "end_freq": 110000000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "雷达-W波段"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Radar-W Band"
+                        }
+                    ],
+                    "start_freq": 75000000000
+                },
+                {
+                    "color": "#ebc22d",
+                    "end_freq": 170000000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "雷达-D波段"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Radar-D Band"
+                        }
+                    ],
+                    "start_freq": 110000000000
+                },
+                {
+                    "color": "#ebc22d",
+                    "end_freq": 220000000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "雷达-G波段"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Radar-G Band"
+                        }
+                    ],
+                    "start_freq": 140000000000
+                },
+                {
+                    "color": "#c1dcc0",
+                    "end_freq": 2483500000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "WiFi 2.4G"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "WiFi 2.4G"
+                        }
+                    ],
+                    "start_freq": 2400000000
+                },
+                {
+                    "color": "#c1dcc0",
+                    "end_freq": 5330000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "WiFi 5.2G"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "WiFi 5.2G"
+                        }
+                    ],
+                    "start_freq": 5170000000
+                },
+                {
+                    "color": "#c1dcc0",
+                    "end_freq": 5730000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "WiFi 5.5G"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "WiFi 5.5G"
+                        }
+                    ],
+                    "start_freq": 5490000000
+                },
+                {
+                    "color": "#c1dcc0",
+                    "end_freq": 5835000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "WiFi 5.8G"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "WiFi 5.8G"
+                        }
+                    ],
+                    "start_freq": 5735000000
+                },
+                {
+                    "color": "#c1dcc0",
+                    "end_freq": 7125000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "WiFi 6G"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "WiFi 6G"
+                        }
+                    ],
+                    "start_freq": 5925000000
+                },
+                {
+                    "color": "#523385",
+                    "end_freq": 15340000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "NFC"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "NFC"
+                        }
+                    ],
+                    "start_freq": 11780000
+                },
+                {
+                    "color": "#3c1246",
+                    "end_freq": 2483500000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "蓝牙"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Bluetooth"
+                        }
+                    ],
+                    "start_freq": 2400000000
+                },
+                {
+                    "color": "#d42820",
+                    "end_freq": 169475000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "ZigBee"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "ZigBee"
+                        }
+                    ],
+                    "start_freq": 169400000
+                },
+                {
+                    "color": "#d42820",
+                    "end_freq": 869,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "ZigBee"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "ZigBee"
+                        }
+                    ],
+                    "start_freq": 868000000
+                },
+                {
+                    "color": "#d42820",
+                    "end_freq": 928000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "ZigBee"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "ZigBee"
+                        }
+                    ],
+                    "start_freq": 902000000
+                },
+                {
+                    "color": "#d42820",
+                    "end_freq": 2483500000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "ZigBee"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "ZigBee"
+                        }
+                    ],
+                    "start_freq": 2400000000
+                },
+                {
+                    "color": "#4af0e6",
+                    "end_freq": 134000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "射频识别"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "RFID"
+                        }
+                    ],
+                    "start_freq": 125000
+                },
+                {
+                    "color": "#4af0e6",
+                    "end_freq": 6795000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "射频识别"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "RFID"
+                        }
+                    ],
+                    "start_freq": 6765000
+                },
+                {
+                    "color": "#4af0e6",
+                    "end_freq": 13559000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "射频识别"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "RFID"
+                        }
+                    ],
+                    "start_freq": 13553000
+                },
+                {
+                    "color": "#4af0e6",
+                    "end_freq": 27283000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "射频识别"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "RFID"
+                        }
+                    ],
+                    "start_freq": 26957000
+                },
+                {
+                    "color": "#4af0e6",
+                    "end_freq": 440000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "射频识别"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "RFID"
+                        }
+                    ],
+                    "start_freq": 430000000
+                },
+                {
+                    "color": "#4af0e6",
+                    "end_freq": 845000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "射频识别"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "RFID"
+                        }
+                    ],
+                    "start_freq": 840000000
+                },
+                {
+                    "color": "#4af0e6",
+                    "end_freq": 930000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "射频识别"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "RFID"
+                        }
+                    ],
+                    "start_freq": 925000000
+                },
+                {
+                    "color": "#4af0e6",
+                    "end_freq": 2483500000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "射频识别"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "RFID"
+                        }
+                    ],
+                    "start_freq": 2400000000
+                },
+                {
+                    "color": "#4af0e6",
+                    "end_freq": 5875000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "射频识别"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "RFID"
+                        }
+                    ],
+                    "start_freq": 5724000000
+                },
+                {
+                    "color": "#950284",
+                    "end_freq": 2400000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "全球微波互联接入"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "WiMAX/WiMax Advance"
+                        }
+                    ],
+                    "start_freq": 2300000000
+                },
+                {
+                    "color": "#950284",
+                    "end_freq": 2690000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "全球微波互联接入"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "WiMAX/WiMax Advance"
+                        }
+                    ],
+                    "start_freq": 2496000000
+                },
+                {
+                    "color": "#950284",
+                    "end_freq": 3600000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "全球微波互联接入"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "WiMAX/WiMax Advance"
+                        }
+                    ],
+                    "start_freq": 3400000000
+                },
+                {
+                    "color": "#e4b004",
+                    "end_freq": 13559000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "ISM(仪器科学医疗)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "ISM"
+                        }
+                    ],
+                    "start_freq": 13553000
+                },
+                {
+                    "color": "#e4b004",
+                    "end_freq": 27283000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "ISM(仪器科学医疗)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "ISM"
+                        }
+                    ],
+                    "start_freq": 26957000
+                },
+                {
+                    "color": "#e4b004",
+                    "end_freq": 4070000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "ISM(仪器科学医疗)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "ISM"
+                        }
+                    ],
+                    "start_freq": 406600000
+                },
+                {
+                    "color": "#e4b004",
+                    "end_freq": 2483500000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "ISM(仪器科学医疗)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "ISM"
+                        }
+                    ],
+                    "start_freq": 2400000000
+                },
+                {
+                    "color": "#e4b004",
+                    "end_freq": 5875000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "ISM(仪器科学医疗)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "ISM"
+                        }
+                    ],
+                    "start_freq": 5724000000
+                },
+                {
+                    "color": "#e4b004",
+                    "end_freq": 24250000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "ISM(仪器科学医疗)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "ISM"
+                        }
+                    ],
+                    "start_freq": 24000000000
+                },
+                {
+                    "color": "#726c4a",
+                    "end_freq": 806000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "无线接力系统"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Wireless Relay System"
+                        }
+                    ],
+                    "start_freq": 798000000
+                },
+                {
+                    "color": "#726c4a",
+                    "end_freq": 851000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "无线接力系统"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Wireless Relay System"
+                        }
+                    ],
+                    "start_freq": 843000000
+                },
+                {
+                    "color": "#89d751",
+                    "end_freq": 925000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "立体声传送系统"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Stereo Transmission System"
+                        }
+                    ],
+                    "start_freq": 917000000
+                },
+                {
+                    "color": "#4a0220",
+                    "end_freq": 1400000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "雷达（军用）"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Military Radar Systems"
+                        }
+                    ],
+                    "start_freq": 1200000000
+                },
+                {
+                    "color": "#4a0220",
+                    "end_freq": 2900000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "雷达（军用）"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Military Radar Systems"
+                        }
+                    ],
+                    "start_freq": 2600000000
+                },
+                {
+                    "color": "#4a0220",
+                    "end_freq": 3400000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "雷达（军用）"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Military Radar Systems"
+                        }
+                    ],
+                    "start_freq": 3100000000
+                },
+                {
+                    "color": "#a4ba30",
+                    "end_freq": 3100000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "船用导航雷达"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Marine Navigation Radar"
+                        }
+                    ],
+                    "start_freq": 2900000000
+                },
+                {
+                    "color": "#a4ba30",
+                    "end_freq": 9500000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "船用导航雷达"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Marine Navigation Radar"
+                        }
+                    ],
+                    "start_freq": 9300000000
+                },
+                {
+                    "color": "#75f88e",
+                    "end_freq": 3700000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "路基雷达"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Ground-Based Radar"
+                        }
+                    ],
+                    "start_freq": 3100000000
+                },
+                {
+                    "color": "#bb2cbc",
+                    "end_freq": 3080000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "船用雷达"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Marine Radar"
+                        }
+                    ],
+                    "start_freq": 3020000000
+                },
+                {
+                    "color": "#bb2cbc",
+                    "end_freq": 9440000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "船用雷达"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Marine Radar"
+                        }
+                    ],
+                    "start_freq": 9380000000
+                },
+                {
+                    "color": "#a9d713",
+                    "end_freq": 9500000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "雷达应答器"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Radar Transponder"
+                        }
+                    ],
+                    "start_freq": 9200000000
+                },
+                {
+                    "color": "#d0918d",
+                    "end_freq": 1295000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "边界层风(温)廓线雷达"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Boundary Layer Wind/Temperature Profiling Radar"
+                        }
+                    ],
+                    "start_freq": 1270000000
+                },
+                {
+                    "color": "#d0918d",
+                    "end_freq": 1375000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "边界层风(温)廓线雷达"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Boundary Layer Wind/Temperature Profiling Radar"
+                        }
+                    ],
+                    "start_freq": 1300000000
+                },
+                {
+                    "color": "#33d8e1",
+                    "end_freq": 2900000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "多普勒天气雷达（S波段）"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Doppler Weather Radar (S-Band)​"
+                        }
+                    ],
+                    "start_freq": 2700000000
+                },
+                {
+                    "color": "#75a57f",
+                    "end_freq": 5600000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "多普勒天气雷达（C波段)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Doppler Weather Radar (C-Band)​"
+                        }
+                    ],
+                    "start_freq": 5300000000
+                },
+                {
+                    "color": "#d9826a",
+                    "end_freq": 9700000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "多普勒天气雷达(X波段)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Doppler Weather Radar (X-Band)​"
+                        }
+                    ],
+                    "start_freq": 9300000000
+                },
+                {
+                    "color": "#66c469",
+                    "end_freq": 77000000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "车载雷达"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Vehicle Radar"
+                        }
+                    ],
+                    "start_freq": 76000000000
+                },
+                {
+                    "color": "#66c469",
+                    "end_freq": 81000000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "车载雷达"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Vehicle Radar"
+                        }
+                    ],
+                    "start_freq": 77000000000
+                },
+                {
+                    "color": "#674fcb",
+                    "end_freq": 909000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "移动GSM900上行"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "GSM900 Uplink"
+                        }
+                    ],
+                    "start_freq": 889000000
+                },
+                {
+                    "color": "#674fcb",
+                    "end_freq": 954000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "移动GSM900下行"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "GSM900 Downlink"
+                        }
+                    ],
+                    "start_freq": 934000000
+                },
+                {
+                    "color": "#674fcb",
+                    "end_freq": 1735000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "移动GSM1800M上行"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "GSM1800M Uplink"
+                        }
+                    ],
+                    "start_freq": 1710000000
+                },
+                {
+                    "color": "#674fcb",
+                    "end_freq": 1830000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "移动GSM1800M下行"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "GSM1800M Downlink"
+                        }
+                    ],
+                    "start_freq": 1805000000
+                },
+                {
+                    "color": "#674fcb",
+                    "end_freq": 1900000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "移动3G TDD"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Mobile 3G TDD"
+                        }
+                    ],
+                    "start_freq": 1880000000
+                },
+                {
+                    "color": "#674fcb",
+                    "end_freq": 2025000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "移动3G TDD"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Mobile 3G TDD"
+                        }
+                    ],
+                    "start_freq": 2010000000
+                },
+                {
+                    "color": "#674fcb",
+                    "end_freq": 1900000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "移动4G TD-LTE"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Mobile 4G TD-LTE"
+                        }
+                    ],
+                    "start_freq": 1880000000
+                },
+                {
+                    "color": "#674fcb",
+                    "end_freq": 2370000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "移动4G TD-LTE（仅室内）"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Mobile 4G TD-LTE（Indoor）"
+                        }
+                    ],
+                    "start_freq": 2320000000
+                },
+                {
+                    "color": "#674fcb",
+                    "end_freq": 2635000000,
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "移动4G TD-LTE"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Mobile 4G TD-LTE"
+                        }
+                    ],
+                    "start_freq": 2575000000
+                },
+                {
+                    "color": "#674fcb",
+                    "end_freq": 2675000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "移动5G"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Moblie 5G"
+                        }
+                    ],
+                    "start_freq": 2515000000
+                },
+                {
+                    "color": "#674fcb",
+                    "end_freq": 4900000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "移动5G"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Moblie 5G"
+                        }
+                    ],
+                    "start_freq": 4800000000
+                },
+                {
+                    "color": "#c580f1",
+                    "end_freq": 915000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "联通GSM900上行"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Unicom GSM900 Uplink"
+                        }
+                    ],
+                    "start_freq": 909000000
+                },
+                {
+                    "color": "#c580f1",
+                    "end_freq": 960000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "联通GSM900下行"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Unicom GSM900 Downlink"
+                        }
+                    ],
+                    "start_freq": 954000000
+                },
+                {
+                    "color": "#c580f1",
+                    "end_freq": 1755000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "联通GSM1800M上行"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Unicom GSM1800M Uplink"
+                        }
+                    ],
+                    "start_freq": 1735000000
+                },
+                {
+                    "color": "#c580f1",
+                    "end_freq": 1850000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "联通GSM1800M下行"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Unicom GSM1800M Downlink"
+                        }
+                    ],
+                    "start_freq": 1830000000
+                },
+                {
+                    "color": "#c580f1",
+                    "end_freq": 1965000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "联通3G/FDD-LTE"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Unicom 3G/FDD-LTE"
+                        }
+                    ],
+                    "start_freq": 1940000000
+                },
+                {
+                    "color": "#c580f1",
+                    "end_freq": 2155000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "联通3G/FDD-LTE"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Unicom 3G/FDD-LTE"
+                        }
+                    ],
+                    "start_freq": 2130000000
+                },
+                {
+                    "color": "#c580f1",
+                    "end_freq": 2320000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "联通TD-LTE"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Unicom TD-LTE"
+                        }
+                    ],
+                    "start_freq": 2300000000
+                },
+                {
+                    "color": "#c580f1",
+                    "end_freq": 2575000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "联通TD-LTE"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Unicom TD-LTE"
+                        }
+                    ],
+                    "start_freq": 2555000000
+                },
+                {
+                    "color": "#c580f1",
+                    "end_freq": 1765000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "联通FDD-LTE"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Unicom FDD-LTE"
+                        }
+                    ],
+                    "start_freq": 1755000000
+                },
+                {
+                    "color": "#c580f1",
+                    "end_freq": 1860000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "联通FDD-LTE"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Unicom FDD-LTE"
+                        }
+                    ],
+                    "start_freq": 1850000000
+                },
+                {
+                    "color": "#c580f1",
+                    "end_freq": 1765000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "联通FDD-LTE(实际使用)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Unicom FDD-LTE"
+                        }
+                    ],
+                    "start_freq": 1745000000
+                },
+                {
+                    "color": "#c580f1",
+                    "end_freq": 1860000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "联通FDD-LTE(实际使用)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Unicom FDD-LTE"
+                        }
+                    ],
+                    "start_freq": 1840000000
+                },
+                {
+                    "color": "#c580f1",
+                    "end_freq": 1980000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "联通家庭基站"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Unicom Home Base Station"
+                        }
+                    ],
+                    "start_freq": 1975000000
+                },
+                {
+                    "color": "#c580f1",
+                    "end_freq": 2170000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "联通家庭基站"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Unicom Home Base Station"
+                        }
+                    ],
+                    "start_freq": 2165000000
+                },
+                {
+                    "color": "#c580f1",
+                    "end_freq": 3600000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "联通5G"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Unicom 5G"
+                        }
+                    ],
+                    "start_freq": 3500000000
+                },
+                {
+                    "color": "#12ca94",
+                    "end_freq": 835000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "电信CMDA2000/LTE FDD上行"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Telecom CMDA2000/LTE FDD Uplink"
+                        }
+                    ],
+                    "start_freq": 825000000
+                },
+                {
+                    "color": "#12ca94",
+                    "end_freq": 880000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "电信CMDA2000/LTE FDD下行"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Telecom CMDA2000/LTE FDD Downlink"
+                        }
+                    ],
+                    "start_freq": 870000000
+                },
+                {
+                    "color": "#12ca94",
+                    "end_freq": 1940000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "电信3G/FDD-LTE上行"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Telecom 3G/FDD-LTE Uplink"
+                        }
+                    ],
+                    "start_freq": 1920000000
+                },
+                {
+                    "color": "#12ca94",
+                    "end_freq": 2130000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "电信3G/FDD-LTE下行"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Telecom 3G/FDD-LTE Downlink"
+                        }
+                    ],
+                    "start_freq": 2110000000
+                },
+                {
+                    "color": "#12ca94",
+                    "end_freq": 2390000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "电信TD-LTE"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Telecom TD-LTE"
+                        }
+                    ],
+                    "start_freq": 2370000000
+                },
+                {
+                    "color": "#12ca94",
+                    "end_freq": 2655000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "电信TD-LTE"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Telecom TD-LTE"
+                        }
+                    ],
+                    "start_freq": 2635000000
+                },
+                {
+                    "color": "#12ca94",
+                    "end_freq": 1785000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "电信FDD-LTE"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Telecom FDD-LTE"
+                        }
+                    ],
+                    "start_freq": 1765000000
+                },
+                {
+                    "color": "#12ca94",
+                    "end_freq": 1880000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "电信FDD-LTE"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Telecom FDD-LTE"
+                        }
+                    ],
+                    "start_freq": 1860000000
+                },
+                {
+                    "color": "#12ca94",
+                    "end_freq": 3500000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "电信5G-n78"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Telecom 5G-n78"
+                        }
+                    ],
+                    "start_freq": 3400000000
+                },
+                {
+                    "color": "#b05695",
+                    "end_freq": 733000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "广电 5G-Band28"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "CBN 5G-Band28"
+                        }
+                    ],
+                    "start_freq": 703000000
+                },
+                {
+                    "color": "#b05695",
+                    "end_freq": 788000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "广电 5G-Band28"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "CBN 5G-Band28"
+                        }
+                    ],
+                    "start_freq": 758000000
+                },
+                {
+                    "color": "#b05695",
+                    "end_freq": 4960000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "广电5G-n79"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "CBN 5G-n79"
+                        }
+                    ],
+                    "start_freq": 4900000000
+                },
+                {
+                    "color": "#674fcb",
+                    "end_freq": 1975000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "移动通信（未分配FDD）"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Mobile Communication (Unassigned)"
+                        }
+                    ],
+                    "start_freq": 1965000000
+                },
+                {
+                    "color": "#674fcb",
+                    "end_freq": 2165000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "移动通信（未分配FDD）"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Mobile Communication (Unassigned)"
+                        }
+                    ],
+                    "start_freq": 2155000000
+                },
+                {
+                    "color": "#674fcb",
+                    "end_freq": 2400000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "移动通信（未分配TDD）"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Mobile Communication (Unassigned)"
+                        }
+                    ],
+                    "start_freq": 2390000000
+                },
+                {
+                    "color": "#674fcb",
+                    "end_freq": 2555000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "移动通信（未分配TDD）"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Mobile Communication (Unassigned)"
+                        }
+                    ],
+                    "start_freq": 2500000000
+                },
+                {
+                    "color": "#674fcb",
+                    "end_freq": 2690000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "移动通信（未分配TDD）"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Mobile Communication (Unassigned)"
+                        }
+                    ],
+                    "start_freq": 2655000000
+                },
+                {
+                    "color": "#ca6111",
+                    "end_freq": 409500000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "供应链管理数据分析"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Supply Chain Management Data Analytics"
+                        }
+                    ],
+                    "start_freq": 406500000
+                },
+                {
+                    "color": "#7e4e0f",
+                    "end_freq": 108000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "调频广播"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "M Broadcasting​"
+                        }
+                    ],
+                    "start_freq": 88000000
+                },
+                {
+                    "color": "#7e4e0f",
+                    "end_freq": 87000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "校园广播"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Campus Radio​"
+                        }
+                    ],
+                    "start_freq": 76000000
+                },
+                {
+                    "color": "#7e4e0f",
+                    "end_freq": 223000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "DAB数字信号广播"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "DAB (Digital Audio Broadcasting)"
+                        }
+                    ],
+                    "start_freq": 167000000
+                },
+                {
+                    "color": "#b4b47d",
+                    "end_freq": 845000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "无人机"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "UAV"
+                        }
+                    ],
+                    "start_freq": 840500000
+                },
+                {
+                    "color": "#b4b47d",
+                    "end_freq": 1444000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "无人机"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "UAV"
+                        }
+                    ],
+                    "start_freq": 1430000000
+                },
+                {
+                    "color": "#b4b47d",
+                    "end_freq": 440000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "无人机"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "UAV"
+                        }
+                    ],
+                    "start_freq": 430000000
+                },
+                {
+                    "color": "#b4b47d",
+                    "end_freq": 2483500000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "无人机"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "UAV"
+                        }
+                    ],
+                    "start_freq": 2400000000
+                },
+                {
+                    "color": "#b4b47d",
+                    "end_freq": 5850000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "无人机"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "UAV"
+                        }
+                    ],
+                    "start_freq": 5725000000
+                },
+                {
+                    "color": "#39c03a",
+                    "end_freq": 72500000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "无线电视I波段(1到3频道，N=0,1,2)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Band I Television(1-3，N=0,1,2)"
+                        }
+                    ],
+                    "start_freq": 48500000
+                },
+                {
+                    "color": "#8a96b0",
+                    "end_freq": 92000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "无线电视工波段(4到5频道，N=0,1)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Band II Television(4-5，N=0,1)"
+                        }
+                    ],
+                    "start_freq": 72000000
+                },
+                {
+                    "color": "#6bcd82",
+                    "end_freq": 223000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "无线电视Ⅲ波段(6到12频道，N=0~6)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Band III Television(6-12，N=0~6)"
+                        }
+                    ],
+                    "start_freq": 167000000
+                },
+                {
+                    "color": "#9bd6cf",
+                    "end_freq": 566000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "无线电视IV波段(13到24频道，N=0~9)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Band IV Television​(13-24，N=0~9)"
+                        }
+                    ],
+                    "start_freq": 470000000
+                },
+                {
+                    "color": "#a877b1",
+                    "end_freq": 606000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "无线电视(62~66频道，N=0~4)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Terrestrial Television​(62~66，N=0~4)"
+                        }
+                    ],
+                    "start_freq": 566000000
+                },
+                {
+                    "color": "#7cd0ea",
+                    "end_freq": 806000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "无线电视V波段(25到57频道，N=0~32)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Band V Television​(25-57，N=0~32)"
+                        }
+                    ],
+                    "start_freq": 606000000
+                },
+                {
+                    "color": "#6f4cb9",
+                    "end_freq": 162025000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "遇险和安全通信"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Distress And Safety Communications"
+                        }
+                    ],
+                    "start_freq": 156025000
+                },
+                {
+                    "color": "#43cd45",
+                    "end_freq": 1645500000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "INMARSAT船舶地球站"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "INMARSAT Ship Earth Station (SES)​​"
+                        }
+                    ],
+                    "start_freq": 1626500000
+                },
+                {
+                    "color": "#43cd45",
+                    "end_freq": 1544000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "INMARSAT船舶地球站"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "INMARSAT Ship Earth Station (SES)​​"
+                        }
+                    ],
+                    "start_freq": 1525000000
+                },
+                {
+                    "color": "#15cdef",
+                    "end_freq": 162025000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "水上自动识别系统AIS"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "AIS (Automatic Identification System)​​"
+                        }
+                    ],
+                    "start_freq": 161975000
+                },
+                {
+                    "color": "#56d780",
+                    "end_freq": 39500000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "渔船对讲机"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Marine VHF Radio"
+                        }
+                    ],
+                    "start_freq": 27500000
+                },
+                {
+                    "color": "#8e3bcb",
+                    "end_freq": 406100000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "紧急无线电示位标"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "S-EPIRB"
+                        }
+                    ],
+                    "start_freq": 406000000
+                },
+                {
+                    "color": "#8e3bcb",
+                    "end_freq": 1646500000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "紧急无线电示位标"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "L-EPIRB"
+                        }
+                    ],
+                    "start_freq": 1645500000
+                },
+                {
+                    "color": "#8e3bcb",
+                    "end_freq": 156537500,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "紧急无线电示位标"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "VHF-EPIRB"
+                        }
+                    ],
+                    "start_freq": 156512500
+                },
+                {
+                    "color": "#4820de",
+                    "end_freq": 3100000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "紧急无线电示位标(自动雷达标绘仪)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Radar Beacon"
+                        }
+                    ],
+                    "start_freq": 2900000000
+                },
+                {
+                    "color": "#10d936",
+                    "end_freq": 6575000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "海事GSPS(卫星与地面站上行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "​GSPS Uplink​"
+                        }
+                    ],
+                    "start_freq": 6424000000
+                },
+                {
+                    "color": "#10d936",
+                    "end_freq": 3700000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "海事GSPS(卫星与地面站下行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "GSPS Downlink"
+                        }
+                    ],
+                    "start_freq": 3550000000
+                },
+                {
+                    "color": "#10d936",
+                    "end_freq": 1660500000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "海事GSPS(卫星与用户终端上行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "GSPS User Terminal Uplink​"
+                        }
+                    ],
+                    "start_freq": 1626500000
+                },
+                {
+                    "color": "#10d936",
+                    "end_freq": 1559000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "海事GSPS(卫星与用户终端下行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "GSPS User Terminal Downlink​"
+                        }
+                    ],
+                    "start_freq": 1525000000
+                },
+                {
+                    "color": "#677cda",
+                    "end_freq": 6575000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "海事BGAN(卫星与地面站上行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "BGAN Uplink​"
+                        }
+                    ],
+                    "start_freq": 6424000000
+                },
+                {
+                    "color": "#677cda",
+                    "end_freq": 3700000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "海事BGAN(卫星与地面站下行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "BGAN Downlink​"
+                        }
+                    ],
+                    "start_freq": 3550000000
+                },
+                {
+                    "color": "#677cda",
+                    "end_freq": 1660500000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "海事BGAN(卫星与用户终端上行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "BGAN User Terminal Uplink​"
+                        }
+                    ],
+                    "start_freq": 1626500000
+                },
+                {
+                    "color": "#677cda",
+                    "end_freq": 1559000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "海事BGAN(卫星与用户终端下行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "BGAN User Terminal Downlink​"
+                        }
+                    ],
+                    "start_freq": 1525000000
+                },
+                {
+                    "color": "#b3dd56",
+                    "end_freq": 1660500000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "亚洲蜂窝系统Aces系统(用户链路(L频段)上行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "ACeS User Uplink​"
+                        }
+                    ],
+                    "start_freq": 1626500000
+                },
+                {
+                    "color": "#b3dd56",
+                    "end_freq": 1559000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "亚洲蜂窝系统Aces系统(用户链路(L频段)下行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "ACeS User Downlink​"
+                        }
+                    ],
+                    "start_freq": 1525500000
+                },
+                {
+                    "color": "#b3dd56",
+                    "end_freq": 6725000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "亚洲蜂窝系统Aces系统(馈送链路(C频段)上行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "ACeS C-Band Feeder Uplink"
+                        }
+                    ],
+                    "start_freq": 6425000000
+                },
+                {
+                    "color": "#b3dd56",
+                    "end_freq": 3700000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "亚洲蜂窝系统Aces系统(馈送链路(C频段)下行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "ACeS C-Band Feeder Downlink​"
+                        }
+                    ],
+                    "start_freq": 3400000000
+                },
+                {
+                    "color": "#19c7f8",
+                    "end_freq": 1660500000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "欧星(Thuraya)系统(终端到卫星(载波带宽:27.7KHz)上行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Thuraya Mobile Terminal Uplink(Carrier Bandwidth:27.7KHz)"
+                        }
+                    ],
+                    "start_freq": 1626500000
+                },
+                {
+                    "color": "#19c7f8",
+                    "end_freq": 1559000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "欧星(Thuraya)系统(终端到卫星(载波带宽:27.7KHz)下行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Thuraya Mobile Terminal Downlink(Carrier Bandwidth:27.7KHz)"
+                        }
+                    ],
+                    "start_freq": 1525000000
+                },
+                {
+                    "color": "#19c7f8",
+                    "end_freq": 6725000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "欧星(Thuraya)系统(卫星到关口站(载波带宽:27.7KHz)上行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Thuraya Gateway Uplink (Satellite to Gateway(Carrier Bandwidth:27.7KHz))​"
+                        }
+                    ],
+                    "start_freq": 6425000000
+                },
+                {
+                    "color": "#19c7f8",
+                    "end_freq": 3520000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "欧星(Thuraya)系统(卫星到关口站(载波带宽:27.7KHz)下行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Thuraya Gateway Downlink (Satellite to Gateway(Carrier Bandwidth:27.7KHz))​"
+                        }
+                    ],
+                    "start_freq": 3400000000
+                },
+                {
+                    "color": "#5ccce1",
+                    "end_freq": 29300000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "铱星系统(LEO低轨道)(馈线链路(Ka频段)上行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Iridium Feeder Link (Ka-band Uplink)"
+                        }
+                    ],
+                    "start_freq": 29100000000
+                },
+                {
+                    "color": "#5ccce1",
+                    "end_freq": 19600000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "铱星系统(LEO低轨道)(馈线链路(Ka频段)下行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Iridium Feeder Link (Ka-band Downlink)"
+                        }
+                    ],
+                    "start_freq": 19400000000
+                },
+                {
+                    "color": "#5ccce1",
+                    "end_freq": 23380000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "铱星系统(LEO低轨道)(星际链路(Ka频段))"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Iridium Inter-Satellite Link (ISL)​"
+                        }
+                    ],
+                    "start_freq": 23180000000
+                },
+                {
+                    "color": "#5ccce1",
+                    "end_freq": 1626500000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "铱星系统(LEO低轨道)(用户链路(L频段)上行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Iridium User Uplink (L-Band)​"
+                        }
+                    ],
+                    "start_freq": 1621350000
+                },
+                {
+                    "color": "#5ccce1",
+                    "end_freq": 1626500000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "铱星系统(LEO低轨道)(用户链路(L频段)下行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Iridium User Downlink (L-Band)"
+                        }
+                    ],
+                    "start_freq": 1616000000
+                },
+                {
+                    "color": "#5efb37",
+                    "end_freq": 1626500000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "全球星(Globalstar)系统(LEO低轨道)(用户链路上行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Globalstar User Uplink (FDMA)​"
+                        }
+                    ],
+                    "start_freq": 1610000000
+                },
+                {
+                    "color": "#5efb37",
+                    "end_freq": 2500000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "全球星(Globalstar)系统(LEO低轨道)(用户链路下行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Globalstar User Downlink (FDMA)"
+                        }
+                    ],
+                    "start_freq": 2483500000
+                },
+                {
+                    "color": "#5efb37",
+                    "end_freq": 5250000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "全球星(Globalstar)系统(LEO低轨道)(馈线链路上行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "​Globalstar Feeder Link Uplink"
+                        }
+                    ],
+                    "start_freq": 5091000000
+                },
+                {
+                    "color": "#5efb37",
+                    "end_freq": 7055000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "全球星(Globalstar)系统(LEO低轨道)(馈线链路下行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "​Globalstar Feeder Link Downlink"
+                        }
+                    ],
+                    "start_freq": 6875000000
+                },
+                {
+                    "color": "#a5ff11",
+                    "end_freq": 1626500000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "Odyssey(奥德赛)系统(MEO中轨道)(用户链路上行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Odyssey User Uplink"
+                        }
+                    ],
+                    "start_freq": 1610000000
+                },
+                {
+                    "color": "#a5ff11",
+                    "end_freq": 2500000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "Odyssey(奥德赛)系统(MEO中轨道)(用户链路下行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Odyssey User Downlink"
+                        }
+                    ],
+                    "start_freq": 2483500000
+                },
+                {
+                    "color": "#a5ff11",
+                    "end_freq": 29840000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "Odyssey(奥德赛)系统(MEO中轨道)(馈线链路上行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Odyssey Feeder Link Uplink"
+                        }
+                    ],
+                    "start_freq": 29500000000
+                },
+                {
+                    "color": "#a5ff11",
+                    "end_freq": 20000000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "Odyssey(奥德赛)系统(MEO中轨道)(馈线链路下行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Odyssey Feeder Link c"
+                        }
+                    ],
+                    "start_freq": 19700000000
+                },
+                {
+                    "color": "#7a4794",
+                    "end_freq": 2010000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "Inmarsat-P系统(ICO(中圆形轨道)(用户链路上行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "ICO User Uplink"
+                        }
+                    ],
+                    "start_freq": 1980000000
+                },
+                {
+                    "color": "#7a4794",
+                    "end_freq": 2200000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "Inmarsat-P系统(ICO(中圆形轨道)(用户链路下行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "ICO User ICO User Uplink"
+                        }
+                    ],
+                    "start_freq": 2170000000
+                },
+                {
+                    "color": "#bdcd12",
+                    "end_freq": 6425000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "C频段(6G上/4G下)(500M带宽)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "C-band Satellite Link (6GHz Up/4GHz Down)​(500MHz Wideband Feeder Link)"
+                        }
+                    ],
+                    "start_freq": 5925000000
+                },
+                {
+                    "color": "#bdcd12",
+                    "end_freq": 4200000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "C频段(6G上/4G下)(500M带宽)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "C-band Satellite Link (6GHz Up/4GHz Down)​(500MHz Wideband Feeder Link)"
+                        }
+                    ],
+                    "start_freq": 3700000000
+                },
+                {
+                    "color": "#bdcd12",
+                    "end_freq": 6425000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "C频段(6G上/4G下)(575M带宽)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "C-band Satellite Link (6GHz Up/4GHz Down)​(575MHz Wideband Feeder Link)"
+                        }
+                    ],
+                    "start_freq": 5850000000
+                },
+                {
+                    "color": "#bdcd12",
+                    "end_freq": 4200000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "C频段(6G上/4G下)(575M带宽)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "C-band Satellite Link (6GHz Up/4GHz Down)​(575MHz Wideband Feeder Link)"
+                        }
+                    ],
+                    "start_freq": 3625000000
+                },
+                {
+                    "color": "#bdcd12",
+                    "end_freq": 6650000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "C频段(6G上/4G下)(800M带宽)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "C-band Satellite Link (6GHz Up/4GHz Down)​(800MHz Wideband Feeder Link)"
+                        }
+                    ],
+                    "start_freq": 5850000000
+                },
+                {
+                    "color": "#bdcd12",
+                    "end_freq": 4200000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "C频段(6G上/4G下)(800M带宽)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "C-band Satellite Link (6GHz Up/4GHz Down)​(800MHz Wideband Feeder Link)"
+                        }
+                    ],
+                    "start_freq": 3400000000
+                },
+                {
+                    "color": "#926ee4",
+                    "end_freq": 14500000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "Ku频段(第Ⅲ区14G上/11G下)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Ku-band Satellite Link (14GHz Up/11GHz Down)​"
+                        }
+                    ],
+                    "start_freq": 14000000000
+                },
+                {
+                    "color": "#926ee4",
+                    "end_freq": 12500000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "Ku频段(第Ⅲ区14G上/11G下)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Ku-band Satellite Link (14GHz Up/11GHz Down)​"
+                        }
+                    ],
+                    "start_freq": 12200000000
+                },
+                {
+                    "color": "#926ee4",
+                    "end_freq": 12750000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "Ku频段(第Ⅲ区14G上/11G下)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Ku-band Satellite Link (14GHz Up/11GHz Down)​"
+                        }
+                    ],
+                    "start_freq": 12500000000
+                },
+                {
+                    "color": "#c2a9d0",
+                    "end_freq": 2500000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "卫星广播/卫星移动"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "DTH/MSS"
+                        }
+                    ],
+                    "start_freq": 2483500000
+                },
+                {
+                    "color": "#c2a9d0",
+                    "end_freq": 2535000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "卫星广播/卫星移动"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "DTH/MSS"
+                        }
+                    ],
+                    "start_freq": 2500000000
+                },
+                {
+                    "color": "#de210e",
+                    "end_freq": 366000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "TERA通信标准(上行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "TERA/TERA2(TED S)(Uplink)"
+                        }
+                    ],
+                    "start_freq": 361000000
+                },
+                {
+                    "color": "#de210e",
+                    "end_freq": 356000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "TERA通信标准(下行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "TERA/TERA2(TED S)(Downlink​)"
+                        }
+                    ],
+                    "start_freq": 351000000
+                },
+                {
+                    "color": "#de210e",
+                    "end_freq": 400000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "TERA通信标准(上行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "TERA/TERA2(TED S)(Uplink)"
+                        }
+                    ],
+                    "start_freq": 390000000
+                },
+                {
+                    "color": "#de210e",
+                    "end_freq": 390000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "TERA通信标准(下行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "TERA/TERA2(TED S)(Downlink​)"
+                        }
+                    ],
+                    "start_freq": 380000000
+                },
+                {
+                    "color": "#de210e",
+                    "end_freq": 430000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "TERA通信标准(上行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "TERA/TERA2(TED S)(Uplink)"
+                        }
+                    ],
+                    "start_freq": 420000000
+                },
+                {
+                    "color": "#de210e",
+                    "end_freq": 420000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "TERA通信标准(下行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "TERA/TERA2(TED S)(Downlink​)"
+                        }
+                    ],
+                    "start_freq": 410000000
+                },
+                {
+                    "color": "#de210e",
+                    "end_freq": 470000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "TERA通信标准(上行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "TERA/TERA2(TED S)(Uplink)"
+                        }
+                    ],
+                    "start_freq": 460000000
+                },
+                {
+                    "color": "#de210e",
+                    "end_freq": 460000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "TERA通信标准(下行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "TERA/TERA2(TED S)(Downlink​)"
+                        }
+                    ],
+                    "start_freq": 450000000
+                },
+                {
+                    "color": "#de210e",
+                    "end_freq": 879000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "TERA通信标准(上行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "TERA/TERA2(TED S)(Uplink)"
+                        }
+                    ],
+                    "start_freq": 861000000
+                },
+                {
+                    "color": "#de210e",
+                    "end_freq": 825000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "TERA通信标准(下行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "TERA/TERA2(TED S)(Downlink​)"
+                        }
+                    ],
+                    "start_freq": 806000000
+                },
+                {
+                    "color": "#cb5d0f",
+                    "end_freq": 358000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "集群通信"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Trunked Radio System"
+                        }
+                    ],
+                    "start_freq": 351000000
+                },
+                {
+                    "color": "#cb5d0f",
+                    "end_freq": 368000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "集群通信"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Trunked Radio System"
+                        }
+                    ],
+                    "start_freq": 361000000
+                },
+                {
+                    "color": "#cb5d0f",
+                    "end_freq": 379000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "集群通信"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Trunked Radio System"
+                        }
+                    ],
+                    "start_freq": 372000000
+                },
+                {
+                    "color": "#cb5d0f",
+                    "end_freq": 389000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "集群通信"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Trunked Radio System"
+                        }
+                    ],
+                    "start_freq": 382000000
+                },
+                {
+                    "color": "#cb5d0f",
+                    "end_freq": 821000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "集群通信"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Trunked Radio System"
+                        }
+                    ],
+                    "start_freq": 806000000
+                },
+                {
+                    "color": "#cb5d0f",
+                    "end_freq": 866000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "集群通信"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Trunked Radio System"
+                        }
+                    ],
+                    "start_freq": 851000000
+                },
+                {
+                    "color": "#86f07e",
+                    "end_freq": 167000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "对讲频段"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Intercom Frequency Band"
+                        }
+                    ],
+                    "start_freq": 137000000
+                },
+                {
+                    "color": "#86f07e",
+                    "end_freq": 423500000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "对讲频段"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Intercom Frequency Band"
+                        }
+                    ],
+                    "start_freq": 403000000
+                },
+                {
+                    "color": "#86f07e",
+                    "end_freq": 450000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "对讲频段"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Intercom Frequency Band"
+                        }
+                    ],
+                    "start_freq": 423500000
+                },
+                {
+                    "color": "#86f07e",
+                    "end_freq": 470000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "对讲频段"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Intercom Frequency Band"
+                        }
+                    ],
+                    "start_freq": 450000000
+                },
+                {
+                    "color": "#786ef9",
+                    "end_freq": 361000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "数字或对讲机"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Digital Or Intercom"
+                        }
+                    ],
+                    "start_freq": 358000000
+                },
+                {
+                    "color": "#786ef9",
+                    "end_freq": 382000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "数字或对讲机"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Digital Or Intercom"
+                        }
+                    ],
+                    "start_freq": 379000000
+                },
+                {
+                    "color": "#6c8ea5",
+                    "end_freq": 281000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "原寻呼系统"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Original Paging System"
+                        }
+                    ],
+                    "start_freq": 279000000
+                },
+                {
+                    "color": "#1d7779",
+                    "end_freq": 240000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "无线数传"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Wireless Data Transmission"
+                        }
+                    ],
+                    "start_freq": 220000000
+                },
+                {
+                    "color": "#1d7779",
+                    "end_freq": 470000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "无线数传"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Wireless Data Transmission"
+                        }
+                    ],
+                    "start_freq": 400000000
+                },
+                {
+                    "color": "#661470",
+                    "end_freq": 825000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "数传电台(CDPD)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Data Transmission Radio (CDPD)"
+                        }
+                    ],
+                    "start_freq": 821000000
+                },
+                {
+                    "color": "#661470",
+                    "end_freq": 870000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "数传电台(CDPD)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Data Transmission Radio (CDPD)"
+                        }
+                    ],
+                    "start_freq": 866000000
+                },
+                {
+                    "color": "#1ab498",
+                    "end_freq": 174000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "美国及国际公共安全专业无线通信标准(VHF)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Project 25(VHF)"
+                        }
+                    ],
+                    "start_freq": 136000000
+                },
+                {
+                    "color": "#1ab498",
+                    "end_freq": 470000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "美国及国际公共安全专业无线通信标准(UHF)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Project 25(UHF)"
+                        }
+                    ],
+                    "start_freq": 380000000
+                },
+                {
+                    "color": "#1ab498",
+                    "end_freq": 512000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "美国及国际公共安全专业无线通信标准(UHF)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Project 25(UHF)"
+                        }
+                    ],
+                    "start_freq": 450000000
+                },
+                {
+                    "color": "#1ab498",
+                    "end_freq": 870000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "美国及国际公共安全专业无线通信标准(UHF)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Project 25(UHF)"
+                        }
+                    ],
+                    "start_freq": 764000000
+                },
+                {
+                    "color": "#a54075",
+                    "end_freq": 352000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "无线报警网"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Wireless Alarm Network"
+                        }
+                    ],
+                    "start_freq": 350000000
+                },
+                {
+                    "color": "#49285a",
+                    "end_freq": 406000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "电子探空仪"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Radiosonde"
+                        }
+                    ],
+                    "start_freq": 400000000
+                },
+                {
+                    "color": "#466183",
+                    "end_freq": 1990000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "图传系统"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Video Transmission System"
+                        }
+                    ],
+                    "start_freq": 1880000000
+                },
+                {
+                    "color": "#f4f5a9",
+                    "end_freq": 344000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "数字增强无绳通信(DECT)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "DECT"
+                        }
+                    ],
+                    "start_freq": 336000000
+                },
+                {
+                    "color": "#b86978",
+                    "end_freq": 917000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "无中心系统"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Ad-hoc/Decentralized System"
+                        }
+                    ],
+                    "start_freq": 915000000
+                },
+                {
+                    "color": "#a2c602",
+                    "end_freq": 889000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "全球铁路移动通信系统(上行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "GSM-R(Uplink)"
+                        }
+                    ],
+                    "start_freq": 885000000
+                },
+                {
+                    "color": "#a2c602",
+                    "end_freq": 934000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "全球铁路移动通信系统(下行)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "GSM-R(Downlink)"
+                        }
+                    ],
+                    "start_freq": 930000000
+                },
+                {
+                    "color": "#178003",
+                    "end_freq": 420000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "数字对讲通信业务(单工)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Simplex Digital Trunking"
+                        }
+                    ],
+                    "start_freq": 418000000
+                },
+                {
+                    "color": "#178003",
+                    "end_freq": 415000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "数字对讲通信业务(双工)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Full-Duplex Digital Trunking"
+                        }
+                    ],
+                    "start_freq": 403000000
+                },
+                {
+                    "color": "#178003",
+                    "end_freq": 424000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "数字对讲通信业务(双工)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Full-Duplex Digital Trunking"
+                        }
+                    ],
+                    "start_freq": 413000000
+                },
+                {
+                    "color": "#1fe37b",
+                    "end_freq": 459000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "模拟对讲通信业务"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Analog Two-Way Radio"
+                        }
+                    ],
+                    "start_freq": 456000000
+                },
+                {
+                    "color": "#1fe37b",
+                    "end_freq": 469000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "模拟对讲通信业务"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Analog Two-Way Radio"
+                        }
+                    ],
+                    "start_freq": 466000000
+                },
+                {
+                    "color": "#09f226",
+                    "end_freq": 467462500,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "铁路对讲频率组(频率组1)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": ""
+                        }
+                    ],
+                    "start_freq": 467437500
+                },
+                {
+                    "color": "#09f226",
+                    "end_freq": 467512500,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "铁路对讲频率组(频率组1)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": ""
+                        }
+                    ],
+                    "start_freq": 467487500
+                },
+                {
+                    "color": "#09f226",
+                    "end_freq": 467562500,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "铁路对讲频率组(频率组1)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": ""
+                        }
+                    ],
+                    "start_freq": 467537500
+                },
+                {
+                    "color": "#09f226",
+                    "end_freq": 457562500,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "铁路对讲频率组(频率组1)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": ""
+                        }
+                    ],
+                    "start_freq": 457537500
+                },
+                {
+                    "color": "#0401a6",
+                    "end_freq": 467512500,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "铁路对讲频率组(频率组2)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": ""
+                        }
+                    ],
+                    "start_freq": 467487500
+                },
+                {
+                    "color": "#0401a6",
+                    "end_freq": 467562500,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "铁路对讲频率组(频率组2)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": ""
+                        }
+                    ],
+                    "start_freq": 467537500
+                },
+                {
+                    "color": "#0401a6",
+                    "end_freq": 467612500,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "铁路对讲频率组(频率组2)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": ""
+                        }
+                    ],
+                    "start_freq": 467587500
+                },
+                {
+                    "color": "#0401a6",
+                    "end_freq": 457562500,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "铁路对讲频率组(频率组2)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": ""
+                        }
+                    ],
+                    "start_freq": 457537500
+                },
+                {
+                    "color": "#d232fb",
+                    "end_freq": 467662500,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "铁路对讲频率组(频率组3)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": ""
+                        }
+                    ],
+                    "start_freq": 467637500
+                },
+                {
+                    "color": "#d232fb",
+                    "end_freq": 467712500,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "铁路对讲频率组(频率组3)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": ""
+                        }
+                    ],
+                    "start_freq": 467687500
+                },
+                {
+                    "color": "#d232fb",
+                    "end_freq": 467762500,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "铁路对讲频率组(频率组3)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": ""
+                        }
+                    ],
+                    "start_freq": 467737500
+                },
+                {
+                    "color": "#d232fb",
+                    "end_freq": 457712500,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "铁路对讲频率组(频率组3)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": ""
+                        }
+                    ],
+                    "start_freq": 457687500
+                },
+                {
+                    "color": "#380d26",
+                    "end_freq": 467787500,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "铁路对讲频率组(频率组4)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": ""
+                        }
+                    ],
+                    "start_freq": 467762500
+                },
+                {
+                    "color": "#380d26",
+                    "end_freq": 467837500,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "铁路对讲频率组(频率组4)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": ""
+                        }
+                    ],
+                    "start_freq": 467812500
+                },
+                {
+                    "color": "#380d26",
+                    "end_freq": 467887500,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "铁路对讲频率组(频率组4)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": ""
+                        }
+                    ],
+                    "start_freq": 467862500
+                },
+                {
+                    "color": "#380d26",
+                    "end_freq": 457837500,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "铁路对讲频率组(频率组4)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": ""
+                        }
+                    ],
+                    "start_freq": 457812500
+                },
+                {
+                    "color": "#68c93b",
+                    "end_freq": 870000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "列车安全防护预警系统"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "ATP (Automatic Train Protection)​"
+                        }
+                    ],
+                    "start_freq": 820000000
+                },
+                {
+                    "color": "#d25af1",
+                    "end_freq": 915000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "铁路车辆自动识别系统"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "AEI (Automatic Equipment Identification)​"
+                        }
+                    ],
+                    "start_freq": 910000000
+                },
+                {
+                    "color": "#0c3409",
+                    "end_freq": 23000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "高频地空台"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "HF Ground-to-Air Communication"
+                        }
+                    ],
+                    "start_freq": 2800000
+                },
+                {
+                    "color": "#070e63",
+                    "end_freq": 137000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "甚高频航空移动系统"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "VHF Aeronautical Mobile System"
+                        }
+                    ],
+                    "start_freq": 117975000
+                },
+                {
+                    "color": "#b71ea3",
+                    "end_freq": 121508330,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "应急(民用救援频率)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Civil Emergency Frequency"
+                        }
+                    ],
+                    "start_freq": 121491670
+                },
+                {
+                    "color": "#158f8b",
+                    "end_freq": 243025000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "应急(军用应急频率)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Military Emergency Frequency"
+                        }
+                    ],
+                    "start_freq": 242975000
+                },
+                {
+                    "color": "#25e65b",
+                    "end_freq": 3991000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "卫星地球站(C波段(下行))"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "​Satellite Earth Station (C-Band (downlink))"
+                        }
+                    ],
+                    "start_freq": 3968000000
+                },
+                {
+                    "color": "#523ed7",
+                    "end_freq": 75003000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "仪表着陆系统ILS(指点信标)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Marker Beacon (for ILS)​"
+                        }
+                    ],
+                    "start_freq": 74997000
+                },
+                {
+                    "color": "#f59b30",
+                    "end_freq": 12742000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "卫星地球站(Ku波段(下行))"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Satellite Earth Station (Ku Band (downlink))"
+                        }
+                    ],
+                    "start_freq": 12688000000
+                },
+                {
+                    "color": "#9590bf",
+                    "end_freq": 112000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "仪表着陆系统ILS(LOC航向信标)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "ILS Localizer(LOC)"
+                        }
+                    ],
+                    "start_freq": 108000000
+                },
+                {
+                    "color": "#dcfa77",
+                    "end_freq": 336000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "仪表着陆系统ILS(GP下滑台)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "ILS Glide Path(GP)"
+                        }
+                    ],
+                    "start_freq": 328000000
+                },
+                {
+                    "color": "#e6bee2",
+                    "end_freq": 118000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "VOR全向信标"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "VHF Omnidirectional Range"
+                        }
+                    ],
+                    "start_freq": 108000000
+                },
+                {
+                    "color": "#3aca38",
+                    "end_freq": 112000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "LOC航向信标"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Localizer(LOC)"
+                        }
+                    ],
+                    "start_freq": 108000000
+                },
+                {
+                    "color": "#ecb2a2",
+                    "end_freq": 700000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "NDB无方向性信标"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Non-Directional Beacon"
+                        }
+                    ],
+                    "start_freq": 150000
+                },
+                {
+                    "color": "#8e7b37",
+                    "end_freq": 450000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "飞机测高仪"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Radio Altimeter"
+                        }
+                    ],
+                    "start_freq": 423500000
+                },
+                {
+                    "color": "#b51305",
+                    "end_freq": 1092300000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "卫星跟踪飞机航行线路系统"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "SATCOM-Based Aircraft Tracking"
+                        }
+                    ],
+                    "start_freq": 1087700000
+                },
+                {
+                    "color": "#2687a6",
+                    "end_freq": 806000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "航空无线电导航"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Aeronautical Radio Navigation"
+                        }
+                    ],
+                    "start_freq": 798000000
+                },
+                {
+                    "color": "#2687a6",
+                    "end_freq": 930000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "航空无线电导航"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Aeronautical Radio Navigation"
+                        }
+                    ],
+                    "start_freq": 925000000
+                },
+                {
+                    "color": "#2687a6",
+                    "end_freq": 2900000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "航空无线电导航"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Aeronautical Radio Navigation"
+                        }
+                    ],
+                    "start_freq": 2700000000
+                },
+                {
+                    "color": "#5f1c92",
+                    "end_freq": 5091000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "MLS微波着陆系统"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Microwave Landing System"
+                        }
+                    ],
+                    "start_freq": 5030000000
+                },
+                {
+                    "color": "#3b0128",
+                    "end_freq": 1350000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "一次雷达（远程）"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Primary Surveillance Radar(Long-Range)"
+                        }
+                    ],
+                    "start_freq": 1250000000
+                },
+                {
+                    "color": "#0c9835",
+                    "end_freq": 2900000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "一次雷达（近程）"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Primary Surveillance Radar(Short-Range)"
+                        }
+                    ],
+                    "start_freq": 2700000000
+                },
+                {
+                    "color": "#72527c",
+                    "end_freq": 1031000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "二次雷达"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Secondary Surveillance Radar"
+                        }
+                    ],
+                    "start_freq": 1029000000
+                },
+                {
+                    "color": "#72527c",
+                    "end_freq": 1093000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "二次雷达"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Secondary Surveillance Radar"
+                        }
+                    ],
+                    "start_freq": 1087000000
+                },
+                {
+                    "color": "#94fbdf",
+                    "end_freq": 1031000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "二次雷达(广播室自动相关监视系统ADS-B S模式SSR)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Secondary Surveillance Radar (SSR) with Automatic Dependent Surveillance-Broadcast (ADS-B) and Mode S"
+                        }
+                    ],
+                    "start_freq": 1029000000
+                },
+                {
+                    "color": "#94fbdf",
+                    "end_freq": 1091000000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "二次雷达(广播室自动相关监视系统ADS-B S模式SSR)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Secondary Surveillance Radar (SSR) with Automatic Dependent Surveillance-Broadcast (ADS-B) and Mode S"
+                        }
+                    ],
+                    "start_freq": 1089000000
+                },
+                {
+                    "color": "#71052a",
+                    "end_freq": 1576443000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "GPS(L1-C/A,L1C)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "GPS(L1-C/A,L1C)"
+                        }
+                    ],
+                    "start_freq": 1574397000
+                },
+                {
+                    "color": "#71052a",
+                    "end_freq": 1228623000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "GPS(L2)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "GPS(L2)"
+                        }
+                    ],
+                    "start_freq": 1226577000
+                },
+                {
+                    "color": "#71052a",
+                    "end_freq": 1186680000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "GPS(L5)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "GPS(L5)"
+                        }
+                    ],
+                    "start_freq": 1166220000
+                },
+                {
+                    "color": "#9f0ae8",
+                    "end_freq": 1587420000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "伽利略卫星导航系统(E1)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Galileo(E1)"
+                        }
+                    ],
+                    "start_freq": 1563420000
+                },
+                {
+                    "color": "#9f0ae8",
+                    "end_freq": 1186680000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "伽利略卫星导航系统(E5a)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Galileo(E5a)"
+                        }
+                    ],
+                    "start_freq": 1166220000
+                },
+                {
+                    "color": "#9f0ae8",
+                    "end_freq": 1217370000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "伽利略卫星导航系统(E5b)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Galileo(E5b)"
+                        }
+                    ],
+                    "start_freq": 1196910000
+                },
+                {
+                    "color": "#9f0ae8",
+                    "end_freq": 1288980000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "伽利略卫星导航系统(E6)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Galileo(E6)"
+                        }
+                    ],
+                    "start_freq": 1268520000
+                },
+                {
+                    "color": "#1da1bc",
+                    "end_freq": 1615500000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "格洛纳斯系统(L1(FDMA))"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Glonass(L1(FDMA))"
+                        }
+                    ],
+                    "start_freq": 1602000000
+                },
+                {
+                    "color": "#1da1bc",
+                    "end_freq": 1256500000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "格洛纳斯系统(L2(FDMA))"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Glonass(L2(FDMA))"
+                        }
+                    ],
+                    "start_freq": 1246000000
+                },
+                {
+                    "color": "#1da1bc",
+                    "end_freq": 1212255000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "格洛纳斯系统(L3(CDMA))"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "Glonass(L3(CDMA))"
+                        }
+                    ],
+                    "start_freq": 1191795000
+                },
+                {
+                    "color": "#cd1afa",
+                    "end_freq": 1565190000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "北斗(B1)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "BDS(B1)"
+                        }
+                    ],
+                    "start_freq": 1557006000
+                },
+                {
+                    "color": "#cd1afa",
+                    "end_freq": 1288980000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "北斗(B3)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "BDS(B3)"
+                        }
+                    ],
+                    "start_freq": 1248060000
+                },
+                {
+                    "color": "#cd1afa",
+                    "end_freq": 1211232000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "北斗(B2)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "BDS(B2)"
+                        }
+                    ],
+                    "start_freq": 1203048000
+                },
+                {
+                    "color": "#4e2b6b",
+                    "end_freq": 1589742000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "准天顶卫星系统(QZSS)(L1C)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "QZSS(L1C)"
+                        }
+                    ],
+                    "start_freq": 1561098000
+                },
+                {
+                    "color": "#e78bb0",
+                    "end_freq": 1576443000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "准天顶卫星系统(QZSS)(L1-C/A)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "QZSS(L1-C/A)"
+                        }
+                    ],
+                    "start_freq": 1574397000
+                },
+                {
+                    "color": "#c1dcc0",
+                    "end_freq": 1278623000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "准天顶卫星系统(QZSS)(L2C)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "QZSS(L2C)"
+                        }
+                    ],
+                    "start_freq": 1276577000
+                },
+                {
+                    "color": "#6ef125",
+                    "end_freq": 1186680000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "准天顶卫星系统(QZSS)(L5)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "QZSS(L5)"
+                        }
+                    ],
+                    "start_freq": 1166220000
+                },
+                {
+                    "color": "#6ef125",
+                    "end_freq": 1283865000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "准天顶卫星系统(QZSS)(L6)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "QZSS(L6)"
+                        }
+                    ],
+                    "start_freq": 1273635000
+                },
+                {
+                    "color": "#6ef125",
+                    "end_freq": 1177473000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "印度区域导航卫星系统（IRNSS）(L5)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "IRNSS(L5)"
+                        }
+                    ],
+                    "start_freq": 1175427000
+                },
+                {
+                    "color": "#6ef125",
+                    "end_freq": 2494074000,
+                    "foot_notes": [
+                    ],
+                    "language": [
+                        {
+                            "code": 2052,
+                            "name": "印度区域导航卫星系统（IRNSS）(S)"
+                        },
+                        {
+                            "code": 1033,
+                            "name": "IRNSS(S)"
+                        }
+                    ],
+                    "start_freq": 2489982000
+                }
+            ],
+            "bg_color": "#BCBCBC",
+            "format_type": 3,
+            "table_name": "中国"
+        },
+        "data_options": {
+            "button": {
+                "background_button": [
+                    0,
+                    0,
+                    255,
+                    1
+                ],
+                "show_switch_button": true
+            },
+            "channel_show": "show",
+            "grid": {
+                "channel_max_height": 5,
+                "left": 40,
+                "right": 0,
+                "stroke_color": [
+                    0,
+                    255,
+                    0,
+                    1
+                ],
+                "stroke_focus_color": [
+                    0,
+                    0,
+                    255,
+                    1
+                ],
+                "stroke_focus_width": 5,
+                "stroke_width": 5
+            },
+            "language_code": "2052",
+            "lock": {
+                "background": [
+                    200,
+                    200,
+                    200,
+                    1
+                ],
+                "color": [
+                    100,
+                    100,
+                    100,
+                    1
+                ],
+                "content": "hello!",
+                "font_size": 10
+            },
+            "scrollbar_show": "show",
+            "x_axis": {
+                "decimals": 6,
+                "init_end_freq": 500000000,
+                "init_start_freq": 200000000,
+                "show_bottom_label": true,
+                "show_top_label": true,
+                "unit": "MHz",
+                "unit_position": "top"
+            }
+        }
+    },
+    "operate_type": "load_chart"
+}

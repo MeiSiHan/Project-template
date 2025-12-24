@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Line Chart with Zoom and Grid</title>
+    <style>
+        #chartContainer {
+            width: 100%;
+            height: 400px;
+            position: relative;
+        }
+        canvas {
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="chartContainer">
+        <canvas id="lineChart"></canvas>
+    </div>
+
+    <script>
+        class LineChart {
+            constructor(canvasId, data, options = {}) {
+                this.canvas = document.getElementById(canvasId);
+                this.ctx = this.canvas.getContext('2d');
+
+                this.width = 600;
+                this.height = 400;
+
+                // Initial parameters
+                this.yMin = options.yMin || Math.min(...data);
+                this.yMax = options.yMax || Math.max(...data);
+                this.yTickInterval = 20; // Initial Y axis tick interval
+                this.zoomLevel = options.zoomLevel || 1;
+                this.padding = options.padding || { top: 20, right: 20, bottom: 40, left: 50 };
+
+                this.data = data;
+
+                // Initialize mouse dragging properties
+                this.isDragging = false;
+                this.startY = 0;
+
+                // Set Canvas size
+                this.setCanvasSize();
+                this.draw();
+
+                // Add mouse event listeners
+                this.canvas.addEventListener('mousedown', this.onMouseDown.bind(this));
+                this.canvas.addEventListener('mouseup', this.onMouseUp.bind(this));
+                this.canvas.addEventListener('mousemove', this.onMouseMove.bind(this));
+                this.canvas.addEventListener('wheel', this.onWheel.bind(this));
+            }
+
+            setCanvasSize() {
+                this.canvas.width = this.width;
+                this.canvas.height = this.height;
+            }
+
+            draw() {
+                const { ctx, canvas, data, yMax, yMin, padding } = this;
+                const yRange = (yMax - yMin) * this.zoomLevel;
+
+                // Clear the canvas
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                // Draw grid lines
+                this.drawGrid(yMin, yMax, yRange);
+
+                // Draw axes
+                ctx.beginPath();
+                ctx.moveTo(padding.left, canvas.height - padding.bottom);
+                ctx.lineTo(canvas.width - padding.right, canvas.height - padding.bottom); // X axis
+                ctx.moveTo(padding.left, padding.top);
+                ctx.lineTo(padding.left, canvas.height - padding.bottom); // Y axis
+                ctx.strokeStyle = '#000';
+                ctx.stroke();
+
+                // Draw Y axis ticks and labels
+                this.drawYAxisTicks(yMin, yMax, yRange);
+
+                // Draw X axis labels (Days of the week)
+                this.drawXAxisLabels();
+
+                // Draw line chart
+                this.drawLineChart(data, yMin, yMax, yRange);
+            }
+
+            drawGrid(yMin, yMax, yRange) {
+                const { ctx, canvas, padding } = this;
+                ctx.strokeStyle = '#e0e0e0'; // Grid color
+                ctx.lineWidth = 0.5;
+
+                // Draw horizontal grid lines
+                const numHorizontalTicks = Math.ceil(yRange / this.yTickInterval); // Adjust based on tick interval
+                const horizontalTickInterval = yRange / numHorizontalTicks;
+                for (let i = 0; i <= numHorizontalTicks; i++) {
+                    const yValue = yMin + i * horizontalTickInterval / this.zoomLevel;
+                    const y = canvas.height - padding.bottom - ((yValue - yMin) / yRange) * (canvas.height - padding.top - padding.bottom);
+                    ctx.beginPath();
+                    ctx.moveTo(padding.left, y);
+                    ctx.lineTo(canvas.width - padding.right, y);
+                    ctx.stroke();
+                }
+
+                // Draw vertical grid lines
+                const numVerticalTicks = this.data.length; // Number of vertical ticks based on data length
+                for (let i = 0; i < numVerticalTicks; i++) {
+                    const x = padding.left + (i * ((canvas.width - padding.left - padding.right) / (numVerticalTicks - 1)));
+                    ctx.beginPath();
+                    ctx.moveTo(x, padding.top);
+                    ctx.lineTo(x, canvas.height - padding.bottom);
+                    ctx.stroke();
+                }
+            }
+
+            drawYAxisTicks(yMin, yMax, yRange) {
+                const { ctx, canvas, padding } = this;
+                const numTicks = Math.ceil((yMax - yMin) / this.yTickInterval); // Calculate number of ticks dynamically
+                ctx.fillStyle = '#000';
+
+                for (let i = 0; i <= numTicks; i++) {
+                    const yValue = yMin + i * this.yTickInterval;
+                    const y = canvas.height - padding.bottom - ((yValue - yMin) / yRange) * (canvas.height - padding.top - padding.bottom);
+                    ctx.fillText(yValue.toFixed(1), padding.left - 30, y);
+                    if (i < numTicks) {
+                        ctx.moveTo(padding.left - 5, y);
+                        ctx.lineTo(padding.left, y);
+                    }
+                }
+                ctx.stroke();
+            }
+            
+            drawXAxisLabels() {
+                const { ctx, canvas, padding } = this;
+                const weekdays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+                ctx.fillStyle = '#000';
+
+                weekdays.forEach((day, index) => {
+                    const x = padding.left + (index * ((canvas.width - padding.left - padding.right) / (weekdays.length - 1)));
+                    ctx.fillText(day, x, canvas.height - padding.bottom + 15);
+                });
+            }
+
+            drawLineChart(data, yMin, yMax, yRange) {
+                const { ctx, canvas, padding } = this;
+                ctx.strokeStyle = 'rgb(75, 192, 192)';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+
+                data.forEach((value, index) => {
+                    const y = canvas.height - padding.bottom - ((value - yMin) / yRange) * (canvas.height - padding.top - padding.bottom);
+                    const x = padding.left + (index * ((canvas.width - padding.left - padding.right) / (data.length - 1)));
+
+                    if (index === 0) {
+                        ctx.moveTo(x, y);
+                    } else {
+                        ctx.lineTo(x, y);
+                    }
+                });
+
+                ctx.stroke(); // Draw the line
+            }
+
+            onMouseDown(event) {
+                this.isDragging = true;
+                this.startY = event.clientY;
+            }
+
+            onMouseUp() {
+                this.isDragging = false;
+            }
+
+            onMouseMove(event) {
+                if (this.isDragging) {
+                    const dy = event.clientY - this.startY;
+
+                    // Adjust Y axis range
+                    const adjustment = dy * 0.1; // Adjustment sensitivity
+                    this.yMin -= adjustment;
+                    this.yMax -= adjustment;
+
+                    // Redraw the chart
+                    this.draw();
+
+                    // Update starting position
+                    this.startY = event.clientY;
+                }
+            }
+
+            onWheel(event) {
+                event.preventDefault(); // Prevent page scrolling
+
+                const zoomFactor = 5; // Zoom factor for tick interval change
+                const wheelDelta = event.deltaY < 0 ? -zoomFactor : zoomFactor;
+
+                // Update Y axis tick interval
+                this.yTickInterval = Math.max(5, this.yTickInterval + wheelDelta); // Ensure a minimum tick interval
+
+                // Redraw the chart
+                this.draw();
+            }
+        }
+
+        // Sample data
+        const data = [25, 30, 45, 50, 55, 40, 60];
+
+        // Create chart instance with initial Y axis min/max values and padding
+        const options = {
+            yMin: 20,
+            yMax: 100, // Set a higher max value to accommodate tick intervals
+            zoomLevel: 1,
+            padding: { top: 20, right: 20, bottom: 40, left: 50 }
+        };
+        const myChart = new LineChart('lineChart', data, options);
+    </script>
+</body>
+</html>

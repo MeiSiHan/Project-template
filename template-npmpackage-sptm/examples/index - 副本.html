@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Renderer with Layers</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+    <button id="undoButton">Undo Layer 1</button>
+    <button id="redoButton">Redo Layer 1</button>
+
+    <script>
+
+
+class DeltaSet {
+  constructor() {
+    this.history = {};
+    this.currentIndex = {};
+  }
+
+  add(layer, delta) {
+    if (!this.history[layer]) {
+      this.history[layer] = [];
+      this.currentIndex[layer] = -1;
+    }
+
+    const layerHistory = this.history[layer];
+    const layerIndex = this.currentIndex[layer];
+
+    if (layerIndex < layerHistory.length - 1) {
+      layerHistory.splice(layerIndex + 1);
+    }
+
+    layerHistory.push(delta);
+    this.currentIndex[layer]++;
+  }
+
+  undo(layer) {
+    if (this.canUndo(layer)) {
+      const layerHistory = this.history[layer];
+      this.currentIndex[layer]--;
+      return layerHistory[this.currentIndex[layer] + 1];
+    }
+    return null;
+  }
+
+  redo(layer) {
+    if (this.canRedo(layer)) {
+      const layerHistory = this.history[layer];
+      this.currentIndex[layer]++;
+      return layerHistory[this.currentIndex[layer]];
+    }
+    return null;
+  }
+
+  canUndo(layer) {
+    return this.currentIndex[layer] > 0;
+  }
+
+  canRedo(layer) {
+    return this.currentIndex[layer] < (this.history[layer] ? this.history[layer].length - 1 : -1);
+  }
+}
+
+
+
+
+
+
+// 示例操作
+class DrawOperation {
+  constructor(type, params) {
+    this.type = type; // 'circle', 'rectangle', etc.
+    this.params = params; // 具体参数
+  }
+}
+
+
+
+
+class CanvasRenderer {
+  constructor(canvasId) {
+    this.canvas = document.getElementById(canvasId);
+    this.context = this.canvas.getContext('2d');
+    this.deltaSet = new DeltaSet();
+    this.shapes = []; // 存储绘制的形状
+    this.canvas.addEventListener('click', (event) => this.handleClick(event));
+  }
+
+  draw(layer, operation) {
+    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height); // 清空画布
+    this.renderAllLayers(); // 渲染所有图层
+    this.render(operation); // 渲染当前操作
+    this.deltaSet.add(layer, operation); // 添加到历史
+    this.shapes.push({ layer, operation }); // 记录形状
+  }
+
+  render(operation) {
+    const { type, params } = operation;
+    this.context.beginPath();
+    switch (type) {
+      case 'circle':
+        this.context.arc(params.x, params.y, params.radius, 0, Math.PI * 2);
+        this.context.fillStyle = params.color;
+        this.context.fill();
+        break;
+      case 'rectangle':
+        this.context.rect(params.x, params.y, params.width, params.height);
+        this.context.fillStyle = params.color;
+        this.context.fill();
+        break;
+      case 'line':
+        this.context.moveTo(params.x1, params.y1);
+        this.context.lineTo(params.x2, params.y2);
+        this.context.strokeStyle = params.color;
+        this.context.lineWidth = params.width;
+        this.context.stroke();
+        break;
+    }
+    this.context.closePath();
+  }
+
+  handleClick(event) {
+    const rect = this.canvas.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+
+    const clickedShape = this.shapes.find(shape => this.isInsideShape(shape.operation, x, y));
+    if (clickedShape) {
+      console.log('Clicked on:', clickedShape);
+    }
+  }
+
+  isInsideShape(operation, x, y) {
+    const { type, params } = operation;
+    switch (type) {
+      case 'circle':
+        const distance = Math.sqrt((x - params.x) ** 2 + (y - params.y) ** 2);
+        return distance <= params.radius;
+      case 'rectangle':
+        return x >= params.x && x <= params.x + params.width && y >= params.y && y <= params.y + params.height;
+      case 'line':
+        const d1 = Math.hypot(params.x2 - params.x1, params.y2 - params.y1);
+        const d2 = Math.hypot(x - params.x1, y - params.y1) + Math.hypot(x - params.x2, y - params.y2);
+        return Math.abs(d1 - d2) < 1; // 允许一定误差
+      default:
+        return false;
+    }
+  }
+
+  renderAllLayers() {
+    Object.keys(this.deltaSet.history).forEach(layer => {
+      this.deltaSet.history[layer].forEach(op => this.render(op));
+    });
+  }
+
+  undo() {
+    const layers = this.shapes
+    var layer=this.shapes[this.shapes.length-1].layer
+    const undoneOperation = this.deltaSet.undo(layer);
+    console.log(this.shapes,undoneOperation);
+    if (undoneOperation) {
+      this.shapes.pop(); // 移除最后的形状
+      this.renderAllLayers(); // 重新渲染所有形状
+    }
+  }
+
+  redo() {
+    const layers = this.shapes
+    var layer=this.shapes[this.shapes.length-1].layer
+    const redoneOperation = this.deltaSet.redo(layer);
+    if (redoneOperation) {
+      this.shapes.push(redoneOperation); // 添加回形状
+      this.render(redoneOperation); // 重新绘制
+    }
+  }
+}
+
+
+
+
+
+
+        const renderer = new CanvasRenderer('myCanvas');
+
+        // 添加绘制操作
+        renderer.draw('layer1', new DrawOperation('circle', { x: 100, y: 100, radius: 30, color: 'red' }));
+        renderer.draw('layer2', new DrawOperation('rectangle', { x: 150, y: 150, width: 50, height: 100, color: 'blue' }));
+        renderer.draw('layer1', new DrawOperation('line', { x1: 50, y1: 50, x2: 300, y2: 300, color: 'green', width: 2 }));
+        // 绑定撤销和重做
+        document.getElementById('undoButton').addEventListener('click', () => renderer.undo('layer1'));
+        document.getElementById('redoButton').addEventListener('click', () => renderer.redo('layer1'));
+    </script>
+</body>
+</html>

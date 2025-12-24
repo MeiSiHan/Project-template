@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Canvas Chart</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 使内容居中 */
+            background-color: #f5f5f5; /* 背景颜色 */
+        }
+        #chartContainer {
+            width: 100%; /* 容器宽度100% */
+            max-width: 1200px; /* 最大宽度限制 */
+            height: 400px; /* 固定高度 */
+            margin: auto; /* 居中 */
+            border: 1px solid #ccc;
+            position: relative;
+        }
+        canvas {
+            display: block; /* 使 Canvas 填满容器 */
+        }
+    </style>
+</head>
+<body>
+    <div id="chartContainer">
+        <canvas id="lineChart"></canvas>
+    </div>
+
+    <script>
+//         class LineChart {
+//     constructor(canvasId, data, options = {}) {
+//         this.canvas = document.getElementById(canvasId);
+//         this.ctx = this.canvas.getContext('2d');
+//         this.devicePixelRatio = window.devicePixelRatio || 1;
+
+        
+
+//         this.data = data;
+//         this.options = {
+//             color: options.color || 'rgb(75, 192, 192)',
+//             lineWidth: options.lineWidth || 2,
+//             padding: options.padding || 20,
+//             ...options
+//         };
+//         // 设置 Canvas 尺寸为容器大小
+//         this.resizeCanvas();
+//         this.draw();
+        
+//         // 监听窗口调整大小
+//         window.addEventListener('resize', () => this.resizeCanvas());
+//     }
+
+//     resizeCanvas() {
+//         const container = document.getElementById('chartContainer');
+//         const width = container.clientWidth;
+//         const height = container.clientHeight;
+
+//         this.canvas.width = width * this.devicePixelRatio;
+//         this.canvas.height = height * this.devicePixelRatio;
+//         this.ctx.scale(this.devicePixelRatio, this.devicePixelRatio);
+//         this.draw(); // 重新绘制图表以适应新尺寸
+//     }
+
+//     draw() {
+//         const { ctx, canvas, data, options } = this;
+//         const { padding, color, lineWidth } = options;
+
+//         const maxDataPoint = Math.max(...data);
+//         const minDataPoint = Math.min(...data);
+//         const scaledHeight = canvas.height - 2 * padding;
+//         const scaledWidth = canvas.width - 2 * padding;
+
+//         // 清空画布
+//         ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+//         // 绘制坐标轴
+//         ctx.beginPath();
+//         ctx.moveTo(padding, padding);
+//         ctx.lineTo(padding, canvas.height - padding);
+//         ctx.lineTo(canvas.width - padding, canvas.height - padding);
+//         ctx.stroke();
+
+//         // 绘制折线
+//         ctx.strokeStyle = color;
+//         ctx.lineWidth = lineWidth;
+//         ctx.beginPath();
+
+//         data.forEach((point, index) => {
+//             const x = padding + (index * (scaledWidth / (data.length - 1)));
+//             const y = (canvas.height - padding) - ((point - minDataPoint) / (maxDataPoint - minDataPoint)) * scaledHeight;
+//             if (index === 0) {
+//                 ctx.moveTo(x, y);
+//             } else {
+//                 ctx.lineTo(x, y);
+//             }
+//         });
+
+//         ctx.stroke();
+//     }
+
+//     updateData(newData) {
+//         this.data = newData;
+//         this.draw();
+//     }
+// }
+
+// // 示例数据
+// const data = [65, 59, 80, 81, 56, 55, 40];
+
+// // 创建折线图
+// const myChart = new LineChart('lineChart', data, {
+//     color: 'rgb(75, 192, 192)',
+//     lineWidth: 2,
+//     padding: 30 // 确保这里传递了padding参数
+// });
+
+// // 更新数据示例
+// setTimeout(() => {
+//     const newData = [28, 48, 40, 19, 86, 27, 90];
+//     myChart.updateData(newData);
+// }, 2000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class LineChart {
+    constructor(canvasId, data, options = {}) {
+        this.canvas = document.getElementById(canvasId);
+        this.ctx = this.canvas.getContext('2d');
+
+        
+
+        this.data = data;
+        this.options = {
+            color: options.color || 'rgb(75, 192, 192)',
+            lineWidth: options.lineWidth || 2,
+            padding: options.padding || 20,
+            fontSize: options.fontSize || '16px',
+            fontFamily: options.fontFamily || 'Arial',
+            ...options
+        };
+
+        this.draw();
+// 设置 Canvas 尺寸为容器大小
+this.setCanvasSize(options.width, options.height);
+        // 监听窗口调整大小
+        window.addEventListener('resize', () => this.resizeCanvas());
+
+        // 监听鼠标移动
+        this.canvas.addEventListener('mousemove', (event) => this.handleMouseMove(event));
+    }
+
+    setCanvasSize(width, height) {
+        const container = document.getElementById('chartContainer');
+        const containerWidth = container.clientWidth;
+        const containerHeight = container.clientHeight;
+
+        // 使用实际像素大小设置 Canvas
+        this.canvas.width = width === "100%" ? containerWidth * window.devicePixelRatio : width;
+        this.canvas.height = height === "100%" ? containerHeight * window.devicePixelRatio : height;
+
+        // 设置 CSS 样式，确保 Canvas 在视觉上保持相应比例
+        this.canvas.style.width = `${containerWidth}px`;
+        this.canvas.style.height = `${containerHeight}px`;
+
+        // 更新字体大小以适应高分辨率
+        this.options.fontSize = `${parseInt(this.options.fontSize) * window.devicePixelRatio}px`;
+    }
+
+    resizeCanvas() {
+        this.setCanvasSize('100%', '100%'); // 重新设置 Canvas 尺寸
+        this.draw(); // 重新绘制图表以适应新尺寸
+    }
+
+    draw() {
+        const { ctx, canvas, data, options } = this;
+        const { padding, color, lineWidth } = options;
+
+        // const maxDataPoint = Math.max(...data);
+        // const minDataPoint = Math.min(...data);
+        const maxDataPoint =80;
+        const minDataPoint = 20;
+        const scaledHeight = canvas.height - 2 * padding;
+        const scaledWidth = canvas.width - 2 * padding;
+
+
+        // 创建剪切区域
+        ctx.save(); // 保存当前状态
+        ctx.beginPath();
+        ctx.rect(padding, padding, canvas.width - padding * 2, canvas.height - padding * 2);
+        ctx.clip(); // 应用剪切区域
+
+        // 清空画布
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // 绘制坐标轴
+        ctx.beginPath();
+        ctx.moveTo(padding, padding);
+        ctx.lineTo(padding, canvas.height - padding);
+        ctx.lineTo(canvas.width - padding, canvas.height - padding);
+        ctx.stroke();
+
+        // 绘制折线
+        ctx.strokeStyle = color;
+        ctx.lineWidth = lineWidth;
+        ctx.beginPath();
+
+        data.forEach((point, index) => {
+            const x = padding + (index * (scaledWidth / (data.length - 1)));
+            const y = (canvas.height - padding) - ((point - minDataPoint) / (maxDataPoint - minDataPoint)) * scaledHeight;
+            if (index === 0) {
+                ctx.moveTo(x, y);
+            } else {
+                ctx.lineTo(x, y);
+            }
+        });
+
+        ctx.stroke();
+
+        // 恢复之前的状态以移除剪切效果
+        ctx.restore();
+        // 添加数据标签
+        ctx.fillStyle = color;
+        ctx.font = `${options.fontSize} ${options.fontFamily}`;
+        data.forEach((point, index) => {
+            const x = padding + (index * (scaledWidth / (data.length - 1)));
+            const y = (canvas.height - padding) - ((point - minDataPoint) / (maxDataPoint - minDataPoint)) * scaledHeight;
+            ctx.fillText(point.toFixed(2), x, y - 5); // 在点上方显示数据值
+        });
+
+        // 绘制 X 轴刻度（星期）
+        const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        ctx.font = `bold ${options.fontSize} ${options.fontFamily}`;
+        weekdays.forEach((day, index) => {
+            const x = padding + (index * (scaledWidth / (weekdays.length - 1)));
+            ctx.fillText(day, x, canvas.height - padding + 20); // 在 X 轴下方显示星期
+        });
+
+        // 绘制 Y 轴刻度
+        ctx.font = options.fontSize;
+        for (let i = 0; i <= 5; i++) {
+            const value = minDataPoint + (i * (maxDataPoint - minDataPoint) / 5);
+            const y = (canvas.height - padding) - ((value - minDataPoint) / (maxDataPoint - minDataPoint)) * scaledHeight;
+            ctx.fillText(value.toFixed(2), 20, y); // 在 Y 轴左侧显示数值
+        }
+    }
+
+    handleMouseMove(event) {
+        const { data, options } = this;
+        const padding = options.padding;
+        const scaledWidth = this.canvas.width - 2 * padding;
+
+        // 获取鼠标在 Canvas 中的位置
+        const rect = this.canvas.getBoundingClientRect();
+        const mouseX = event.clientX - rect.left;
+
+        // 找到最近的数据点
+        const index = Math.round((mouseX - padding) / (scaledWidth / (data.length - 1)));
+
+        if (index >= 0 && index < data.length) {
+            this.showTooltip(mouseX, data[index]);
+        }
+    }
+
+    showTooltip(mouseX, value) {
+        const { ctx, options } = this;
+        const padding = options.padding;
+
+        // 清空 Canvas 并重新绘制
+        this.draw();
+
+        // 绘制悬浮提示框
+        const tooltipWidth = 50;
+        const tooltipHeight = 30;
+        const tooltipX = mouseX - tooltipWidth / 2;
+        const tooltipY = 10;
+
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+        ctx.fillRect(tooltipX, tooltipY, tooltipWidth, tooltipHeight);
+        ctx.strokeStyle = 'black';
+        ctx.strokeRect(tooltipX, tooltipY, tooltipWidth, tooltipHeight);
+
+        ctx.fillStyle = 'black';
+        ctx.font = `${options.fontSize} ${options.fontFamily}`;
+        ctx.fillText(value.toFixed(2), tooltipX + 5, tooltipY + 20);
+    }
+
+    updateData(newData) {
+        this.data = newData;
+        this.draw();
+    }
+}
+
+// 示例数据
+const data = [160, 59, 80, 81, 56, 55, 40];
+
+// 创建折线图，设置宽度和高度为100%
+const myChart = new LineChart('lineChart', data, {
+    width: '100%',   // 宽度自适应
+    height: '100%',  // 高度自适应
+    color: 'rgb(75, 192, 192)',
+    lineWidth: 2,
+    padding: 60,
+    fontSize: '12px', // 可以根据需要调整字体大小
+    fontFamily: 'Arial'
+});
+
+// 更新数据示例
+setTimeout(() => {
+    const newData = [160, 48, 40, 19, 86, 27, 90];
+    myChart.updateData(newData);
+}, 2000);
+
+
+
+    </script>
+</body>
+</html>

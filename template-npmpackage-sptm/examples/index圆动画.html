@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Circle Animation</title>
+    <style>
+        canvas {
+            background-color: #f0f0f0; /* 背景颜色 */
+            display: block; /* 让 canvas 居中 */
+            margin: auto; /* 自动边距 */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // 圆圈的配置，减小 growthRate 使其变慢
+        const circles = [
+            { radius: 100, maxRadius: 100, color: 'rgba(255, 99, 71, 1)' }, // 番茄红
+            { radius: 80, maxRadius: 100, color: 'rgba(30, 144, 255, 1)' }, // 深天蓝
+            { radius: 60, maxRadius: 100,color: 'rgba(60, 179, 113, 1)' }, // 海洋绿
+            { radius: 40, maxRadius: 100, color: 'rgba(255, 215, 0, 1)' }, // 金色
+            { radius: 20, maxRadius: 100, color: 'rgba(255, 105, 180, 1)' }, // 粉红色
+            { radius: 20, maxRadius: 100, growthRate: 10, color: 'rgba(255, 0, 0, 1)' }
+        ];
+
+        function animate() {
+            // 清除画布
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // 绘制每个圆
+            circles.forEach((circle,index) => {
+                ctx.beginPath();
+                ctx.arc(200, 200, circle.radius, 0, Math.PI * 2, true);
+                ctx.fillStyle = circle.color.replace(/1\)$/, '0.5)'); // 设置填充颜色为半透明
+                ctx.fill();
+
+                // 增加半径
+                //circle.radius += circle.growthRate;
+                if(index==5){
+                    circle.radius += 20;
+                    // 如果半径小于最大半径，继续动画
+                    if (circle.radius > circle.maxRadius) {
+                    circle.radius = 20; // 重新开始
+                }
+                }
+                
+                
+            });
+
+            // 请求下一帧
+           // requestAnimationFrame(animate);
+            
+        }
+        setInterval(() => {
+                animate()
+            }, 500);
+        // 启动动画
+        animate();
+    </script>
+</body>
+</html>

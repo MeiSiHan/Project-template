@@ -5,13 +5,14 @@ npm install ol
 # 安装babel
 npm install @babel/core @babel/cli @babel/preset-env babel-loader @babel/preset-react @babel/preset-typescript --save-dev
 # 安装rollup
-npm install rollup @rollup/plugin-babel @rollup/plugin-node-resolve rollup-plugin-terser rollup-plugin-postcss @rollup-plugin-commonjs --save-dev
+npm install rollup @rollup/plugin-babel @rollup/plugin-node-resolve rollup-plugin-terser rollup-plugin-postcss @rollup-plugin-commonjs @rollup/plugin-typescrip --save-dev
 
 # 安装terser
 npm install --save-dev terser
  # 安装commonjs
 npm install --save-dev @rollup/plugin-commonjs
-
+# 安装typescript
+npm install typescript --save-dev
 
 # package.json文件
 ```javaScript
@@ -78,21 +79,21 @@ export default {
   input: 'src/index.js',
   output: [
     {
-        file: 'dist/olMaps.js',
+        file: 'dist/DZChart.js',
         format: 'umd',//UMD 格式的输出（适用于浏览器和 Node.js）
-        name: 'olMaps',
+        name: 'DZChart',
         globals:{
             ol: 'ol'
         },
         sourcemap: true  // 生成 sourcemap 文件，方便调试
     },
     {
-        file: 'dist/olMaps.esm.js',// ES Modules 格式的输出（适用于 npm 包）
+        file: 'dist/DZChart.esm.js',// ES Modules 格式的输出（适用于 npm 包）
         format: 'esm',
         sourcemap: true
     },
     {
-        file: 'dist/ol-maps.cjs.js',  // CommonJS 格式的输出（适用于 Node.js 和 CommonJS）
+        file: 'dist/DZChart.cjs.js',  // CommonJS 格式的输出（适用于 Node.js 和 CommonJS）
         format: 'cjs',
         sourcemap: true,
         exports: 'auto', // 或 'default' 根据需要选择合适的导出方式
@@ -142,28 +143,3 @@ export default function createMap(target, options) {
 ```
 # 创建index.css文件
 ```css
-```
-
-## 安装依赖
-```javaScript
-  npm i
-```
-
-## 本地打包
-```javaScript
-  npm run build
-```
-
-## 打包后执行
-```javaScript
-  npm link
-```
-## 使用
-```javaScript
-  //链接库
-  npm link sptmChart
-  //引入库
-  import sptmChart from 'sptmChart'
-  // 实例化
-  let sptmCharts = new sptmChart('id',options)
-```

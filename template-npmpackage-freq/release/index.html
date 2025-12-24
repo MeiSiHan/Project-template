@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv=Content-Type content="text/html;charset=utf-8">
+  <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/qwebchannel.js"></script>
+  <title>freq chart</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      touch-action: none;
+      /* 禁止触摸屏上的缩放 */
+    }
+
+    #lock_mask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 10;
+      display: none;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    #onload_mask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 11;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      color: #0097ef;
+      font-size: 50px;
+    }
+
+    #mycanvas {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      box-sizing: border-box;
+      border: 2px solid transparent;
+    }
+
+    #bottomBox {
+      display: none;
+      position: absolute;
+      left: 0px;
+      /* bottom: 50px; */
+      height: 100%;
+      width: 40px;
+      z-index: 2;
+      background-color: #70797e;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+
+    #bottomBox .button {
+      width: 100%;
+      /* height: 40px; */
+      border: 2px solid transparent;
+      /* margin: 4px; */
+      cursor: pointer;
+      /* border-radius: 6px; */
+      background-color: rgba(50, 63, 72, 0.6);
+      /* background-color: #323f48; */
+      /* background-size: 100% 100%; */
+      background-size: contain;
+      /* 保持图片比例，不放大 */
+      background-repeat: no-repeat;
+      /* 防止图片重复显示 */
+      background-position: center center;
+      box-sizing: border-box;
+      /* 水平垂直居中 */
+    }
+
+    /* #bottomBox .button:first-child {
+      margin-bottom: 2px;
+    } */
+    #bottomBox .button:last-child {
+      margin-top: 4px;
+    }
+
+    #bottomBox .button:hover {
+      background-color: #3b8df3 !important;
+    }
+
+    .active {
+      border: 2px solid red !important;
+    }
+
+    #zoom_in {
+      display: none;
+      background-image: url("img/up.png");
+    }
+
+    #zoom_out {
+      background-image: url("img/down.png");
+    }
+
+    #switch_button {
+      display: none;
+      background-image: url("img/switch.png");
+    }
+
+    #scroll-bar {
+      position: absolute;
+      width: 18px;
+      height: 500px;
+      top: 0;
+      right: 0;
+      background-color: #f5f5f5;
+      z-index: 1;
+      overflow-y: auto;
+      border-radius: 4px;
+      display: none;
+      ;
+    }
+
+    #scroll-bar-content {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* 整体滚动条容器 */
+    ::-webkit-scrollbar {
+      width: 12px;
+      /* 垂直滚动条宽度 */
+      height: 12px;
+      /* 水平滚动条高度 */
+      background: #f5f5f5;
+      /* 轨道背景色 */
+    }
+
+    /* 滚动条轨道 */
+    ::-webkit-scrollbar-track {
+      border-radius: 6px;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+      /* 内阴影效果 */
+    }
+
+    /* 滚动条滑块 */
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(45deg, #888, #666);
+      /* 渐变效果 */
+      border: 2px solid #f5f5f5;
+      /* 轨道留白 */
+      border-radius: 6px;
+      transition: background 0.3s;
+      /* 动画过渡 */
+    }
+
+    /* 滑块悬停态 */
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(45deg, #666, #444);
+    }
+
+    /* 滚动条边角（右下角交汇处）*/
+    ::-webkit-scrollbar-corner {
+      background: #f0f0f0;
+    }
+
+    /* 按钮（上下箭头）*/
+    ::-webkit-scrollbar-button {
+      height: 0;
+      /* 隐藏默认箭头按钮 */
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="lock_mask"></div>
+  <div id="onload_mask"></div>
+  <div id="mycanvas">
+    <div id="bottomBox">
+      <div id="zoom_in" class="button" dataid="0"></div>
+      <div id="switch_button" class="button"></div>
+    </div>
+  </div>
+  <div id="scroll-bar">
+    <div id="scroll-bar-content"></div>
+  </div>
+  <!-- 引入你的编译库 -->
+
+  <script src="./dist/freqChart.js"></script>
+  <!-- <script src="./src/indextest.js"></script> -->
+  <script>
+    var freqCharts = ""
+
+    //功能方法
+    function startmethod(data) {
+      var types = data.operate_type;
+      if (types == "load_chart") {
+        onloadPage(data)
+      } else {
+        if (freqCharts == null || freqCharts == "") {
+          return false;
+        }
+        if (types == "update_chart") {
+          //更新数据
+          freqCharts.setChartData(data.operate_data.data_chart)
+        } else if (types == "update_options") {
+          //更新配置
+          freqCharts.updateOptions(data.operate_data.data_options)
+        } else if (types == "set_freq_range") {
+          if (data.operate_data.data_freqs && data.operate_data.data_freqs.type == "init") {
+            freqCharts.setInitFreqRange(data.operate_data.data_freqs)
+            //设置频率范围
+          } else {
+            //设置频率范围
+            freqCharts.setfreqRange(data.operate_data.data_freqs)
+          }
+
+        } else if (types == "set_lock") {
+          freqCharts.setLock(data.operate_data.lock_status)
+        } else if (types == "set_key") {
+          freqCharts.setKey(data.operate_data.data_key)
+        } else if (types == "set_scale_button") {
+          freqCharts.setZoom(data.operate_data.scale_status)
+        } else if(types == "get_freq_bussiness"){
+          var results=freqCharts.getFreqBussiness(data.operate_data.data_freqs)
+          var messageObj = {
+            "callback_type":"freq_bussiness_name",
+            "callback_data":{
+              "names":results
+            }
+          }
+          sendMessage(JSON.stringify(messageObj))
+        }
+      }
+    }
+
+    //加载图表
+    function onloadPage(data) {
+      var options = data.operate_data.data_options
+      var tree_datas = data.operate_data.data_chart
+      freqCharts = new freqChart("mycanvas", options, tree_datas);
+      freqCharts.onClick(function (data) {
+        gridClickMessage(data)
+      })
+      freqCharts.onFreq(function (min, max) {
+        var message = '{"callback_type":"freq_change","callback_data":{"start_freq":' + min + ',"end_freq":' + max + '}}'
+        sendMessage(message)
+      })
+      freqCharts.onClickZoom(function (data) {
+        var message = '{"callback_type":"click_scale_button","callback_data":{"data_type":"button","scale_value": ' + data + '}}'
+        sendMessage(message)
+      })
+      freqCharts.onFocus(function (data) {
+        var message;
+        if (data === '') {
+          message = '{"callback_type":"chart_focus","callback_data":{"focus_type":""}}';
+        } else if (data === 'chart') {
+          message = '{"callback_type":"chart_focus","callback_data":{"focus_type":"chart"}}';
+        }
+        sendMessage(message)
+      })
+      freqCharts.onSwitch(function (data) {
+        var message = '{"callback_type":"click_switch_button","callback_data":{"data_type":"switch_button"}}'
+        sendMessage(message)
+      })
+    }
+
+
+    new QWebChannel(qt.webChannelTransport, function (channel) {
+      window.bridge = channel.objects.bridge;
+      bridge.recvDataFromWebFun('{"callback_type":"get_chart"}')
+      bridge.sendDataToWebSignal.connect(function (data) {
+        startmethod(data)
+      })
+    })
+    function gridClickMessage(data) {
+      var business_id = data.business_id || "";
+      var foot_note = [];
+      var name = data.text || "";
+      if (data.parent_foot_notes && data.parent_foot_notes.length > 0) {
+        foot_note = foot_note.concat(data.parent_foot_notes)
+      }
+      if (data.foot_note && data.foot_note.length > 0) {
+        foot_note = foot_note.concat(data.foot_note)
+      }
+      // 构造 message 对象
+      var messageObj = {
+        callback_type: "click_grid",
+        callback_data: {
+          data_type: "grid_chart",
+          business_id: business_id,
+          names: name,
+          foot_note: foot_note,
+          start: data.start_freq,
+          end: data.end_freq
+        }
+      };
+      var message = JSON.stringify(messageObj);
+      sendMessage(message)
+    }
+    function sendMessage(message) {
+      bridge.recvDataFromWebFun(message)
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电磁频谱瀑布图</title>
+    <style>
+        canvas {
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="spectrumCanvas" width="600" height="400"></canvas>
+    <script>
+        const canvas = document.getElementById('spectrumCanvas');
+        const ctx = canvas.getContext('2d');
+
+        const numBands = 50; // 频段数量
+        const dataHistory = []; // 存储历史数据
+
+        // 生成随机数据以模拟频谱强度
+        function generateRandomData() {
+            const data = [];
+            for (let i = 0; i < numBands; i++) {
+                data.push(Math.random()); // 生成 0 到 1 之间的随机数
+            }
+            return data;
+        }
+
+        // 更新数据历史记录
+        function updateDataHistory() {
+            if (dataHistory.length >= canvas.height) {
+                dataHistory.shift(); // 删除最旧的数据
+            }
+            dataHistory.push(generateRandomData());
+        }
+
+        // 绘制瀑布图
+        function drawWaterfall() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // 清空画布
+
+            // 遍历历史数据并绘制每一行
+            dataHistory.forEach((data, index) => {
+                data.forEach((value, band) => {
+                    const color = `rgb(${Math.floor(value * 255)}, 0, ${255 - Math.floor(value * 255)})`;
+                    ctx.fillStyle = color;
+                    ctx.fillRect(band * (canvas.width / numBands), canvas.height - (index + 1), canvas.width / numBands, 1);
+                });
+            });
+        }
+
+        // 定时更新数据和绘制图形
+        function update() {
+            updateDataHistory();
+            drawWaterfall();
+            requestAnimationFrame(update);
+        }
+
+        update(); // 启动更新循环
+    </script>
+</body>
+</html>
